@@ -35,6 +35,23 @@
 </head>
 
 <body>
+    <div class="navbar-fixed">
+        <nav class="nav-extended text-shadow purple darken-4">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('homepage') }}" class="brand-logo">The Bar Blade</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">New Recipe</a></li>
+                    <li><a href="#">Manage Recipes</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     {% block content %}
     {% endblock %}
 
