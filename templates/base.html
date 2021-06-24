@@ -36,7 +36,7 @@
 
 <body>
     <div class="navbar-fixed">
-        <nav class="nav-extended text-shadow purple darken-4">
+        <nav class="nav-extended purple darken-4">
             <div class="nav-wrapper">
                 <a href="{{ url_for('homepage') }}" class="brand-logo">The Bar Blade</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -52,6 +52,18 @@
             </div>
         </nav>
     </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><h4 class="center-align purple-text text-darken-4">The Bar Blade</h4></li>
+        <li><a href="{{ url_for('homepage') }}">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">New Recipe</a></li>
+        <li><a href="#">Manage Recipes</a></li>
+        <li><a href="#">Log Out</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Register</a></li>
+    </ul>
+    
     {% block content %}
     {% endblock %}
 
