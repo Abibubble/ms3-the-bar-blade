@@ -24,7 +24,7 @@
     <meta name="twitter:site" content="@Abi_Hazard">
     <meta name="twitter:creator" content="@Abi_Hazard">
     <!-- Local stylesheets -->
-    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -35,5 +35,7 @@
 <body>
     {% block content %}
     {% endblock %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" async></script>
 </body>
 </html>
