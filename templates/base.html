@@ -23,19 +23,23 @@
     <meta name="twitter:image" content="LINK TO IMAGE">
     <meta name="twitter:site" content="@Abi_Hazard">
     <meta name="twitter:creator" content="@Abi_Hazard">
-    <!-- Local stylesheets -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Local stylesheets -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     {% block content %}
     {% endblock %}
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}" async></script>
 </body>
 </html>
