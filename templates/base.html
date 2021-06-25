@@ -28,6 +28,10 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Local stylesheets -->
@@ -43,6 +47,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('homepage') }}">Home</a></li>
                     <li><a href="#">Profile</a></li>
+                    <li><a href="#">Favourites</a></li>
                     <li><a href="#">New Recipe</a></li>
                     <li><a href="#">Manage Recipes</a></li>
                     <li><a href="#">Log Out</a></li>
@@ -57,15 +62,17 @@
         <li><h4 class="center-align purple-text text-darken-4">The Bar Blade</h4></li>
         <li><a href="{{ url_for('homepage') }}">Home</a></li>
         <li><a href="#">Profile</a></li>
+        <li><a href="#">Favourites</a></li>
         <li><a href="#">New Recipe</a></li>
         <li><a href="#">Manage Recipes</a></li>
         <li><a href="#">Log Out</a></li>
         <li><a href="#">Log In</a></li>
         <li><a href="#">Register</a></li>
     </ul>
-    
-    {% block content %}
-    {% endblock %}
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

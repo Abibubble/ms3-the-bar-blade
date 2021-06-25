@@ -9,8 +9,14 @@ body {
     color: white;
 }
 
-.bar-blade-header {
-    text-align: center;
+.brand-logo {
+    margin-left: 20px;
+    font-family: 'Libre Barcode 128 Text', sans-serif;
+    font-size: 3rem;
+}
+
+.bar-blade {
+    font-family: 'Dancing Script', cursive;
 }
 
 .card {
@@ -18,11 +24,10 @@ body {
 }
 
 .card-outer {
-    margin-right: 20px;
-    margin-bottom: 20px;
     border: 2px solid var(--light-purple);
     height: fit-content;
     height: -moz-fit-content;
+    min-height: 600px !important;
 }
 
 .card-header {
@@ -58,5 +63,5 @@ body {
 
 .card-action-link {
     color: var(--lightest-purple) !important;
-    font-size: 1.14rem;
+    font-size: 1.1rem;
 }
