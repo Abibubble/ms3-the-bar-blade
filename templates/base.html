@@ -46,13 +46,16 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('homepage') }}">Home</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="#">Favourites</a></li>
-                    <li><a href="#">New Recipe</a></li>
-                    <li><a href="#">Manage Recipes</a></li>
-                    <li><a href="#">Log Out</a></li>
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% if session.user %}
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="#">Favourites</a></li>
+                        <li><a href="#">New Recipe</a></li>
+                        <li><a href="#">Manage Recipes</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -61,13 +64,16 @@
     <ul class="sidenav" id="mobile-demo">
         <li><h4 class="center-align purple-text text-darken-4">The Bar Blade</h4></li>
         <li><a href="{{ url_for('homepage') }}">Home</a></li>
-        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-        <li><a href="#">Favourites</a></li>
-        <li><a href="#">New Recipe</a></li>
-        <li><a href="#">Manage Recipes</a></li>
-        <li><a href="#">Log Out</a></li>
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
+        {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="#">Favourites</a></li>
+            <li><a href="#">New Recipe</a></li>
+            <li><a href="#">Manage Recipes</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        {% endif %}
     </ul>
     <main class="container">
         <section>
