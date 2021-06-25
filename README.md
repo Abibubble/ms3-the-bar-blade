@@ -269,6 +269,8 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 
 ### Content
 * WHO OWNS THE CONTENT OF THE SITE
+* Screwdriver - Image by <a href="https://pixabay.com/users/blende12-201217/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2029118">Gerhard G.</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2029118">Pixabay</a>
+* Long Island Iced Tea - Image by <a href="https://pixabay.com/users/robert84ak-16722616/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5374802">Robert Krajewski</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5374802">Pixabay</a>
 
 ### Media
 * WHO OWNS ANY MEDIA ON THE SITE, SUCH AS IMAGES AND VIDEOS

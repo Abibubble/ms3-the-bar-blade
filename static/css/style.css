@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.card-title {
+    background-color: rgba(0, 0, 0, 0.5);
+}

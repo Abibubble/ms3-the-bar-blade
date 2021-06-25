@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+    <h1>The Bar Blade</h1>
     <div class="row">
         {% for recipe in recipes %}
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{ url_for('static', filename='img/drink.jpg') }}">
+                        <img src="{{ recipe.recipe_img }}">
                         <span class="card-title">{{ recipe.recipe_name.capitalize() }}</span>
                     </div>
                     <div class="card-content">
-                        <p>
-                            {{ recipe.category_name.capitalize() }}<br>
-                            {{ recipe.recipe_list }}<br>
-                            {{ recipe.recipe_description }}<br>
-                        </p>
+                        <h2>Category</h2>
+                        <p>{{ recipe.category_name.capitalize() }}</p>
+                        <h2>Ingredients</h2>
+                        <p>{{ recipe.recipe_list }}</p>
+                        <h2>Recipe</h2>
+                        <p>{{ recipe.recipe_description }}</p>
                     </div>
                 </div>
             </div>
