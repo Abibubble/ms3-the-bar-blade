@@ -119,13 +119,12 @@ def add_cocktail():
     return render_template("add_cocktail.html", categories=categories)
 
 
-@app.route("/edit_cocktail/<cocktail_id>", methods=["GET", "POST"])
-def edit_cocktail(cocktail_id):
-    cocktail = mongo.db.recipes.find_one({"_id": ObjectId(cocktail_id)})
-
+@app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
+def edit_cocktail(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_cocktail.html", cocktail=cocktail, categories=categories)
+        "edit_cocktail.html", categories=categories, recipe=recipe)
 
 
 if __name__ == "__main__":
