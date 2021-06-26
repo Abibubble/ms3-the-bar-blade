@@ -7,6 +7,18 @@
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s8 offset-m2">
+                    <i class="fas fa-wine-bottle prefix"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Select the main ingredient used</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name.capitalize() }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Main Ingredient</label>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s8 offset-m2">
                     <i class="fas fa-cocktail prefix"></i>
                     <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="50" class="validate" required>
                     <label for="recipe_name">Cocktail Name</label>
@@ -18,12 +30,6 @@
                     <input id="recipe_list" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate" required>
                     <label for="recipe_list">Ingredients</label>
                     <p class="center-align">Please separate ingredients with a comma</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s8 offset-m2">
-                    <i class="fas fa-wine-bottle prefix"></i>
-
                 </div>
             </div>
             <div class="row">
