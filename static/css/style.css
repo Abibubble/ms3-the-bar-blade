@@ -27,7 +27,7 @@ body {
     border: 2px solid var(--light-purple);
     height: fit-content;
     height: -moz-fit-content;
-    min-height: 600px !important;
+    min-height: 625px !important;
 }
 
 .card-header {
@@ -53,6 +53,10 @@ body {
 .card-heading {
     font-size: 1.5rem;
     margin: 10px 0;
+}
+
+.added-by {
+    margin-left: 20px;
 }
 
 .card {
