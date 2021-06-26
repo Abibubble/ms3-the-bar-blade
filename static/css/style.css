@@ -62,7 +62,14 @@ body {
 .card {
     color: white;
     background-color: black;
+}
+
+.homepage-card {
     margin: 0 20px;
+}
+
+.category-card {
+    border: 2px solid black;
 }
 
 .card-action-link {
