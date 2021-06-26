@@ -97,3 +97,11 @@ body {
 .edit-btn {
     margin-right: 20px;
 }
+
+.page-footer {
+    padding-top: 0;
+}
+
+.footer-copyright {
+    background-color: var(--purple) !important;
+}
