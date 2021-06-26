@@ -140,6 +140,13 @@ def edit_cocktail(recipe_id):
         "edit_cocktail.html", categories=categories, recipe=recipe)
 
 
+@app.route("/delete_cocktail/<recipe_id>")
+def delete_cocktail(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Cocktail Deleted")
+    return redirect(url_for("homepage"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
