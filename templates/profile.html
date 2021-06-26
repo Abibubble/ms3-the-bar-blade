@@ -12,11 +12,23 @@
                     {{ username }}'s Favourites
                 </h4>
                 <!-- for favourite in favourites -->
-                {% for recipe in recipes %}
-                    <div class="card-panel purple darken-4">
-                        <h5 class="bar-blade">{{ recipe.recipe_name }}</h5>
-                    </div>
-                {% endfor %}
+                <ul class="collapsible">
+                    {% for recipe in recipes %}
+                        <li class="card-panel purple darken-4 collapsible-li">
+                            <div class="collapsible-header purple darken-4">
+                                <h5 class="bar-blade">{{ recipe.recipe_name }}</h5>
+                            </div>
+                            <div class="collapsible-body purple darken-4">
+                                <h6 class="favourite-header">Category</h6>
+                                <p>{{ recipe.category_name.capitalize() }}</p>
+                                <h6 class="favourite-header">Ingredients</h6>
+                                <p>{{ recipe.recipe_list }}</p>
+                                <h6 class="favourite-header">Recipe</h6>
+                                <p>{{ recipe.recipe_description }}</p></p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
