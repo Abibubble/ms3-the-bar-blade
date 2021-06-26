@@ -12,10 +12,11 @@
                     {{ username }}'s Favourites
                 </h4>
                 <!-- for favourite in favourites -->
-                <div class="card-panel purple darken-4">
-                    Hi
-                </div>
-                <!-- endfor -->
+                {% for recipe in recipes %}
+                    <div class="card-panel purple darken-4">
+                        <h5 class="bar-blade">{{ recipe.recipe_name }}</h5>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
