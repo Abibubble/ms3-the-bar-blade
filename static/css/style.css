@@ -86,3 +86,7 @@ body {
 .favourite-header {
     text-decoration: underline;
 }
+
+.edit-btn {
+    margin-right: 20px;
+}

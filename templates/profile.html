@@ -8,24 +8,16 @@
                 </h3>
             </div>
             <div class="card-panel white-text purple">
-                <div class="row">
-                    <div class="col s4 offset-m2">
-                        <a href="{{ url_for('add_cocktail') }}" class="btn-large purple darken-4">Add Cocktail</a>
-                    </div>
-                    <div class="col s4">
-                        <a href="#" class="btn-large purple darken-4">Edit Cocktail</a>
-                    </div>
-                </div>
                 <h4 class="center-align">
-                    {{ username }}'s Favourites
+                    {{ username }}'s Cocktails
                 </h4>
-                <!-- for favourite in favourites -->
                 <ul class="collapsible">
                     {% for recipe in recipes %}
                         <li class="card-panel purple darken-4 collapsible-li">
                             <div class="collapsible-header purple darken-4">
                                 <div class="valign-wrapper">
                                     <i class="fas fa-caret-down prefix "></i>
+                                    <a href="{{ url_for('edit_cocktail', cocktail_id=recipe._id) }}" class="btn-small purple darekn-2 edit-btn">Edit Cocktail</a>
                                 </div>
                                 <h5 class="bar-blade">{{ recipe.recipe_name }}</h5>
                             </div>
