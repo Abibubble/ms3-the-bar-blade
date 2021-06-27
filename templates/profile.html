@@ -51,7 +51,7 @@
                 Want to delete your account?
             </h4>
             <p>We'll be sad to see you go</p>
-            <a href="#" class="btn-small purple darken-2 edit-btn">Delete Account</a>
+            <a href="{{ url_for('delete_account', username=username) }}" class="btn-small purple darken-2 edit-btn">Delete Account</a>
         </div>
     </div>
 

@@ -202,10 +202,11 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-@app.route("/delete_account/<user_id>")
-def delete_account(user_id):
-    mongo.db.users.remove({"_id": ObjectId(user_id)})
+@app.route("/delete_account/<username>")
+def delete_account(username):
+    mongo.db.users.remove({"username": username})
     flash("User deleted")
+    session.pop("user")
     return redirect(url_for("homepage"))
 
 
