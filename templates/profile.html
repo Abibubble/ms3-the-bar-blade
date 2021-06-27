@@ -3,15 +3,16 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel white-text purple darken-4">
-                <h3 class="center-align">
+                <h3 class="center-align bar-blade">
                     {{ username }}'s Profile
                 </h3>
             </div>
             <div class="card-panel white-text purple">
-                <h4 class="center-align">
+                <h4 class="center-align bar-blade">
                     {{ username }}'s Cocktails
                 </h4>
                 <ul class="collapsible">
+                    {% if session.user|lower == recipes.added_by|lower > 0 %}
                     {% for recipe in recipes %}
                         {% if session.user|lower == recipe.added_by|lower %}
                             <li class="card-panel purple darken-4 collapsible-li">
@@ -34,8 +35,23 @@
                             </li>
                         {% endif %}
                     {% endfor %}
+                    {% else %}
+                        <div class="white-text purple center-align">
+                            <h4>You haven't added any cocktails yet</h4>
+                            <a href="{{ url_for('add_cocktail') }}" class="btn-small purple darken-4 edit-btn">Add a Cocktail</a>
+                        </div>
+                    {% endif %}
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6 offset-m3 card-panel white-text purple darken-4 center-align delete-card">
+            <h4>
+                Want to delete your account?
+            </h4>
+            <p>We'll be sad to see you go</p>
+            <a href="#" class="btn-small purple darken-2 edit-btn">Delete Account</a>
         </div>
     </div>
 

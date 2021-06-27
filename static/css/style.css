@@ -1,8 +1,12 @@
+/* ----------------------------------------------------------------------------------- Variables */
+
 :root {
     --purple: #4A148C;
     --light-purple: #933bff;
     --lightest-purple: #b980ff;
 }
+
+/* ----------------------------------------------------------------------------------- CSS Resets */
 
 body {
     background-color: black;
@@ -17,17 +21,23 @@ main {
     flex: 1 0 auto;
 }
 
+/* ----------------------------------------------------------------------------------- Navbar */
+
 .brand-logo {
     margin-left: 20px;
     font-family: 'Libre Barcode 128 Text', sans-serif;
     font-size: 3rem;
 }
 
+/* ----------------------------------------------------------------------------------- Homepage */
+
 .bar-blade {
     font-family: 'Dancing Script', cursive;
 }
 
 .card {
+    color: white;
+    background-color: black;
     margin: auto;
 }
 
@@ -67,11 +77,6 @@ main {
     margin-left: 20px;
 }
 
-.card {
-    color: white;
-    background-color: black;
-}
-
 .homepage-card {
     margin: 0 20px;
 }
@@ -84,6 +89,8 @@ main {
     color: var(--lightest-purple) !important;
     font-size: 1.1rem;
 }
+
+/* ----------------------------------------------------------------------------------- Profile page */
 
 .collapsible {
     border-top: none;
@@ -105,6 +112,16 @@ main {
 .edit-btn {
     margin-right: 20px;
 }
+
+.no-cocktails {
+    margin-top: 50px;
+}
+
+.delete-card {
+    padding-bottom: 20px !important;
+}
+
+/* ----------------------------------------------------------------------------------- Footer */
 
 .page-footer {
     padding-top: 0;
