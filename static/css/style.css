@@ -81,6 +81,14 @@ main {
     margin: 0 20px;
 }
 
+.search-row {
+    margin-bottom: 0 !important;
+}
+
+.search-buttons {
+    margin-top: 20px !important;
+}
+
 label, input {
     color: white !important;
 }
@@ -139,4 +147,10 @@ label {
 
 .footer-copyright {
     background-color: var(--purple) !important;
+}
+
+@media screen and (max-width: 706px) {
+    .search-buttons {
+        margin-top: 0 !important;
+    }
 }
