@@ -28,19 +28,28 @@ def homepage():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        # Set variables
+        username = request.form.get("username").lower()
+        password = request.form.get("password")
+        password_confirm = request.form.get("password_confirm")
+        print(password_confirm)
+
         # Check if username already exists
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": username})
 
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
+        if password != password_confirm:
+            flash("Oh no! Your passwords don't match")
+            return redirect(url_for("register"))
 
+        register = {
+            "username": username,
+            "password": generate_password_hash(password)
+        }
         mongo.db.users.insert_one(register)
 
         # Put new user into session
@@ -60,10 +69,10 @@ def login():
         if existing_user:
             # Ensure hashed password matches
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
