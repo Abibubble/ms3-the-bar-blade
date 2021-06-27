@@ -90,6 +90,14 @@ main {
     font-size: 1.1rem;
 }
 
+label, input {
+    color: white !important;
+}
+
+label {
+    font-size: 1.2rem !important;
+}
+
 /* ----------------------------------------------------------------------------------- Profile page */
 
 .collapsible {
