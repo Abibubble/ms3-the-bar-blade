@@ -2,14 +2,14 @@
 {% block content %}
 
     <div class="row">
-        <div class="col s8 offset-m2">
+        <div class="col s10 m8 offset-s1 offset-m2">
             <h3 class="purple white-text darken-4 center-align">Edit a cocktail</h3>
         </div>
     
         <div class="row purple white-text darken-4">
             <form class="col s12" method="POST" action="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}">
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-wine-bottle prefix"></i>
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled class="white-text">Category</option>
@@ -25,21 +25,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-cocktail prefix"></i>
                         <input id="recipe_name" value="{{ recipe.recipe_name }}" name="recipe_name" type="text" minlength="5" maxlength="50" class="validate white-text" required>
                         <label for="recipe_name">Cocktail Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-mortar-pestle prefix"></i>
                         <input id="recipe_list" value="{{ recipe.recipe_list }}" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
                         <label for="recipe_list">Ingredients</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-align-left prefix"></i>
                         <textarea name="recipe_description" id="recipe_description" class="materialize-textarea validate white-text" minlength="5" maxlength="200" required>
                             {{- recipe.recipe_description -}}
@@ -48,14 +48,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-images prefix"></i>
                         <input id="recipe_img" name="recipe_img" value="{{ recipe.recipe_img }}" type="text" minlength="7" maxlength="200" class="validate white-text" required>
                         <label for="recipe_img">Image URL</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s8 offset-m2">
+                    <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-universal-access prefix"></i>
                         <input id="recipe_alt" name="recipe_alt" value="{{ recipe.recipe_alt }}" type="text" minlength="7" maxlength="200" class="validate white-text" required>
                         <label for="recipe_alt">Image Description</label>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s8 offset-m2 center-align">
+                    <div class="col m8 offset-s1 offset-m2 center-align">
                         <a href="{{ url_for('homepage') }}" class="btn waves-effect waves-light purple">
                             Cancel Edit
                             <i class="fas fa-times-circle right"></i>
