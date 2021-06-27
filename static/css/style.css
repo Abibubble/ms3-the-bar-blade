@@ -81,21 +81,22 @@ main {
     margin: 0 20px;
 }
 
-.category-card {
-    border: 2px solid black;
-}
-
-.card-action-link {
-    color: var(--lightest-purple) !important;
-    font-size: 1.1rem;
-}
-
 label, input {
     color: white !important;
 }
 
 label {
     font-size: 1.2rem !important;
+}
+
+/* ----------------------------------------------------------------------------------- Categories page */
+
+.category-card {
+    border: 2px solid black;
+}
+
+.category-card-content {
+    padding: 24px 0 !important;
 }
 
 /* ----------------------------------------------------------------------------------- Profile page */
