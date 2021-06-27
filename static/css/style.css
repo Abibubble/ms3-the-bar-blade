@@ -45,7 +45,7 @@ main {
     border: 2px solid var(--light-purple);
     height: fit-content;
     height: -moz-fit-content;
-    min-height: 625px !important;
+    min-height: 550px !important;
 }
 
 .card-header {
