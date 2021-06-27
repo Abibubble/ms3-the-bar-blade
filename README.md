@@ -65,20 +65,22 @@ This is a cocktail recipe site, built for bartenders, by bartenders. As an ex-ba
 ---
 ## User Experience (UX)
 ### Initial Discussion
-WHAT I WANTED FROM THIS PROJECT
+I wanted to create a website linked to a database, which allows users to login, add their own cocktails, or just search and find previously added cocktails.
 
 ### User Stories
-#### Client Goals
-* WHAT THE CLIENT WANTS, NOT THE USER
-
 #### First Time Visitor Goals
-* WHAT A FIRST TIME VISITOR WANTS, LIKE EASY TO UNDERSTAND, EASY TO NAVIGATE
+* To be able to easily navigate the site.
+* It should be easy to understand what to do.
+* It should be easy to register for an account.
 
 #### Returning Visitor Goals
-* LIKE REPLAYABILITY, WHY THEY WANT TO RETURN TO THE SITE, EXTRA FEATURES
+* It should be easy to add, edit and delete the user's cocktails.
+* It should be easy to see the cocktails the user has added.
+* The user's password should be stored securely.
 
 #### Frequent Visitor Goals
-* WHY SOMEONE WOULD COME BACK REPEATEDLY, AND WHAT THEY'D WANT, LIKE EASY TO BOOK SOMETHING, OR A SCOREBOARD, ETC.
+* Other users shouldn't be able to edit or delete the user's cocktails.
+* A user shouldn't be able to brute force their way into the restricted pages.
 
 ### Project Goals
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
@@ -89,13 +91,11 @@ WHAT I WANTED FROM THIS PROJECT
 * I decided on a very simple theme of purple and black for my color scheme.
 
 ### Typography
-* WHAT FONT AND WHY
-* Barcode font
-* Cursive font
-* Basic font
+* Barcode font for the logo
+* Cursive font to link with the theme of an elegant cocktail bar.
+* Basic font for the rest of the text, so as to not distract the user from the content of the site.
 
 ### Imagery
-* WHAT IMAGES ARE USED AND WHY
 * Cocktail images
 * Icons
 
@@ -201,24 +201,39 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 ![Image of JSHint results]()
 
 ### Testing User Stories
-#### Client Goals
-##### GOAL
-* HOW THE SITE COMPLETES EACH GOAL
-
 #### First Time Visitor Goals
-##### GOAL
-* HOW THE SITE COMPLETES EACH GOAL
+##### To be able to easily navigate the site.
+* 
+
+##### It should be easy to understand what to do.
+* 
+
+##### It should be easy to register for an account.
+* 
 
 #### Returning Visitor Goals
-##### GOAL
-* HOW THE SITE COMPLETES EACH GOAL
+##### It should be easy to add, edit and delete the user's cocktails.
+* 
+
+##### It should be easy to see the cocktails the user has added.
+* 
+
+##### The user's password should be stored securely.
+* 
 
 #### Frequent Visitor Goals
-##### GOAL
-* HOW THE SITE COMPLETES EACH GOAL
+##### Other users shouldn't be able to edit or delete the user's cocktails.
+* 
+
+##### A user shouldn't be able to brute force their way into the restricted pages.
+* 
+
+### Project Goals
+##### This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
+* 
 
 ### Full Testing
-[Click here](static/docs/testing.md) to view the full testing steps that were completed on every device and browser, and screenshots of testing.
+[Click here](static/docs/TESTING.md) to view the full testing steps that were completed on every device and browser, and screenshots of testing.
 
 ### Solved Bugs
 1. WHAT THE BUG IS
@@ -233,7 +248,7 @@ INTERESTING OR DIFFICULT BUGS
 I tested my website using DevTools Lighthouse feature, and got these results:
 
 #### Desktop
-![Lighthouse desktop first try](static/docs/lighthouse.png)
+![Lighthouse desktop first try](static/docs/lighthousedesktop.png)
 
 #### Mobile
 ![Lighthouse mobile first try](static/docs/lighthousemobile.png)
