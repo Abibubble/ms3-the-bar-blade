@@ -284,9 +284,9 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 
 #### Accessibility:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
-* All colors are WCAG AA compliant.
+* All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete buttons.
 
-![WCAG Color Compliance to AA standard](static/docs/aa-colors.png)
+![WCAG AAA non-compliant color example](static/docs/aa-color.png)
 
 #### Best Practices:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
