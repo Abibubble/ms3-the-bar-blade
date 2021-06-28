@@ -87,7 +87,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 * All text is white, which allows the text to be easily visible on all backgrounds.
 * I have used red only for the delete buttons, to convey the button is a destructive thing.
 
-![Color Scheme](static/docs/colors.png)
+![Color Scheme](static/docs/color-scheme.png)
 
 ### Typography
 * I have used a barcode-style font from [Google Fonts](https://fonts.google.com/), called [Libre Barcode 128 Text](https://fonts.google.com/specimen/Libre+Barcode+128+Text), to form the logo. This has the fallback font of sans-serif.
