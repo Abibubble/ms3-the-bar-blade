@@ -67,7 +67,7 @@
                 Want to delete your account?
             </h4>
             <p>We'll be sad to see you go</p>
-            <span onclick="document.getElementById('modal-{{ username }}').style.display='block'" class="btn-small purple darken-2 edit-btn">Delete Account</span>
+            <span onclick="document.getElementById('modal-{{ username }}').style.display='block'" class="btn-small red darken-4 edit-btn">Delete Account</span>
             <div id="modal-{{ username }}" class="modal">
                 <span onclick="document.getElementById('modal-{{ username }}').style.display='none'" class="close-icon white" title="Close Modal"><i class="far fa-times-circle"></i></span>
                 <div class="modal-content" class="purple darken-4">
@@ -76,10 +76,10 @@
                     <p>Are you sure you want to permanently delete your account?</p>
                     <div class="row">
                         <div class="col s5 offset-s1">
-                            <button type="button" class="btn-small purple" onclick="document.getElementById('modal-{{ username }}').style.display='none'">Cancel</button>
+                            <button type="button" class="btn-small green darken-4" onclick="document.getElementById('modal-{{ username }}').style.display='none'">Cancel</button>
                         </div>
                         <div class="col s5">
-                            <a href="{{ url_for('delete_account', username=username) }}" class="btn-small red">Delete</a>
+                            <a href="{{ url_for('delete_account', username=username) }}" class="btn-small red darken-4">Delete</a>
                         </div>
                     </div>
                 </div>
