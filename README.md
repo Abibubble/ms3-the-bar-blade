@@ -35,7 +35,6 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
 * [Deployment](#deployment)
     * [Initial Deployment](#initial-deployment)
     * [How to Fork it](#how-to-fork-it)
-    * [How to Clone it](#how-to-clone-it)
     * [Making a Local Clone](#making-a-local-clone)
 
 * [Testing](#testing)
@@ -90,8 +89,8 @@ I wanted to create a website linked to a database, which allows users to login, 
 ![Color Scheme](static/docs/colors.png)
 
 ### Typography
-* I have used a barcode-style font from Google Fonts, called Libre Barcode 128 Text, to form the logo. This has the fallback font of sans-serif.
-* I have used a cursive font from Google Fonts, called Dancing Script, to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
+* I have used a barcode-style font from [Google Fonts](https://fonts.google.com/), called [Libre Barcode 128 Text](https://fonts.google.com/specimen/Libre+Barcode+128+Text), to form the logo. This has the fallback font of sans-serif.
+* I have used a cursive font from [Google Fonts](https://fonts.google.com/), called [Dancing Script](https://fonts.google.com/specimen/Dancing+Script), to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
 * The basic font-family of Arial, Helvetica, sans-serif has been used for the rest of the text, so as to not distract the user from the content of the site. This also comes with the bonus that it's standard with HTML, so it should render on any browser and any device.
 
 ### Imagery
@@ -120,6 +119,8 @@ I wanted to create a website linked to a database, which allows users to login, 
 [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
 #### GitHub:
 [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
+#### Heroku:
+[Heroku](https://www.heroku.com) was used to deploy the live site.
 #### Balsamiq:
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
 #### Responsinator:
@@ -146,6 +147,10 @@ I wanted to create a website linked to a database, which allows users to login, 
 [jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
 #### Google Fonts:
 [Google Fonts](https://fonts.google.com/) was used to select all the fonts on the site.
+#### Jinja:
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
+#### RandomKeygen:
+[RandomKeygen](https://randomkeygen.com/) was used to generate a strong secret key.
 
 ## Deployment
 ### Initial Deployment
@@ -186,16 +191,8 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 1. Login or Sign Up to [GitHub](www.github.com).
 2. On GitHub, go to [Abibubble/ms3-the-bar-blade](https://github.com/Abibubble/ms3-the-bar-blade).
 3. In the top right, click "Fork".
-
-### How to Clone it
-1. Login or Sign Up to [GitHub](https://www.github.com).
-2. Fork the repository Abibubble/ms3-the-bar-blade using the steps above in [How to Fork it](#how-to-fork-it).
-3. Above the file list, click "Code".
-4. Choose if you want to clone using HTTPS, SSH, or GitHub CLI, then click the copy button to the right.
-5. Open Git Bash.
-6. Change the directory to where you want your clone to go.
-7. Type git clone and then paste the URL you copied in step 4.
-8. Press Enter to create your clone.
+4. You will need to create an env.py file with your own values, and create a MongoDB database.
+5. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
 
 ### Making a Local Clone
 1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/Abibubble/ms3-the-bar-blade) for this site.
@@ -204,8 +201,10 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
 5. Open Git Bash.
 6. Change the current working directory to the new location, where you want the cloned directory to be.
-6. Type git clone, and then paste the URL that was copied in Step 4.
+6. Type `git clone`, and then paste the URL that was copied in Step 4.
 7. Press Enter, and your local clone will be created.
+8. You will need to create an env.py file with your own values, and create a MongoDB database.
+9. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
 
 For a more detailed version of these steps, go to the [Github Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) page on this topic.
 
