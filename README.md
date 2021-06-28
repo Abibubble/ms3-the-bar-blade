@@ -86,6 +86,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 * I have used 3 different shades of purple to provide some contrast.
 * All text is white, which allows the text to be easily visible on all backgrounds.
 * I have used red only for the delete buttons, to convey the button is a destructive thing.
+
 ![Color Scheme](static/docs/colors.png)
 
 ### Typography
@@ -221,6 +222,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 
 3. JSHint
     * [JSHint](https://jshint.com/)
+
 ![Image of JSHint results]()
 
 ### Testing User Stories
@@ -283,7 +285,8 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 #### Accessibility:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
 * All colors are WCAG AA compliant.
-SCREENSHOT OF AA COLOR COMPLIANCE FROM DEVTOOLS
+
+![WCAG Color Compliance to AA standard](static/docs/aa-colors.png)
 
 #### Best Practices:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
@@ -297,10 +300,10 @@ SCREENSHOT OF AA COLOR COMPLIANCE FROM DEVTOOLS
 * [Font Awesome](https://fontawesome.com/): Library of icons used for social media and download links.
 * [Autoprefixer CSS online](https://autoprefixer.github.io/): To aid in the CSS prefixing.
 * [Materialize](https://materializecss.com/): To create a beautiful responsive site, without taking too much time.
-* [Code Institute](https://codeinstitute.net/): For the select form element validation
+* [Code Institute](https://codeinstitute.net/): For the select form element validation.
 
 ### Content
-* Unless otherwise mentioned, all code and content was created by [Abi Harrison](https://github.com/Abibubble).
+* All content was created by [Abi Harrison](https://github.com/Abibubble).
 
 ### Media
 * Screwdriver - Photo by [Gerhard G.](https://pixabay.com/users/blende12-201217/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2029118) from Pixabay.
@@ -316,7 +319,6 @@ SCREENSHOT OF AA COLOR COMPLIANCE FROM DEVTOOLS
 
 ### Acknowledgements
 * My mentor, Antonio Rodriguez, at [Code Institute](https://codeinstitute.net/), for continuous helpful feedback and support.
-* [Eve Crabb](https://github.com/evecrabb), for her support through my learning, and for being a sounding board for bug fixes.
-* [Tom Crabb](https://github.com/tomcrabb), for his advice on how to make my code cleaner.
+* [Eve Crabb](https://github.com/evecrabb), for her support through my learning, for being a sounding board for bug fixes, and for being the best boss ever.
 * The team at [Code Institute](https://codeinstitute.net/), for teaching me the necessary skills to create this site.
 * Conor Nye for his continuous support throughout my coding journey.
