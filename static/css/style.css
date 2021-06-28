@@ -121,6 +121,10 @@ label {
     -webkit-box-shadow: none;
 }
 
+.collapsible-header {
+    padding-bottom: 0;
+}
+
 .collapsible-li {
     padding: 0;
     margin: 10px;
@@ -160,6 +164,7 @@ label {
     top: 0;
     width: 100%;
     background-color: transparent;
+    text-align: center;
 }
 
 .modal-content {
