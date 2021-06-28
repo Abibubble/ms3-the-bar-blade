@@ -90,13 +90,13 @@ I wanted to create a website linked to a database, which allows users to login, 
 ![Color Scheme](static/docs/colors.png)
 
 ### Typography
-* I have used a barcode-style font for the logo from Google Fonts, called Libre Barcode 128 Text. This has the fallback font of sans-serif.
+* I have used a barcode-style font from Google Fonts, called Libre Barcode 128 Text, to form the logo. This has the fallback font of sans-serif.
 * I have used a cursive font from Google Fonts, called Dancing Script, to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
 * The basic font-family of Arial, Helvetica, sans-serif has been used for the rest of the text, so as to not distract the user from the content of the site. This also comes with the bonus that it's standard with HTML, so it should render on any browser and any device.
 
 ### Imagery
-* Cocktail images
-* Icons
+* The images used in this project are all pictures of cocktails, to match the recipes.
+* Icons are used where suitable to allow users to easily understand at a glance what is intended.
 
 ### Wireframes
 [Here are the wireframes for desktop, mobile and tablet for this project](static/docs/wireframes.pdf).
