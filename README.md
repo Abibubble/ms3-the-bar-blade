@@ -65,15 +65,18 @@ I wanted to create a website linked to a database, which allows users to login, 
 * To be able to easily navigate the site.
 * It should be easy to understand what to do.
 * It should be easy to register for an account.
+* It should be easy to search for a specific cocktail.
 
 #### Returning Visitor Goals
 * It should be easy to add, edit and delete the user's cocktails.
 * It should be easy to see the cocktails the user has added.
 * The user's password should be stored securely.
+* It should be easy to search for a specific cocktail.
 
 #### Frequent Visitor Goals
 * Other users shouldn't be able to edit or delete the user's cocktails.
 * A user shouldn't be able to brute force their way into the restricted pages.
+* It should be easy to search for a specific cocktail.
 
 ### Project Goals
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
@@ -86,6 +89,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 * I have used 3 different shades of purple to provide some contrast.
 * All text is white, which allows the text to be easily visible on all backgrounds.
 * I have used red only for the delete buttons, to convey the button is a destructive thing.
+* I have used green only for the cancel button on the delete modals, to signify a return to safety for the user.
 
 ![Color Scheme](static/docs/color-scheme.png)
 
@@ -228,23 +232,35 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 ### Testing User Stories
 #### First Time Visitor Goals
 ##### To be able to easily navigate the site.
-* 
+* The navigation bar is clearly visible on all pages.
+* The navigation bar is fixed to the top of the screen, so even when the user scrolls, they can still see the navigation bar.
 
 ##### It should be easy to understand what to do.
-* 
+* Everything is clearly laid out.
+* All buttons decribe what they're for in simple terms.
+* Icons are used to help convey meaning.
 
 ##### It should be easy to register for an account.
-* 
+* The register button is clear to see on the navigation bar, and it only requires a username, a password, and a confirmation of that password to register an account.
+
+##### It should be easy to search for a specific cocktail.
+* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
 #### Returning Visitor Goals
 ##### It should be easy to add, edit and delete the user's cocktails.
-* 
+* Every cocktail that a user has added is displayed on their profile.
+* Each cocktail listing has it's own edit and delete buttons.
+* There is a link to add a cocktail on the navigation bar, which is available on every page.
+* If the user hasn't added any cocktails, their profile instead prompts them to add one, with a helpful button to aid them.
 
 ##### It should be easy to see the cocktails the user has added.
-* 
+* Every cocktail that a user has added is displayed on their profile.
 
 ##### The user's password should be stored securely.
-* 
+* Werkzeug's password hashing methods have been used to store all user's passwords in a secure and safe way.
+
+##### It should be easy to search for a specific cocktail.
+* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
 #### Frequent Visitor Goals
 ##### Other users shouldn't be able to edit or delete the user's cocktails.
@@ -252,6 +268,9 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 
 ##### A user shouldn't be able to brute force their way into the restricted pages.
 * 
+
+##### It should be easy to search for a specific cocktail.
+* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
 ### Project Goals
 ##### This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
