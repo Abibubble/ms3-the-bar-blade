@@ -125,25 +125,27 @@ I wanted to create a website linked to a database, which allows users to login, 
 #### Responsinator:
 [Responsinator](http://www.responsinator.com/) was used to help improve the responsive design on a variety of devices.
 #### Google DevTools:
-[Google DevTools](https://developer.chrome.com/docs/devtools/) was used to help us find what code correlated to which feature.
+[Google DevTools](https://developer.chrome.com/docs/devtools/) was used to help find what code correlated to which feature.
 #### Am I Responsive Design:
 [Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the responsive design of the site, and to create the final site image.
 #### Shields.io:
-[Shields.io](https://shields.io/) was used to create the GitHub badges for this README.md file.
+[Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
 #### Lighthouse:
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that our code was as performant as possible, confirming to best practices, and SEO and Accessibility guidelines.
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the code was as performant as possible, confirming to best practices, and SEO and Accessibility guidelines.
 #### Font Awesome:
-[Font Awesome](https://fontawesome.com/) was used on all pages to add the instructions, home, settings and copyright icons.
+[Font Awesome](https://fontawesome.com/) was used on all pages to add the icons.
 #### Autoprefixer CSS online
 [Autoprefixer CSS online](https://autoprefixer.github.io/) was used to ensure all prefixes for browsers were included correctly.
 #### MongoDB:
-[MongoDB](https://www.mongodb.com/) was used to store the contents of my database, and allow full CRUD functionality.
+[MongoDB](https://www.mongodb.com/) was used to store the contents of the database, and allow full CRUD functionality.
 #### Flask:
 [Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to help create the templating for this site.
 #### Materialize:
 [Materialize](https://materializecss.com/) was used to create a beautiful, responsive website.
-#### jQuery
-[jQuery](https://jquery.com/) was used to make the DOM traversal easier within my JavaScript.
+#### jQuery:
+[jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
+#### Google Fonts:
+[Google Fonts](https://fonts.google.com/) was used to select all the fonts on the site.
 
 ## Deployment
 ### Initial Deployment
