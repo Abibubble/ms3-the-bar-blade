@@ -1,7 +1,3 @@
-Create the backend and frontend functionality for users to locate recipes based on the recipe's fields. You may choose to create a full search functionality, or just a directory of recipes.
-
-Provide results in a manner that is visually appealing and user friendly.
-
 # The Bar Blade
 
 ![GitHub contributors](https://img.shields.io/github/contributors/abibubble/ms3-the-bar-blade)
@@ -11,9 +7,9 @@ Provide results in a manner that is visually appealing and user friendly.
 ![Font Awesome version](https://img.shields.io/badge/Font%20Awesome-v5.15.1-blue)
 ![GitHub forks](https://img.shields.io/github/forks/abibubble/ms3-the-bar-blade?style=social)
 
-[Here is a link to the final project](https://abibubble.github.io/ms3-the-bar-blade)
+[Here is a link to the final project](https://ms3-the-bar-blade.herokuapp.com/homepage)
 
-This is a cocktail recipe site, built for bartenders, by bartenders. As an ex-bartender myself, this was something I always wanted but couldn't find online. It's a site where users can sign in, find cocktails, add their own cocktails, and edit or delete old cocktail recipes. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through. 
+This is a cocktail recipe site, built for bartenders, by bartenders. It's a site where users can sign in, find cocktails, add their own cocktails, and edit or delete old cocktail recipes. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through. 
 
 ![Final project image home page](static/docs/finalpage.png)
 
@@ -30,8 +26,6 @@ This is a cocktail recipe site, built for bartenders, by bartenders. As an ex-ba
     * [Imagery](#imagery)
     * [Wireframes](#wireframes)
     * [Features](#features)
-        * Existing features
-        * Features to implement
     * [Audio](#audio)
 
 * [Technologies Used](#technologies-used)
@@ -65,7 +59,7 @@ This is a cocktail recipe site, built for bartenders, by bartenders. As an ex-ba
 ---
 ## User Experience (UX)
 ### Initial Discussion
-I wanted to create a website linked to a database, which allows users to login, add their own cocktails, or just search and find previously added cocktails.
+I wanted to create a website linked to a database, which allows users to login, add their own cocktails, or just search and find previously added cocktails. As an ex-bartender myself, this was something I always wanted but couldn't find online.
 
 ### User Stories
 #### First Time Visitor Goals
@@ -89,11 +83,16 @@ I wanted to create a website linked to a database, which allows users to login, 
 ## Design
 ### Color Scheme
 * I decided on a very simple theme of purple and black for my color scheme.
+* I didn't want to distract from the content of the site, hence choosing two main colours.
+* I have used 3 different shades of purple to provide some contrast.
+* All text is white, which allows the text to be easily visible on all backgrounds.
+* I have used red only for the delete buttons, to convey the button is a destructive thing.
+![Color Scheme](static/docs/colors.png)
 
 ### Typography
-* Barcode font for the logo
-* Cursive font to link with the theme of an elegant cocktail bar.
-* Basic font for the rest of the text, so as to not distract the user from the content of the site.
+* I have used a barcode-style font for the logo from Google Fonts, called Libre Barcode 128 Text. This has the fallback font of sans-serif.
+* I have used a cursive font from Google Fonts, called Dancing Script, to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
+* The basic font-family of Arial, Helvetica, sans-serif has been used for the rest of the text, so as to not distract the user from the content of the site. This also comes with the bonus that it's standard with HTML, so it should render on any browser and any device.
 
 ### Imagery
 * Cocktail images
@@ -236,10 +235,11 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 [Click here](static/docs/TESTING.md) to view the full testing steps that were completed on every device and browser, and screenshots of testing.
 
 ### Solved Bugs
-1. WHAT THE BUG IS
-    * WHAT STEPS I TOOK TO FIX IT
-CAN USE SCREENSHOTS OF BUGS AND FIXES
-INTERESTING OR DIFFICULT BUGS
+1. When I added the confirm deletion modal into categories.html, it wasn't taking the category I'd clicked on to delete, it was just deleting the first category in the list.
+    * I looked through my code on Google DevTools and saw that, as my delete button was part of a for loop that was populating categories, it was also duplicating the ID of the modal.
+    * This meant that when it came to deleting, it didn't know which one of those IDs I actually wanted to delete.
+    * I then added in the ```category._id```, so I could have an individual ID for each category.
+    * This solved the bug, and also fixed the issue that W3C HTML validator brought up about repeated IDs.
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
@@ -258,6 +258,8 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 
 #### Accessibility:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* All colors are WCAG AA compliant.
+SCREENSHOT OF AA COLOR COMPLIANCE FROM DEVTOOLS
 
 #### Best Practices:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
