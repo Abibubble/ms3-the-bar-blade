@@ -153,8 +153,39 @@ label {
     background-color: var(--purple) !important;
 }
 
+/* ----------------------------------------------------------------------------------- Modal */
+
+.modal {
+    display: none;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.modal-content {
+    background-color: var(--purple);
+    margin: 4% auto;
+    border: 2px solid white;
+    width: 60%;
+}
+
+.modal-close {
+    font-size: 2rem;
+    position: relative;
+    top: -10px;
+    left: 358px;
+}
+
+/* ----------------------------------------------------------------------------------- Media queries */
+
 @media screen and (max-width: 706px) {
     .search-buttons {
         margin-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1436px) {
+    .card-outer {
+        min-height: 550px !important;
     }
 }
