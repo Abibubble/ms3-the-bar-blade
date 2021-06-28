@@ -150,14 +150,37 @@ I wanted to create a website linked to a database, which allows users to login, 
 ## Deployment
 ### Initial Deployment
 This site was deployed to GitHub Pages by following these steps:
-1. Login or Sign Up to [GitHub](www.github.com).
+1. Login or Sign Up to [GitHub](https://www.github.com).
 2. Create a new repository named "ms3-the-bar-blade".
-3. Once created, click on "Settings" on the navigation bar under the repository title.
-4. Scroll down to "GitHub Pages".
-5. Under "Source", choose which branch to deploy. I chose "master", but this is sometimes shown as "main".
-6. Choose which folder to deploy from, usually "/root".
-7. Click "Save", then wait for it to be deployed. It can take some time for the page to be fully deployed.
-8. Your URL will be displayed above "Source".
+3. Heroku needs to be told what the requirements are for this project, so go into your GitPod terminal, and create files to explain the requirements by using the following commands:
+`pip3 freeze --local > requirements.txt`
+`echo web: python run.py > Procfile` - Ensure there is no blank line after the contents of this file
+4. Push these changes to your repository.
+5. Ensure you have a .gitignore file in your repository, and if not, create one.
+6. Add env.py and __pycache__/ into your .gitignore file, and save the file. This is to avoid any sensitive information being added into your repository.
+7. Create an env.py file, and add the following information to it, updating the ## x ## values with your own values:
+
+``` python
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", " ##YOUR UNIQUE SECRET KEY## ")
+os.environ.setdefault("MONGO_URI", " ##YOUR UNIQUE URI FROM MONGODB## ")
+os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
+```
+
+8. Login or sign up to [Heroku](https://www.heroku.com).
+9. Select 'Create New App' from your dashboard.
+10. Choose a unique app name, and select the region closest to you, before clicking 'Create App'.
+11. Go to the 'Deploy' tab, find 'Deployment Method' and select 'GitHub'.
+12. Search to find your GitHub repository, and click 'Connect'. Don't enable automatic deployment yet, as this can cause errors.
+13. Go to the 'Settings' tab, find 'Config Vars', and click 'Reveal Config Vars'.
+14. Enter key value pairs that match those in your env.py file as shown above.
+15. Go to the 'Deploy' tab, and click 'Enable Automatic Deployment'.
+16. In 'Manual Deploy', choose which branch you'd like to deploy from (I chose 'master' branch, this is also known as 'main').
+17. Click 'Deploy Branch'.
+18. Once the app has finished building, click 'Open App' to open your site.
 
 ### How to Fork it
 1. Login or Sign Up to [GitHub](www.github.com).
@@ -165,7 +188,7 @@ This site was deployed to GitHub Pages by following these steps:
 3. In the top right, click "Fork".
 
 ### How to Clone it
-1. Login or Sign Up to [GitHub](www.github.com).
+1. Login or Sign Up to [GitHub](https://www.github.com).
 2. Fork the repository Abibubble/ms3-the-bar-blade using the steps above in [How to Fork it](#how-to-fork-it).
 3. Above the file list, click "Code".
 4. Choose if you want to clone using HTTPS, SSH, or GitHub CLI, then click the copy button to the right.
@@ -175,7 +198,7 @@ This site was deployed to GitHub Pages by following these steps:
 8. Press Enter to create your clone.
 
 ### Making a Local Clone
-1. Log in to [GitHub](www.github.com) and locate the [Repository](https://github.com/Abibubble/ms3-the-bar-blade) for this site.
+1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/Abibubble/ms3-the-bar-blade) for this site.
 2. Under the repository name, above the list of files, click "Code".
 3. Here you can either Clone or Download the repository.
 4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
@@ -240,7 +263,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 1. When I added the confirm deletion modal into categories.html, it wasn't taking the category I'd clicked on to delete, it was just deleting the first category in the list.
     * I looked through my code on Google DevTools and saw that, as my delete button was part of a for loop that was populating categories, it was also duplicating the ID of the modal.
     * This meant that when it came to deleting, it didn't know which one of those IDs I actually wanted to delete.
-    * I then added in the ```category._id```, so I could have an individual ID for each category.
+    * I then added in the `category._id`, so I could have an individual ID for each category.
     * This solved the bug, and also fixed the issue that W3C HTML validator brought up about repeated IDs.
 
 ### Known Bugs
