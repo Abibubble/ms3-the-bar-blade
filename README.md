@@ -153,12 +153,12 @@ This site was deployed to GitHub Pages by following these steps:
 1. Login or Sign Up to [GitHub](https://www.github.com).
 2. Create a new repository named "ms3-the-bar-blade".
 3. Heroku needs to be told what the requirements are for this project, so go into your GitPod terminal, and create files to explain the requirements by using the following commands:
-`pip3 freeze --local > requirements.txt`
-`echo web: python run.py > Procfile` - Ensure there is no blank line after the contents of this file
+    * `pip3 freeze --local > requirements.txt`
+    * `echo web: python run.py > Procfile` - Ensure there is no blank line after the contents of this file
 4. Push these changes to your repository.
 5. Ensure you have a .gitignore file in your repository, and if not, create one.
-6. Add env.py and __pycache__/ into your .gitignore file, and save the file. This is to avoid any sensitive information being added into your repository.
-7. Create an env.py file, and add the following information to it, updating the ## x ## values with your own values:
+6. Add `env.py` and `__pycache__/` into your .gitignore file, and save the file. This is to avoid any sensitive information being added into your repository.
+7. Create an env.py file, and add the following information to it, updating the '## x ##' values with your own values:
 
 ``` python
 import os
