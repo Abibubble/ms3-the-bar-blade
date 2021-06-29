@@ -64,7 +64,7 @@
                 </div>
                 <div class="row">
                     <div class="col m8 offset-s1 offset-m2 center-align">
-                        <a href="{{ url_for('homepage') }}" class="btn waves-effect waves-light purple">
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light purple">
                             Cancel Edit
                             <i class="fas fa-times-circle right"></i>
                         </a>
