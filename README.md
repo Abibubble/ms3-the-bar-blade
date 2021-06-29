@@ -279,16 +279,15 @@ Flask Paginate
 
 ## Deployment
 ### Initial Deployment
-This site was deployed to GitHub Pages by following these steps:
-1. Login or Sign Up to [GitHub](https://www.github.com).
-2. Create a new repository named "ms3-the-bar-blade".
-3. Heroku needs to be told what the requirements are for this project, so go into your GitPod terminal, and create files to explain the requirements by using the following commands:
+This site was deployed to Heroku by following these steps:
+
+1. Heroku needs to be told what the requirements are for this project, so go into your GitPod terminal, and create files to explain the requirements by using the following commands:
     * `pip3 freeze --local > requirements.txt`
     * `echo web: python run.py > Procfile` - Ensure there is no blank line after the contents of this file
-4. Push these changes to your repository.
-5. Ensure you have a .gitignore file in your repository, and if not, create one.
-6. Add `env.py` and `__pycache__/` into your .gitignore file, and save the file. This is to avoid any sensitive information being added into your repository.
-7. Create an env.py file, and add the following information to it, updating the '## x ##' values with your own values:
+2. Push these changes to your repository.
+3. Ensure you have a .gitignore file in your repository, and if not, create one.
+4. Add `env.py` and `__pycache__/` into your .gitignore file, and save the file. This is to avoid any sensitive information being added into your repository.
+5. Create an env.py file, and add the following information to it, updating the '## x ##' values with your own values:
 
 ``` python
 import os
@@ -300,17 +299,17 @@ os.environ.setdefault("MONGO_URI", " ##YOUR UNIQUE URI FROM MONGODB## ")
 os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 ```
 
-8. Login or sign up to [Heroku](https://www.heroku.com).
-9. Select 'Create New App' from your dashboard.
-10. Choose a unique app name, and select the region closest to you, before clicking 'Create App'.
-11. Go to the 'Deploy' tab, find 'Deployment Method' and select 'GitHub'.
-12. Search to find your GitHub repository, and click 'Connect'. Don't enable automatic deployment yet, as this can cause errors.
-13. Go to the 'Settings' tab, find 'Config Vars', and click 'Reveal Config Vars'.
-14. Enter key value pairs that match those in your env.py file as shown above.
-15. Go to the 'Deploy' tab, and click 'Enable Automatic Deployment'.
-16. In 'Manual Deploy', choose which branch you'd like to deploy from (I chose 'master' branch, this is also known as 'main').
-17. Click 'Deploy Branch'.
-18. Once the app has finished building, click 'Open App' to open your site.
+6. Login or sign up to [Heroku](https://www.heroku.com).
+7. Select 'Create New App' from your dashboard.
+8. Choose a unique app name, and select the region closest to you, before clicking 'Create App'.
+9. Go to the 'Deploy' tab, find 'Deployment Method' and select 'GitHub'.
+10. Search to find your GitHub repository, and click 'Connect'. Don't enable automatic deployment yet, as this can cause errors.
+11. Go to the 'Settings' tab, find 'Config Vars', and click 'Reveal Config Vars'.
+12. Enter key value pairs that match those in your env.py file as shown above.
+13. Go to the 'Deploy' tab, and click 'Enable Automatic Deployment'.
+14. In 'Manual Deploy', choose which branch you'd like to deploy from (I chose 'master' branch, this is also known as 'main').
+15. Click 'Deploy Branch'.
+16. Once the app has finished building, click 'Open App' to open your site.
 
 ### How to Fork it
 1. Login or Sign Up to [GitHub](www.github.com).
@@ -318,6 +317,7 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 3. In the top right, click "Fork".
 4. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
 5. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
+6. Type `python3 app.py` in your GitPod terminal to run your local site of this project.
 
 ### Making a Local Clone
 1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/Abibubble/ms3-the-bar-blade) for this site.
@@ -330,6 +330,7 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 7. Press Enter, and your local clone will be created.
 8. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
 9. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
+10. Type `python3 app.py` in your GitPod terminal to run your local site of this project.
 
 For a more detailed version of these steps, go to the [Github Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) page on this topic.
 
