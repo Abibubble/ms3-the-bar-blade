@@ -146,17 +146,6 @@ label {
     padding-bottom: 20px !important;
 }
 
-/* ----------------------------------------------------------------------------------- Footer */
-
-.page-footer {
-    padding-top: 0;
-    margin-top: 20px;
-}
-
-.footer-copyright {
-    background-color: var(--purple) !important;
-}
-
 /* ----------------------------------------------------------------------------------- Modal */
 
 .modal {
@@ -179,6 +168,18 @@ label {
     position: relative;
     top: -10px;
     left: 358px;
+}
+
+/* ----------------------------------------------------------------------------------- Footer */
+
+.page-footer {
+    padding-top: 0;
+    margin-top: 20px;
+    background-color: transparent !important;
+}
+
+.footer-copyright {
+    background-color: var(--purple) !important;
 }
 
 /* ----------------------------------------------------------------------------------- Media queries */
