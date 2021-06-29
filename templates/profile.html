@@ -18,8 +18,8 @@
                                 <div class="row">
                                     <div class="valign-wrapper col s12">
                                         <i class="fas fa-caret-down prefix "></i>
-                                        <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn-small purple darken-2 edit-btn">Edit</a>
-                                        <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='block'" class="btn-small purple darken-2 edit-btn">Delete</span>
+                                        <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn-small blue darken-2 edit-btn">Edit</a>
+                                        <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='block'" class="btn-small red darken-4 edit-btn">Delete</span>
                                         <div id="modal-{{ recipe._id }}" class="modal">
                                             <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='none'" class="close-icon white" title="Close Modal"><i class="far fa-times-circle"></i></span>
                                             <div class="modal-content" class="purple darken-4">
