@@ -26,6 +26,7 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
     * [Imagery](#imagery)
     * [Wireframes](#wireframes)
     * [Features](#features)
+    * [Future Features](#future-features)
     * [Audio](#audio)
     * [Navigation bar](#navigation-bar)
 
@@ -151,6 +152,12 @@ I wanted to create a website linked to a database, which allows users to login, 
 * A link to [Drink Aware](https://www.drinkaware.co.uk/) in the footer, for anyone struggling with alcohol use.
 
 ![Drink Aware link](static/docs/img/drink-aware.png)
+
+### Future Features
+* Email verification before a user can add a cocktail.
+* Enter user's password to delete user account.
+* Create an 'Add to Favourites' so users can store their favourite cocktail recipes.
+* When registering a new account, add ability to view the password that was typed in before submitting.
 
 ### Audio
 * No audio is used in this project.
