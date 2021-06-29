@@ -91,7 +91,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 * I have used red only for the delete buttons, to convey the button is a destructive thing.
 * I have used green only for the cancel button on the delete modals, to signify a return to safety for the user.
 
-![Color Scheme](static/docs/color-scheme.png)
+![Color Scheme](static/docs/colors.png)
 
 ### Typography
 * I have used a barcode-style font from [Google Fonts](https://fonts.google.com/), called [Libre Barcode 128 Text](https://fonts.google.com/specimen/Libre+Barcode+128+Text), to form the logo. This has the fallback font of sans-serif.
@@ -305,7 +305,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
 * All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete buttons.
 
-![WCAG AAA non-compliant color example](static/docs/aa-color.png)
+![WCAG AAA non-compliant color example](static/docs/aa-colors.png)
 
 #### Best Practices:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
