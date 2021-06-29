@@ -56,13 +56,10 @@ main {
     color: var(--light-purple);
 }
 
-.card-content {
-    height: 350px;
-    overflow-y: scroll;
-}
-
 .card-content-padding {
     padding: 0 0 0 12px !important;
+    height: 350px;
+    overflow-y: scroll;
 }
 
 .card-content p {
@@ -157,11 +154,13 @@ label {
     width: 100%;
     background-color: transparent;
     text-align: center;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .modal-content {
     background-color: var(--purple);
-    margin: 4% auto;
+    margin: 6% auto;
     border: 2px solid white;
     width: 60%;
 }
@@ -194,5 +193,9 @@ label {
 @media screen and (max-width: 706px) {
     .search-buttons {
         margin-top: 0 !important;
+    }
+
+    .modal h1 {
+        font-size: 3rem;
     }
 }
