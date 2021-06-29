@@ -22,7 +22,10 @@ mongo = PyMongo(app)
 @app.route("/homepage")
 def homepage():
     recipes = list(mongo.db.recipes.find())
-    return render_template("homepage.html", recipes=recipes)
+    users = mongo.db.users.find()
+    categories = mongo.db.categories.find()
+    return render_template(
+        "homepage.html", recipes=recipes, categories=categories, users=users)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -111,20 +114,25 @@ def logout():
 @app.route("/add_cocktail", methods=["GET", "POST"])
 def add_cocktail():
     if request.method == "POST":
+        category_name = request.form.get("category_name")
+        category = mongo.db.categories.find_one(
+            {"category_name": category_name})
+        user = mongo.db.users.find_one({"username": session["user"]})
+        print(user)
         cocktail = {
-            "category_name": request.form.get("category_name"),
+            "category_id": category["_id"],
             "recipe_name": request.form.get("recipe_name"),
             "recipe_list": request.form.get("recipe_list"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
-            "added_by": session["user"]
+            "user_id": user["_id"]
         }
         mongo.db.recipes.insert_one(cocktail)
         flash("Cocktail successfully added!")
         return redirect(url_for("homepage"))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find().sort("category_id", 1)
     return render_template("add_cocktail.html", categories=categories)
 
 

@@ -27,7 +27,7 @@
         {% for recipe in recipes %}
             <div class="col s12 m6 card-outer">
                 <h2 class="header card-header bar-blade">{{ recipe.recipe_name }}</h2>
-                <p class="added-by"><em>Added by {{ recipe.added_by }}</em></p>
+                <p class="added-by"><em>Added by {{ recipe.user_id }}</em></p>
                 <div class="card homepage-card horizontal">
                     <div class="card-image">
                         <img src="{{ recipe.recipe_img }}" alt="{{ recipe.recipe_alt }}" class="card-img">
@@ -35,7 +35,7 @@
                     <div class="card-stacked">
                         <div class="card-content card-content-padding">
                             <h3 class="card-heading">Category</h3>
-                            <p>{{ recipe.category_name.capitalize() }}</p>
+                            <p>{{ recipe.category_id }}</p>
                             <h3 class="card-heading">Ingredients</h3>
                             <p>{{ recipe.recipe_list }}</p>
                             <h3 class="card-heading">Method</h3>
