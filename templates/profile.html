@@ -20,7 +20,7 @@
                     {% for recipe in recipes if session.user|lower == recipe.added_by|lower or user["is_admin"] %}
                         <li class="card-panel purple darken-4 collapsible-li">
                             <div class="collapsible-header purple darken-4">
-                                <div class="row">
+                                <div class="row profile-row">
                                     <div class="valign-wrapper col s12">
                                         <i class="fas fa-caret-down prefix"></i>
                                         <div id="modal-{{ recipe._id }}" class="modal">
