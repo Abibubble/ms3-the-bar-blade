@@ -11,6 +11,11 @@
                 <h4 class="center-align bar-blade">
                     {{ username }}'s Cocktails
                 </h4>
+                <div class="row">
+                    <div class="col s8">
+                        
+                    </div>
+                </div>
                 <ul class="collapsible">
                     {% for recipe in recipes if session.user|lower == recipe.added_by|lower or user["is_admin"] %}
                         <li class="card-panel purple darken-4 collapsible-li">
@@ -18,8 +23,6 @@
                                 <div class="row">
                                     <div class="valign-wrapper col s12">
                                         <i class="fas fa-caret-down prefix"></i>
-                                        <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn-small blue darken-2 edit-btn">Edit</a>
-                                        <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='block'" class="btn-small red darken-4 edit-btn">Delete</span>
                                         <div id="modal-{{ recipe._id }}" class="modal">
                                             <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='none'" class="close-icon white" title="Close Modal"><i class="far fa-times-circle"></i></span>
                                             <div class="modal-content" class="purple darken-4">
@@ -44,11 +47,13 @@
                             </div>
                             <div class="collapsible-body purple darken-4">
                                 <h6 class="favourite-header"><strong>Category</strong></h6>
-                                <p>{{ recipe.category_name.capitalize() }}</p>
+                                <p>{{ recipe.category_id }}</p>
                                 <h6 class="favourite-header"><strong>Ingredients</strong></h6>
                                 <p>{{ recipe.recipe_list }}</p>
                                 <h6 class="favourite-header"><strong>Method</strong></h6>
-                                <p>{{ recipe.recipe_description }}</p></p>
+                                <p>{{ recipe.recipe_description }}</p>
+                                <a href="{{ url_for('edit_cocktail', recipe_id=recipe._id) }}" class="btn-small blue darken-2 edit-btn">Edit</a>
+                                <span onclick="document.getElementById('modal-{{ recipe._id }}').style.display='block'" class="btn-small red darken-4 edit-btn">Delete</span>
                             </div>
                         </li>
                     {% else %}
@@ -57,7 +62,6 @@
                             <a href="{{ url_for('add_cocktail') }}" class="btn-small purple darken-4 edit-btn">Add a Cocktail</a>
                         </div>
                     {% endfor %}
-                </ul>
             </div>
         </div>
     </div>
