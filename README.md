@@ -152,20 +152,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ![Drink Aware link](static/docs/img/drink-aware.png)
 
-### Navigation bar 
-The navigation bar changes depending on user status and screen size:
-
-| Nav Link | Logged Out | Logged In (User) | Logged In (Admin) |
-|-------|-----|-----|-----|
-| Logo (Homepage) | &#9989; | &#9989; | &#9989; |
-| Home | &#9989; | &#9989; | &#9989; |
-| Profile | &#10060; | &#9989; | &#9989; |
-| Add Cocktail | &#10060; | &#9989; | &#9989; |
-| Manage Categories | &#10060; | &#10060; | &#9989; |
-| Log Out | &#10060; | &#9989; | &#9989; |
-| Log In | &#9989; | &#10060; | &#10060; |
-| Register | &#9989; | &#10060; | &#10060; |
-
+### Navigation bar
     * Logged in
 
     ![Logged in navigation bar](static/docs/img/nav-logged-in.png)
@@ -182,6 +169,19 @@ The navigation bar changes depending on user status and screen size:
 
     ![Mobile navigation burger icon](static/docs/img/nav-mobile-burger.png)
     ![Mobile navigation bar](static/docs/img/nav-mobile.png)
+
+The navigation bar changes depending on user status and screen size:
+
+| Nav Link | Logged Out | Logged In (User) | Logged In (Admin) |
+|-------|-----|-----|-----|
+| Logo (Homepage) | &#9989; | &#9989; | &#9989; |
+| Home | &#9989; | &#9989; | &#9989; |
+| Profile | &#10060; | &#9989; | &#9989; |
+| Add Cocktail | &#10060; | &#9989; | &#9989; |
+| Manage Categories | &#10060; | &#10060; | &#9989; |
+| Log Out | &#10060; | &#9989; | &#9989; |
+| Log In | &#9989; | &#10060; | &#10060; |
+| Register | &#9989; | &#10060; | &#10060; |
 
 ### Audio
 * No audio is used in this project.
