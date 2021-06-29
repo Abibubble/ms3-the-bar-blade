@@ -178,12 +178,12 @@ label {
     background-color: transparent !important;
 }
 
-.footer-copyright {
-    background-color: var(--purple) !important;
-}
-
 .footer-row {
     margin-bottom: 0 !important;
+}
+
+.footer-copyright {
+    background-color: var(--purple) !important;
 }
 
 /* ----------------------------------------------------------------------------------- Media queries */
