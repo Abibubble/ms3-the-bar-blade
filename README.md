@@ -103,12 +103,15 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ### Typography
 * I have used a barcode-style font from [Google Fonts](https://fonts.google.com/), called [Libre Barcode 128 Text](https://fonts.google.com/specimen/Libre+Barcode+128+Text), to form the logo. This has the fallback font of sans-serif.
+
 ![Libre Barcode 128 Text font](static/docs/img/libre-font.png)
 
 * I have used a cursive font from [Google Fonts](https://fonts.google.com/), called [Dancing Script](https://fonts.google.com/specimen/Dancing+Script), to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
+
 ![Dancing Script font](static/docs/img/dancing-font.png)
 
 * The basic font-family of Arial, Helvetica, sans-serif has been used for the rest of the text, so as to not distract the user from the content of the site. This also comes with the bonus that it's standard with HTML, so it should render on any browser and any device.
+
 ![Arial, Helvetica, sans-serif font](static/docs/img/standard-font.png)
 
 ### Imagery
@@ -121,37 +124,48 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ### Features
 * Create, Edit and Delete a cocktail recipe.
+
 ![Create, Edit and Delete on a cocktail recipe](static/docs/img/cocktail.png)
 
 * Create and Delete a profile.
+
 ![Create and delete a profile](static/docs/img/delete-profile.png)
 
 * Create, Edit and Delete a category for admin users only.
+
 ![Create, Edit and Delete a category](static/docs/img/categories.png)
 
 * Search for a specific cocktail.
+
 ![Search bar](static/docs/img/search.png)
 
 * Confirm to delete modal.
+
 ![Confirm deletion modal](static/docs/img/modal.png)
 
 * Auto-updating copyright year.
+
 ![Copyright in footer](static/docs/img/copyright.png)
 
 * A link to [Drink Aware](https://www.drinkaware.co.uk/) in the footer, for anyone struggling with alcohol use.
+
 ![Drink Aware link](static/docs/img/drink-aware.png)
 
 * Navigation bar which changes depending on user status and screen size:
     * Logged in
+
     ![Logged in navigation bar](static/docs/img/nav-logged-in.png)
 
     * Logged out
+
     ![Logged out navigation bar](static/docs/img/nav-logged-out.png)
 
     * An admin
+
     ![Admin navigation bar](static/docs/img/nav-admin.png)
 
     * On small screen sizes
+
     ![Mobile navigation burger icon](static/docs/img/nav-mobile-burger.png)
     ![Mobile navigation bar](static/docs/img/nav-mobile.png)
 
