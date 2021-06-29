@@ -26,6 +26,7 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
     * [Imagery](#imagery)
     * [Wireframes](#wireframes)
     * [Features](#features)
+    * [Navigation bar](#navigation-bar)
     * [Audio](#audio)
 
 * [Database Design](#database-design)
