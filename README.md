@@ -412,6 +412,11 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * This meant that when it came to deleting, it didn't know which one of those IDs I actually wanted to delete.
     * I then added in the `category._id`, so I could have an individual ID for each category.
     * This solved the bug, and also fixed the issue that W3C HTML validator brought up about repeated IDs.
+2. When the user clicked the 'delete' or 'edit' buttons on their profile cocktails, the collapsible would expand as well as the button's action.
+    * I discovered that, as the buttons were inside the collapsible-header Materialize class, they were being treated as clickable too.
+    * I attempted to move them to the right of the headers, but this resulted in the buttons not connecting to their cocktail recipes.
+    * Instead, I moved them into the expanded section, so now the user can click on the header to expand, and depending on the contents of the recipe, can then decide to delete or edit.
+    * This makes more sense than where I had them before, as the user won't know if they want to edit or delete a recipe until they've looked at it.
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
