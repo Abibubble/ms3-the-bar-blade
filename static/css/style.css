@@ -59,7 +59,7 @@ main {
 }
 
 .card-content-padding {
-    padding: 0 24px !important;
+    padding: 0 0 0 24px !important;
 }
 
 .card-content p {
