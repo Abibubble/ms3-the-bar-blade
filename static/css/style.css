@@ -182,6 +182,10 @@ label {
     background-color: var(--purple) !important;
 }
 
+.footer-row {
+    margin-bottom: 0 !important;
+}
+
 /* ----------------------------------------------------------------------------------- Media queries */
 
 @media screen and (max-width: 706px) {

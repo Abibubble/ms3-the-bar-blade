@@ -1,6 +1,6 @@
 // -------------------------------------------------------------------- Materialize
 
-$(document).ready(function(){
+$(document).ready(function(){ // jQuery sections from Materalize
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('select').formSelect();
