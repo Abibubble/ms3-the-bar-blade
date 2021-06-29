@@ -162,8 +162,8 @@ The navigation bar changes depending on user status and screen size:
 | Profile | &#10060; | &#9989; | &#9989; |
 | Add Cocktail | &#10060; | &#9989; | &#9989; |
 | Manage Categories | &#10060; | &#10060; | &#9989; |
-| Log In | &#9989; | &#10060; | &#10060; |
 | Log Out | &#10060; | &#9989; | &#9989; |
+| Log In | &#9989; | &#10060; | &#10060; |
 | Register | &#9989; | &#10060; | &#10060; |
 
     * Logged in
