@@ -86,10 +86,12 @@ I wanted to create a website linked to a database, which allows users to login, 
 ### Color Scheme
 * I decided on a very simple theme of purple and black for my color scheme.
 * I didn't want to distract from the content of the site, hence choosing two main colours.
-* I have used 3 different shades of purple to provide some contrast.
+* I have used 3 different shades of purple to provide some contrast on the site.
 * All text is white, which allows the text to be easily visible on all backgrounds.
-* I have used red only for the delete buttons, to convey the button is a destructive thing.
-* I have used green only for the cancel button on the delete modals, to signify a return to safety for the user.
+* I have used other colors on buttons only:
+    * I have used red only for the delete buttons, to convey the button is a destructive thing.
+    * I have used green only for the cancel button on the delete modals, to signify a return to safety for the user.
+    * I have used blue only for the edit buttons, to show that it's a creative thing.
 
 ![Color Scheme](static/docs/colors.png)
 
@@ -106,7 +108,12 @@ I wanted to create a website linked to a database, which allows users to login, 
 [Here are the wireframes for desktop, mobile and tablet for this project](static/docs/wireframes.pdf).
 
 ### Features
-* WHAT FEATURES ARE ONE THE SITE, LIKE SCOREBOARD, FUNCTIONS, SCROLLING ALERT BAR, ETC.
+* Create, Edit and Delete a cocktail recipe.
+* Create and Delete a profile.
+* Create, Edit and Delete a category for admin users only.
+* Search for a specific cocktail.
+* Confirm to delete modal.
+* Auto-updating copyright year.
 
 ### Audio
 * No audio is used in this project.
