@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-mortar-pestle prefix"></i>
-                        <input id="recipe_list" value="{{ recipe.recipe_list }}" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
+                        <input id="recipe_list" value="{{ recipe.recipe_list }}" name="recipe_list" type="text" minlength="3" maxlength="100" class="validate white-text" required>
                         <label for="recipe_list">Ingredients</label>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="input-field col s10 m8 offset-s1 offset-m2">
                         <i class="fas fa-images prefix"></i>
-                        <input id="recipe_img" name="recipe_img" value="{{ recipe.recipe_img }}" type="text" minlength="7" maxlength="200" class="validate white-text" required>
+                        <input id="recipe_img" name="recipe_img" value="{{ recipe.recipe_img }}" type="url" minlength="7" maxlength="200" class="validate white-text" required>
                         <label for="recipe_img">Image URL</label>
                     </div>
                 </div>
