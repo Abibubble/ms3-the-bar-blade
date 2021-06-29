@@ -204,21 +204,21 @@ MongoDB was used to store data for this site in a database. The data has been se
 | username | string |
 | password | string |
 
-| Recipes |    |
-|---|---|
-| _id | ObjectId |
-| category | string |
-| recipe_name | string |
-| recipe_list | string |
-| method | string |
-| recipe_img | string |
-| recipe_alt | string |
-| created_by | string |
+| Recipes |    |    |
+|---|---|---|
+| _id | ObjectId |    |
+| category_id | ObjectId | categories._id |
+| recipe_name | string |    |
+| recipe_list | array |    |
+| method | string |    |
+| recipe_img | string |    |
+| recipe_alt | string |    |
+| user_id | ObjectId | users._id |
 
-| Categories |    |
-|---|---|
-| _id | ObjectId |
-| category_name | string |
+| Categories |    |    |
+|---|---|---|
+| _id | ObjectId |    |
+| category_name | string |    |
 
 ---
 
