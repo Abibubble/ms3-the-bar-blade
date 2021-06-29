@@ -185,6 +185,7 @@ The navigation bar changes depending on user status and screen size:
 
 ![Mobile navigation burger icon](static/docs/img/nav-mobile-burger.png)
 ![Mobile navigation bar](static/docs/img/nav-mobile.png)
+
 ---
 
 ## Database Design
@@ -257,7 +258,17 @@ MongoDB was used to store data for this site in a database. The data has been se
 #### Jinja:
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
 #### RandomKeygen:
-[RandomKeygen](https://randomkeygen.com/) was used to generate a strong secret key.
+[RandomKeygen](https://randomkeygen.com/) was used to generate a strong `SECRET_KEY`.
+#### Favicon.io:
+[favicon.io](https://favicon.io/) used to create a site favicon.
+#### Imgur:
+[Imgur](https://imgur.com/) was used to host images to add to each cocktail recipe.
+
+???????? CHECK IF THESE SHOULD BE REFERENCED
+Flask-PyMongo
+Pip3
+dnspython
+Flask Paginate
 
 ## Deployment
 ### Initial Deployment
