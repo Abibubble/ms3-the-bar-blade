@@ -47,9 +47,7 @@ main {
 
 .card-outer {
     border: 2px solid var(--light-purple);
-    height: fit-content;
-    height: -moz-fit-content;
-    min-height: 550px !important;
+    height: 550px !important;
 }
 
 .card-header {
@@ -58,8 +56,13 @@ main {
     color: var(--light-purple);
 }
 
+.card-content {
+    height: 350px;
+    overflow-y: scroll;
+}
+
 .card-content-padding {
-    padding: 0 0 0 24px !important;
+    padding: 0 0 0 12px !important;
 }
 
 .card-content p {
@@ -74,7 +77,7 @@ main {
 
 .card-heading {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .added-by {
@@ -191,11 +194,5 @@ label {
 @media screen and (max-width: 706px) {
     .search-buttons {
         margin-top: 0 !important;
-    }
-}
-
-@media screen and (max-width: 1436px) {
-    .card-outer {
-        min-height: 550px !important;
     }
 }
