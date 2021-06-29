@@ -78,8 +78,8 @@
         {% endif %}
     </ul>
     <main class="container">
-        <section>
-            <!-- Flash messages -->
+        
+        <div>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %}
@@ -91,8 +91,10 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-        </section>
+        </div>
+
         <h1 class="center-align bar-blade">The Bar Blade</h1>
+
         {% block content %}
         {% endblock %}
 
