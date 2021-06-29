@@ -187,7 +187,7 @@ MongoDB was used to store data for this site in a database. The data has been se
 | _id | ObjectId |
 | category | string |
 | recipe_name | string |
-| recipe_list | array |
+| recipe_list | string |
 | method | string |
 | recipe_img | string |
 | recipe_alt | string |
@@ -284,7 +284,7 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 1. Login or Sign Up to [GitHub](www.github.com).
 2. On GitHub, go to [Abibubble/ms3-the-bar-blade](https://github.com/Abibubble/ms3-the-bar-blade).
 3. In the top right, click "Fork".
-4. You will need to create an env.py file with your own values, and create a MongoDB database.
+4. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
 5. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
 
 ### Making a Local Clone
@@ -296,7 +296,7 @@ os.environ.setdefault("MONGO_DB", " ##YOUR DATABASE NAME## ")
 6. Change the current working directory to the new location, where you want the cloned directory to be.
 6. Type `git clone`, and then paste the URL that was copied in Step 4.
 7. Press Enter, and your local clone will be created.
-8. You will need to create an env.py file with your own values, and create a MongoDB database.
+8. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
 9. You will also need to install all of the project requirements. This can be done using the command `pip3 install -r requirements.txt`.
 
 For a more detailed version of these steps, go to the [Github Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) page on this topic.
@@ -357,7 +357,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 * The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
 ##### Navigation should be intuitive, with no need to use the browser's back button.
-* 
+* The navigation bar is constantly visible across the top of the site, whether that be the full navigation bar or the condensed burger icon menu bar on smaller screen sizes.
 
 #### Admin Goals
 ##### Other users shouldn't be able to edit or delete the user's cocktails.
@@ -399,7 +399,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
 * All images have alt text, including a request for users to add alt text for their own images so the site stays fully accessible.
 * All icons have titles where text isn't otherwise present to explain their use.
-* All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete buttons.
+* All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete and Edit buttons.
 
 ![WCAG AAA non-compliant color example](static/docs/img/aa-colors.png)
 
