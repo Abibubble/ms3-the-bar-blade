@@ -26,8 +26,8 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
     * [Imagery](#imagery)
     * [Wireframes](#wireframes)
     * [Features](#features)
-    * [Navigation bar](#navigation-bar)
     * [Audio](#audio)
+    * [Navigation bar](#navigation-bar)
 
 * [Database Design](#database-design)
 
@@ -152,6 +152,9 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ![Drink Aware link](static/docs/img/drink-aware.png)
 
+### Audio
+* No audio is used in this project.
+
 ### Navigation bar
 The navigation bar changes depending on user status and screen size:
 
@@ -182,9 +185,6 @@ The navigation bar changes depending on user status and screen size:
 
 ![Mobile navigation burger icon](static/docs/img/nav-mobile-burger.png)
 ![Mobile navigation bar](static/docs/img/nav-mobile.png)
-
-### Audio
-* No audio is used in this project.
 ---
 
 ## Database Design
