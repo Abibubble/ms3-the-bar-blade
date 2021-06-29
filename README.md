@@ -11,7 +11,7 @@
 
 This is a cocktail recipe site, built for bartenders, by bartenders. It's a site where users can sign in, find cocktails, add their own cocktails, and edit or delete old cocktail recipes. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through. 
 
-![Final project image home page](static/docs/finalpage.png)
+![Final project image home page](static/docs/img/finalpage.png)
 
 ## Contents
 
@@ -27,6 +27,8 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
     * [Wireframes](#wireframes)
     * [Features](#features)
     * [Audio](#audio)
+
+* [Database Design](#database-design)
 
 * [Technologies Used](#technologies-used)
     * [Languages Used](#languages-used)
@@ -74,9 +76,13 @@ I wanted to create a website linked to a database, which allows users to login, 
 * It should be easy to search for a specific cocktail.
 
 #### Frequent Visitor Goals
+* It should be easy to search for a specific cocktail.
+* Navigation should be intuitive, with no need to use the browser's back button.
+
+#### Admin Goals
 * Other users shouldn't be able to edit or delete the user's cocktails.
 * A user shouldn't be able to brute force their way into the restricted pages.
-* It should be easy to search for a specific cocktail.
+* Be able to edit or delete any recipe as an admin.
 
 ### Project Goals
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
@@ -93,30 +99,91 @@ I wanted to create a website linked to a database, which allows users to login, 
     * I have used green only for the cancel button on the delete modals, to signify a return to safety for the user.
     * I have used blue only for the edit buttons, to show that it's a creative thing.
 
-![Color Scheme](static/docs/colors.png)
+![Color Scheme](static/docs/img/colors.png)
 
 ### Typography
 * I have used a barcode-style font from [Google Fonts](https://fonts.google.com/), called [Libre Barcode 128 Text](https://fonts.google.com/specimen/Libre+Barcode+128+Text), to form the logo. This has the fallback font of sans-serif.
+![Libre Barcode 128 Text font](static/docs/img/libre-font.png)
+
 * I have used a cursive font from [Google Fonts](https://fonts.google.com/), called [Dancing Script](https://fonts.google.com/specimen/Dancing+Script), to link with the theme of an elegant cocktail bar. This has the fallback font of cursive.
+![Dancing Script font](static/docs/img/dancing-font.png)
+
 * The basic font-family of Arial, Helvetica, sans-serif has been used for the rest of the text, so as to not distract the user from the content of the site. This also comes with the bonus that it's standard with HTML, so it should render on any browser and any device.
+![Arial, Helvetica, sans-serif font](static/docs/img/standard-font.png)
 
 ### Imagery
 * The images used in this project are all pictures of cocktails, to match the recipes.
 * Icons are used where suitable to allow users to easily understand at a glance what is intended.
+* Unfortunately there isn't much control about what images users upload. If any inappropriate images are added, the any admin user has the ability to edit the image.
 
 ### Wireframes
 [Here are the wireframes for desktop, mobile and tablet for this project](static/docs/wireframes.pdf).
 
 ### Features
 * Create, Edit and Delete a cocktail recipe.
+![Create, Edit and Delete on a cocktail recipe](static/docs/img/cocktail.png)
+
 * Create and Delete a profile.
+![Create and delete a profile](static/docs/img/delete-profile.png)
+
 * Create, Edit and Delete a category for admin users only.
+![Create, Edit and Delete a category](static/docs/img/categories.png)
+
 * Search for a specific cocktail.
+![Search bar](static/docs/img/search.png)
+
 * Confirm to delete modal.
+![Confirm deletion modal](static/docs/img/modal.png)
+
 * Auto-updating copyright year.
+![Copyright in footer](static/docs/img/copyright.png)
+
+* A link to [Drink Aware](https://www.drinkaware.co.uk/) in the footer, for anyone struggling with alcohol use.
+![Drink Aware link](static/docs/img/drink-aware.png)
+
+* Navigation bar which changes depending on user status and screen size:
+    * Logged in
+    ![Logged in navigation bar](static/docs/img/nav-logged-in.png)
+
+    * Logged out
+    ![Logged out navigation bar](static/docs/img/nav-logged-out.png)
+
+    * An admin
+    ![Admin navigation bar](static/docs/img/nav-admin.png)
+
+    * On small screen sizes
+    ![Mobile navigation burger icon](static/docs/img/nav-mobile-burger.png)
+    ![Mobile navigation bar](static/docs/img/nav-mobile.png)
 
 ### Audio
 * No audio is used in this project.
+---
+
+## Database Design
+MongoDB was used to store data for this site in a database. The data has been set out in three collections, which are described below:
+
+| Users |    |
+|-------|-----|
+| _id | ObjectId |
+| username | string |
+| password | string |
+
+| Recipes |    |
+|---|---|
+| _id | ObjectId |
+| category | string |
+| recipe_name | string |
+| recipe_list | array |
+| method | string |
+| recipe_img | string |
+| recipe_alt | string |
+| created_by | string |
+
+| Categories |    |
+|---|---|
+| _id | ObjectId |
+| category_name | string |
+
 ---
 
 ## Technologies Used
@@ -223,18 +290,20 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 ---
 ## Testing
 ### W3C Validator
-The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the project to ensure there were no syntax errors within the site.
+The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the project to ensure there were no syntax errors within the site.
 
 1. W3C Markup Validator
     * [HTML Results](LINK)
 
 2. W3C CSS Validator
     * [CSS Results](LINK)
+    * There is only one error appearing, which is from the Materialize CSS file.
+    * There are several warnings, mostly from the Materialize CSS file, but also three related to my purple variables. As these variables are acceptable CSS syntax, I've considered them to be not an error.
 
 3. JSHint
     * [JSHint](https://jshint.com/)
 
-![Image of JSHint results]()
+![Image of JSHint results](static/docs/img/jshint.png)
 
 ### Testing User Stories
 #### First Time Visitor Goals
@@ -270,17 +339,21 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 * The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
 #### Frequent Visitor Goals
-##### Other users shouldn't be able to edit or delete the user's cocktails.
+##### It should be easy to search for a specific cocktail.
+* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
+
+##### Navigation should be intuitive, with no need to use the browser's back button.
 * 
+
+#### Admin Goals
+##### Other users shouldn't be able to edit or delete the user's cocktails.
+* Edit and delete buttons are only shown for cocktails on the user's profile.
+* The only cocktails shown on the user's profile are the ones created by them.
 
 ##### A user shouldn't be able to brute force their way into the restricted pages.
 * 
 
-##### It should be easy to search for a specific cocktail.
-* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
-
-### Project Goals
-##### This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
+##### Be able to edit or delete any recipe as an admin.
 * 
 
 ### Full Testing
@@ -300,19 +373,21 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate the
 I tested my website using DevTools Lighthouse feature, and got these results:
 
 #### Desktop
-![Lighthouse desktop first try](static/docs/lighthousedesktop.png)
+![Lighthouse desktop first try](static/docs/img/lighthousedesktop.png)
 
 #### Mobile
-![Lighthouse mobile first try](static/docs/lighthousemobile.png)
+![Lighthouse mobile first try](static/docs/img/lighthousemobile.png)
 
 #### Performance:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
 
 #### Accessibility:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* All images have alt text, including a request for users to add alt text for their own images so the site stays fully accessible.
+* All icons have titles where text isn't otherwise present to explain their use.
 * All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete buttons.
 
-![WCAG AAA non-compliant color example](static/docs/aa-colors.png)
+![WCAG AAA non-compliant color example](static/docs/img/aa-colors.png)
 
 #### Best Practices:
 * EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
