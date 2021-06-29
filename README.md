@@ -157,14 +157,14 @@ The navigation bar changes depending on user status and screen size:
 
 | Nav Link | Logged Out | Logged In (User) | Logged In (Admin) |
 |-------|-----|-----|-----|
-| Logo (Homepage) | &#9989 | &#9989 | &#9989 |
-| Home | &#9989 | &#9989 | &#9989 |
-| Profile | &#10060; | &#9989 | &#9989 |
-| Add Cocktail | &#10060; | &#9989 | &#9989 |
-| Manage Categories | &#10060; | &#10060; | &#9989 |
-| Log In | &#9989 | &#10060; | &#10060; |
-| Log Out | &#10060; | &#9989 | &#9989 |
-| Register | &#9989 | &#10060; | &#10060; |
+| Logo (Homepage) | &#9989; | &#9989; | &#9989; |
+| Home | &#9989; | &#9989; | &#9989; |
+| Profile | &#10060; | &#9989; | &#9989; |
+| Add Cocktail | &#10060; | &#9989; | &#9989; |
+| Manage Categories | &#10060; | &#10060; | &#9989; |
+| Log In | &#9989; | &#10060; | &#10060; |
+| Log Out | &#10060; | &#9989; | &#9989; |
+| Register | &#9989; | &#10060; | &#10060; |
 
     * Logged in
 
