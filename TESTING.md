@@ -136,6 +136,19 @@ On every device and browser listed above, I tested the following:
 
 ---
 
+## Footer
+* Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Home page.
+* &#128100; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Profile page.
+* &#128100; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Add Cocktail page.
+* &#128100; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Edit Cocktail page.
+* &#128272; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Manage Categories page.
+* &#128272; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Add Category page.
+* &#128272; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Edit Category page.
+* &#128683; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Log In page.
+* &#128683; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Register page.
+
+---
+
 ## Modals
 * &#128100; The Delete Cocktail modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
 * &#128272; The Delete Category modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
@@ -146,44 +159,95 @@ On every device and browser listed above, I tested the following:
 ## Styling and Layout
 * Ensure all images load correctly.
 * Ensure all grid layouts size correctly on all screen sizes.
+* Ensure all modals appear in front of all other content on the screen.
 
 ---
 
 ## User Access
-* 
+### Logged Out Users
+* &#128683;
+* Navigation bar will show Logo, Home, Log In, Register
+
+### Logged In Users
+* &#128100;
+* Navigation bar will show Logo, Home, Profile, Add Cocktail, Log Out
+
+### Admin Users
+* &#128272;
+* Navigation bar will show Logo, Home, Profile, Add Cocktail, Manage Categories, Log Out
 
 ---
 
 ## Functions
 ### Register
-* 
+* &#128683;
+* Creates a new user account.
+* Confirm password field is checked against password field to ensure no typos are made.
+* If the username already exists, it informs the user and clears the form.
+* If the passwords don't match, the user is informed via a flash message.
 
 ### Log In
-* 
+* &#128683;
+* Logs the user into their existing account.
+* Checks their password entry against the hashed password stored in their user in the database.
+* If either username or password don't match what's in the database, it returns a flash message.
+* The flash message doesn't inform them if it was the username or password that was incorrect.
 
 ### Log Out
-* 
+* &#128100;
+* Logs the user out of the current session user account.
+* Removes all session data.
 
 ### Add Cocktail
-* 
+* &#128100;
+* Only accessible for logged in users.
+* Provides a form for users to fill in, with placeholder text, and a helpful message about accessibility.
+* Once submitted, it adds a cocktail to the database, which then populates it onto the homepage, and onto the user's profile.
+* All cocktails added by the user will appear on their profile.
+* &#128272; If the user is an admin, all cocktails appear on their profile, not just the ones they've added. This is so the admin users can edit or delete any cocktail without needing to go into the MongoDB database.
 
 ### Edit Cocktail
-* 
+* &#128100;
+* Only accessible for logged in users.
+* Provides a form for users to fill in, with placeholder text, and a helpful message about accessibility.
+* The form is pre-filled in with the current cocktail recipe details, for easy editing.
+* Once submitted, it edits the cocktail in the database, which then populates those edits onto the homepage, and onto the user's profile.
+* &#128272; If the user is an admin, they can edit any cocktail without needing to go into the MongoDB database.
 
 ### Delete Cocktail
-* 
+* &#128100;
+* Only accessible for logged in users.
+* Create a modal to confirm if the user wishes to delete this cocktail.
+* Once submitted, it deletes the cocktail from the database, so the cocktail can no longer be viewed on the homepage or the user's profile.
+* &#128272; If the user is an admin, they can delete any cocktail without needing to go into the MongoDB database.
+* The cocktail will be permanently deleted from the database.
 
-### Add Category (admin only)
-* 
+### Add Category
+* &#128272;
+* Only accessible for admin users.
+* Provides a form for admins to fill in, with placeholder text.
+* Once submitted, it adds the category in the database, which then can be used when creating cocktails for all users.
 
-### Edit Category (admin only)
-* 
+### Edit Category
+* &#128272;
+* Only accessible for admin users.
+* Provides a form for admins to fill in, with placeholder text.
+* The form is pre-filled in with the current category details, for easy editing.
+* Once submitted, it editss the category in the database, which then can be used when creating cocktails for all users.
 
-### Delete Category (admin only)
-* 
+### Delete Category
+* &#128272;
+* Only accessible for admin users.
+* Create a modal to confirm if the admin wishes to delete this category.
+* Once submitted, it deletes the category from the database, so the category can no longer be used to create new cocktails.
+* The category will be permanently deleted from the database.
 
 ### Search recipes
-* 
+* Accessible by all users
+* Searches through database for what the user has entered into the search box.
+* It using the cocktail recipe name, ingredients list, and category to search within.
+* It returns all results, or a message if there are no results.
+* The reset button then clears the search bar, and returns the homepage to it's standard state.
 
 ---
 
