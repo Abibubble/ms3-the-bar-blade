@@ -426,8 +426,13 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * I checked that the files I was including were correct, accoring to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
     * I then did a google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
     * I added `crossorigin="use-credentials"` to my link for the webmanifest file, which fixed the console errors.
-
-    ![Favicon error](static/docs/img/favicon.png)
+    * ![Favicon error](static/docs/img/favicon.png)
+4. The user couldn't view the Homepage without being logged in - which also meant that they couldn't log in.
+    * In my navigation bar, I was using `{% if user["is_admin"] %}` to check if the current user has the is_admin toggle set to true.
+    * However, if the user isn't logged in, there was no information about the user, causing `KeyError: 'user'` to show.
+    * In my base.html, I changed the `{% if user["is_admin"] %}` to `{% if user %}{% if user["is_admin"] %}` to check if the user was logged in first.
+    * I then added a try/except block in my app.py file to try to find the logged in user, but if that wasn't found, to select all users instead.
+    * This fixed this bug.
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
