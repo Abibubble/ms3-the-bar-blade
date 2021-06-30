@@ -45,7 +45,7 @@
     * All tested and working correctly.
 
 ### Further Testing
-* The website was tested on Google Chrome, Firefox, Microsoft Edge, Safari and Samsung Internet browsers.
+* The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge, Safari and Samsung Internet browsers.
 * Testing was not done on Internet Explorer due to it being depreciated in favour of Microsoft Edge.
 * The website was viewed on a variety of devices, including:
     * Custom built desktop PC, running Windows 10
@@ -82,6 +82,7 @@ On every device and browser listed above, I tested the following:
 * &#128683; Click the Logo to take the user to the Home page from the Log In page.
 * &#128683; Click the Logo to take the user to the Home page from the Register page.
 
+
 * Click the Home button to take the user to the Home page from the Home page.
 * &#128100; Click the Home button to take the user to the Home page from the Profile page.
 * &#128100; Click the Home button to take the user to the Home page from the Add Cocktail page.
@@ -89,20 +90,24 @@ On every device and browser listed above, I tested the following:
 * &#128683; Click the Home button to take the user to the Home page from the Log In page.
 * &#128683; Click the Home button to take the user to the Home page from the Register page.
 
+
 * &#128100; Click the Profile button to take the user to the Profile page from the Home page.
 * &#128100; Click the Profile button to take the user to the Profile page from the Profile page.
 * &#128100; Click the Profile button to take the user to the Profile page from the Add Cocktail page.
-* C&#128272; lick the Profile button to take the user to the Profile page from the Manage Categories page.
+* &#128272; Click the Profile button to take the user to the Profile page from the Manage Categories page.
+
 
 * &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Home page.
 * &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page.
 * &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Add Cocktail page.
 * &#128272; Click the Add Cocktail button to take the user to the Add Cocktail page from the Manage Categories page.
 
+
 * &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Home page.
 * &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Profile page.
 * &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Add Cocktail page.
 * &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Manage Categories page.
+
 
 * &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Home page.
 * &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Profile page.
@@ -111,9 +116,11 @@ On every device and browser listed above, I tested the following:
 * &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Log In page.
 * &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Register page.
 
+
 * &#128683; Click the Log In button to take the user to the Log In page from the Home page.
 * &#128683; Click the Log In button to take the user to the Log In page from the Log In page.
 * &#128683; Click the Log In button to take the user to the Log In page from the Register page.
+
 
 * &#128683; Click the Register button to take the user to the Register page from the Home page.
 * &#128683; Click the Register button to take the user to the Register page from the Log In page.
@@ -122,20 +129,23 @@ On every device and browser listed above, I tested the following:
 ---
 
 ## Internal Navigation
-* Click the Edit Cocktail button to take the user to the Edit Cocktail page from the Profile page. &#128100;
-* Click the Add Category button to take the user to the Add Category page from the Manage Categories page. &#128272;
-* Click the Edit Category button to take the user to the Edit Category page from the Manage Categories page. &#128272;
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page. &#128100;
+* &#128100; Click the Edit Cocktail button to take the user to the Edit Cocktail page from the Profile page.
+* &#128272; Click the Add Category button to take the user to the Add Category page from the Manage Categories page.
+* &#128272; Click the Edit Category button to take the user to the Edit Category page from the Manage Categories page.
+* &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page.
 
 ---
 
 ## Modals
-* 
+* &#128100; The Delete Cocktail modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
+* &#128272; The Delete Category modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
+* &#128100; The Delete Profile modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
 
 ---
 
 ## Styling and Layout
 * Ensure all images load correctly.
+* Ensure all grid layouts size correctly on all screen sizes.
 
 ---
 
@@ -244,127 +254,135 @@ On every device and browser listed above, I tested the following:
 ---
 
 #### Chrome
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-d-chrome.jpg)
+![Log In page](static/docs/testing/log-in-d-chrome.jpg)
+![Log Out page](static/docs/testing/log-out-d-chrome.jpg)
+![Register page](static/docs/testing/register-d-chrome.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-d-chrome.jpg)
+![Profile page without cocktails](static/docs/testing/profile-d-chrome.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-d-chrome.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-d-chrome.jpg)
+![Categories page](static/docs/testing/categories-d-chrome.jpg)
+![Add Category page](static/docs/testing/add-category-d-chrome.jpg)
+![Edit Category page](static/docs/testing/edit-category-d-chrome.jpg)
 
 ---
 
 #### Edge
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-d-edge.jpg)
+![Log In page](static/docs/testing/log-in-d-edge.jpg)
+![Log Out page](static/docs/testing/log-out-d-edge.jpg)
+![Register page](static/docs/testing/register-d-edge.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-d-edge.jpg)
+![Profile page without cocktails](static/docs/testing/profile-d-edge.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-d-edge.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-d-edge.jpg)
+![Categories page](static/docs/testing/categories-d-edge.jpg)
+![Add Category page](static/docs/testing/add-category-d-edge.jpg)
+![Edit Category page](static/docs/testing/edit-category-d-edge.jpg)
 
 ---
 
-#### Firefox
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+#### Mozilla Firefox
+![Home page](static/docs/testing/home-d-moz.jpg)
+![Log In page](static/docs/testing/log-in-d-moz.jpg)
+![Log Out page](static/docs/testing/log-out-d-moz.jpg)
+![Register page](static/docs/testing/register-d-moz.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-d-moz.jpg)
+![Profile page without cocktails](static/docs/testing/profile-d-moz.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-d-moz.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-d-moz.jpg)
+![Categories page](static/docs/testing/categories-d-moz.jpg)
+![Add Category page](static/docs/testing/add-category-d-moz.jpg)
+![Edit Category page](static/docs/testing/edit-category-d-moz.jpg)
 
 ---
 
 #### Safari
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-d-safari.jpg)
+![Log In page](static/docs/testing/log-in-d-safari.jpg)
+![Log Out page](static/docs/testing/log-out-d-safari.jpg)
+![Register page](static/docs/testing/register-d-safari.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-d-safari.jpg)
+![Profile page without cocktails](static/docs/testing/profile-d-safari.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-d-safari.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-d-safari.jpg)
+![Categories page](static/docs/testing/categories-d-safari.jpg)
+![Add Category page](static/docs/testing/add-category-d-safari.jpg)
+![Edit Category page](static/docs/testing/edit-category-d-safari.jpg)
 
 ---
 
 ### Tablet
 #### Safari
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-t-safari.jpg)
+![Log In page](static/docs/testing/log-in-t-safari.jpg)
+![Log Out page](static/docs/testing/log-out-t-safari.jpg)
+![Register page](static/docs/testing/register-t-safari.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-t-safari.jpg)
+![Profile page without cocktails](static/docs/testing/profile-t-safari.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-t-safari.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-t-safari.jpg)
+![Categories page](static/docs/testing/categories-t-safari.jpg)
+![Add Category page](static/docs/testing/add-category-t-safari.jpg)
+![Edit Category page](static/docs/testing/edit-category-t-safari.jpg)
 
 ---
 
 ### Mobile
 #### Chrome
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-m-chrome.jpg)
+![Log In page](static/docs/testing/log-in-m-chrome.jpg)
+![Log Out page](static/docs/testing/log-out-m-chrome.jpg)
+![Register page](static/docs/testing/register-m-chrome.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-m-chrome.jpg)
+![Profile page without cocktails](static/docs/testing/profile-m-chrome.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-m-chrome.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-m-chrome.jpg)
+![Categories page](static/docs/testing/categories-m-chrome.jpg)
+![Add Category page](static/docs/testing/add-category-m-chrome.jpg)
+![Edit Category page](static/docs/testing/edit-category-m-chrome.jpg)
 
 ---
 
 #### Safari
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-m-safari.jpg)
+![Log In page](static/docs/testing/log-in-m-safari.jpg)
+![Log Out page](static/docs/testing/log-out-m-safari.jpg)
+![Register page](static/docs/testing/register-m-safari.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-m-safari.jpg)
+![Profile page without cocktails](static/docs/testing/profile-m-safari.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-m-safari.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-m-safari.jpg)
+![Categories page](static/docs/testing/categories-m-safari.jpg)
+![Add Category page](static/docs/testing/add-category-m-safari.jpg)
+![Edit Category page](static/docs/testing/edit-category-m-safari.jpg)
 
 ---
 
 #### Samsung Internet
-![Home page](assets/images/docs/testing/solemnlypagedchrome.jpg)
-![Log In page](assets/images/docs/testing/clickpagedchrome.jpg)
-![Log Out page](assets/images/docs/testing/homepagedchrome.jpg)
-![Register page](assets/images/docs/testing/quizpagedchrome.jpg)
-![Profile page](assets/images/docs/testing/instructionspagedchrome.jpg)
-![Add Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Cocktail page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Categories page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Add Category page](assets/images/docs/testing/resultspagedchrome.jpg)
-![Edit Category page](assets/images/docs/testing/resultspagedchrome.jpg)
+![Home page](static/docs/testing/home-m-samsung.jpg)
+![Log In page](static/docs/testing/log-in-m-samsung.jpg)
+![Log Out page](static/docs/testing/log-out-m-samsung.jpg)
+![Register page](static/docs/testing/register-m-samsung.jpg)
+![Profile page with cocktails](static/docs/testing/profile-cocktails-m-samsung.jpg)
+![Profile page without cocktails](static/docs/testing/profile-m-samsung.jpg)
+![Add Cocktail page](static/docs/testing/add-cocktail-m-samsung.jpg)
+![Edit Cocktail page](static/docs/testing/edit-cocktail-m-samsung.jpg)
+![Categories page](static/docs/testing/categories-m-samsung.jpg)
+![Add Category page](static/docs/testing/add-category-m-samsung.jpg)
+![Edit Category page](static/docs/testing/edit-category-m-samsung.jpg)
 
 ---
 
 ### Responsinator
-![Responsinator test](assets/images/docs/testing/responsinator1.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator2.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator3.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator4.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator5.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator6.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator7.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator8.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator9.jpg)
-![Responsinator test](assets/images/docs/testing/responsinator10.jpg)
+![Responsinator test](static/docs/testing/responsinator1.jpg)
+![Responsinator test](static/docs/testing/responsinator2.jpg)
+![Responsinator test](static/docs/testing/responsinator3.jpg)
+![Responsinator test](static/docs/testing/responsinator4.jpg)
+![Responsinator test](static/docs/testing/responsinator5.jpg)
+![Responsinator test](static/docs/testing/responsinator6.jpg)
+![Responsinator test](static/docs/testing/responsinator7.jpg)
+![Responsinator test](static/docs/testing/responsinator8.jpg)
+![Responsinator test](static/docs/testing/responsinator9.jpg)
+![Responsinator test](static/docs/testing/responsinator10.jpg)
