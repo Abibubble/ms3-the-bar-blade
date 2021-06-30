@@ -398,13 +398,16 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 * The only cocktails shown on the user's profile are the ones created by them.
 
 ##### A user shouldn't be able to brute force their way into the restricted pages.
-* 
+* Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
 
 ##### Be able to edit or delete any recipe as an admin.
-* 
+* Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
+* If the user has the is_admin toggle set to true, then all recipes are displayed on their profile.
+* This includes all recipes created by other users, with edit and delete buttons.
+* This enabled the admin to edit or delete any recipe.
 
 ### Full Testing
-[Click here](static/docs/TESTING.md) to view the full testing steps that were completed on every device and browser, and screenshots of testing.
+[Click here to view the full testing steps](static/docs/TESTING.md) that were completed on every device and browser, and screenshots of testing.
 
 ### Solved Bugs
 1. When I added the confirm deletion modal into categories.html, it wasn't taking the category I'd clicked on to delete, it was just deleting the first category in the list.
@@ -417,6 +420,12 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * I attempted to move them to the right of the headers, but this resulted in the buttons not connecting to their cocktail recipes.
     * Instead, I moved them into the expanded section, so now the user can click on the header to expand, and depending on the contents of the recipe, can then decide to delete or edit.
     * This makes more sense than where I had them before, as the user won't know if they want to edit or delete a recipe until they've looked at it.
+3. The favicon files were throwing up errors in the console.
+    * I checked that the files I was including were correct, accoring to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
+    * I then did a google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
+    * I added `crossorigin="use-credentials"` to my link for the webmanifest file, which fixed the console errors.
+
+    ![Favicon error](static/docs/img/favicon.png)
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
@@ -454,6 +463,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Autoprefixer CSS online](https://autoprefixer.github.io/): To aid in the CSS prefixing.
 * [Materialize](https://materializecss.com/): To create a beautiful responsive site, without taking too much time.
 * [Code Institute](https://codeinstitute.net/): For the select form element validation.
+* [This article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) for helping me fix bug #3.
 
 ### Content
 * All content was created by [Abi Harrison](https://github.com/Abibubble).
