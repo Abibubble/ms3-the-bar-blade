@@ -22,7 +22,10 @@ mongo = PyMongo(app)
 @app.route("/homepage")
 def homepage():
     recipes = list(mongo.db.recipes.find())
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except:
+        user = mongo.db.users.find()
     categories = mongo.db.categories.find()
     return render_template(
         "homepage.html", recipes=recipes, categories=categories, user=user)
