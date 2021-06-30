@@ -26,6 +26,16 @@ def homepage():
         user = mongo.db.users.find_one({"username": session["user"]})
     except BaseException:
         user = mongo.db.users.find()
+    for recipe in recipes:
+        try:
+            username = mongo.db.users.find_one(
+                {"_id": ObjectId(recipe["user_id"])})["username"]
+            category_name = mongo.db.categories.find_one(
+                {"_id": ObjectId(recipe["category_id"])})["category_name"]
+            recipe["user_id"] = username
+            recipe["category_id"] = category_name
+        except BaseException:
+            pass
     categories = mongo.db.categories.find()
     return render_template(
         "homepage.html", recipes=recipes, categories=categories, user=user)
@@ -96,8 +106,19 @@ def profile(username):
     # Get the user's username from the database
     user = mongo.db.users.find_one({"username": session["user"]})
     username = user["username"]
+    user_id = user["_id"]
 
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find({"user_id": ObjectId(user_id)}))
+    for recipe in recipes:
+        try:
+            username = mongo.db.users.find_one(
+                {"_id": ObjectId(recipe["user_id"])})["username"]
+            category_name = mongo.db.categories.find_one(
+                {"_id": ObjectId(recipe["category_id"])})["category_name"]
+            recipe["user_id"] = username
+            recipe["category_id"] = category_name
+        except BaseException:
+            pass
 
     if session["user"]:
         return render_template(
@@ -130,7 +151,7 @@ def add_cocktail():
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
-            "user_id": user["_id"]
+            "user_id": ObjectId(user["_id"])
         }
         mongo.db.recipes.insert_one(cocktail)
         flash("Cocktail successfully added!")
@@ -145,13 +166,13 @@ def add_cocktail():
 def edit_cocktail(recipe_id):
     if request.method == "POST":
         cocktail = {
-            "category_name": request.form.get("category_name"),
+            "category_id": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_list": request.form.get("recipe_list"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
-            "added_by": session["user"]
+            "user_id": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, cocktail)
         flash("Cocktail successfully edited!")

@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <ul class="collapsible">
-                    {% for recipe in recipes if session.user|lower == recipe.added_by|lower or user["is_admin"] %}
+                    {% for recipe in recipes %}
                         <li class="card-panel purple darken-4 collapsible-li">
                             <div class="collapsible-header purple darken-4">
                                 <div class="row profile-row">
