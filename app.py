@@ -64,7 +64,8 @@ def register():
 
         register = {
             "username": username,
-            "password": generate_password_hash(password)
+            "password": generate_password_hash(password),
+            "is-admin": False
         }
         mongo.db.users.insert_one(register)
 
@@ -108,7 +109,10 @@ def profile(username):
     username = user["username"]
     user_id = user["_id"]
 
-    recipes = list(mongo.db.recipes.find({"user_id": ObjectId(user_id)}))
+    if user["is_admin"]:
+        recipes = list(mongo.db.recipes.find())
+    else:
+        recipes = list(mongo.db.recipes.find({"user_id": ObjectId(user_id)}))
     for recipe in recipes:
         try:
             username = mongo.db.users.find_one(
@@ -122,7 +126,7 @@ def profile(username):
 
     if session["user"]:
         return render_template(
-            "profile.html", username=username, recipes=recipes, user=user)
+            "profile.html", recipes=recipes, user=user)
 
     return redirect(url_for("login"))
 
