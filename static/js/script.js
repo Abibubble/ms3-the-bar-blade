@@ -36,26 +36,24 @@ $(document).ready(function(){ // jQuery sections from Materalize
 
 // -------------------------------------------------------------------- Add Ingredients
 
-let ingredientsCounter = 2;
-let limitOfIngredients = 20;
+let counter = 2;
+let max = 20;
 
-const newIngredient = `<div class="input-field col s11 offset-s1">
+let newIngredient = `<div class="row" id="addIngredient-*"><div class="input-field col s10 m8 offset-s1 offset-m2">
 <i class="fas fa-mortar-pestle prefix"></i>
 <input id="recipe_list" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
 <label for="recipe_list"></label>
 <a class="waves-effect waves-light btn" onClick="deleteIngredient(this)" data-ingredient="ingredient-*"><i class="fas fa-times"></i> Remove</a>
-</div>`;
+</div></div>`;
 
 function addIngredient(add) {
-    if (ingredientsCounter === limitOfIngredients) {
-        alert("You have reached the limit of adding " + ingredientsCounter + " ingredients");
-    }
-    else {
-        console.log("Adding Ingredient")
-        let newDiv = document.createElement('div');
-        newDiv.innerHTML = newIngredient.replaceAll("*", ingredientsCounter);
-        document.getElementById(add).appendChild(newDiv);
-        ingredientsCounter++;
+    if (counter === max) {
+        alert("You have reached the maximum amount of ingredients");
+    } else {
+        console.log("Adding Ingredient");
+        newIngredient = newIngredient.replaceAll("*", counter);
+        document.getElementById(add).insertAdjacentHTML('beforebegin', newIngredient);
+        counter++;
     }
 };
 
