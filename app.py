@@ -24,7 +24,7 @@ def homepage():
     recipes = list(mongo.db.recipes.find())
     try:
         user = mongo.db.users.find_one({"username": session["user"]})
-    except:
+    except BaseException:
         user = mongo.db.users.find()
     categories = mongo.db.categories.find()
     return render_template(
