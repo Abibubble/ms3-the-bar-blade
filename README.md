@@ -122,7 +122,8 @@ I wanted to create a website linked to a database, which allows users to login, 
 * Unfortunately there isn't much control about what images users upload. If any inappropriate images are added, the any admin user has the ability to edit the image.
 
 ### Wireframes
-[Here are the wireframes for desktop, mobile and tablet for this project](static/docs/wireframes.pdf).
+* [Wireframes for desktop, mobile and tablet for this project](static/docs/wireframes.pdf).
+* [Database schema for this project](static/docs/database.pdf).
 
 ### Features
 * Create, Edit and Delete a cocktail recipe.
@@ -203,6 +204,7 @@ MongoDB was used to store data for this site in a database. The data has been se
 | _id | ObjectId |
 | username | string |
 | password | string |
+| is_admin | boolean |
 
 | Recipes |    |    |
 |---|---|---|
@@ -420,7 +422,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * I attempted to move them to the right of the headers, but this resulted in the buttons not connecting to their cocktail recipes.
     * Instead, I moved them into the expanded section, so now the user can click on the header to expand, and depending on the contents of the recipe, can then decide to delete or edit.
     * This makes more sense than where I had them before, as the user won't know if they want to edit or delete a recipe until they've looked at it.
-3. The favicon files were throwing up errors in the console.
+3. The favicon files were throwing up errors in the console, as shown below.
     * I checked that the files I was including were correct, accoring to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
     * I then did a google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
     * I added `crossorigin="use-credentials"` to my link for the webmanifest file, which fixed the console errors.
