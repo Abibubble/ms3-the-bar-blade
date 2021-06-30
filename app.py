@@ -65,7 +65,7 @@ def register():
         register = {
             "username": username,
             "password": generate_password_hash(password),
-            "is-admin": False
+            "is_admin": False
         }
         mongo.db.users.insert_one(register)
 
@@ -115,18 +115,18 @@ def profile(username):
         recipes = list(mongo.db.recipes.find({"user_id": ObjectId(user_id)}))
     for recipe in recipes:
         try:
-            username = mongo.db.users.find_one(
+            user_name = mongo.db.users.find_one(
                 {"_id": ObjectId(recipe["user_id"])})["username"]
             category_name = mongo.db.categories.find_one(
                 {"_id": ObjectId(recipe["category_id"])})["category_name"]
-            recipe["user_id"] = username
+            recipe["user_id"] = user_name
             recipe["category_id"] = category_name
         except BaseException:
             pass
 
     if session["user"]:
         return render_template(
-            "profile.html", recipes=recipes, user=user)
+            "profile.html", recipes=recipes, user=user, username=username)
 
     return redirect(url_for("login"))
 
