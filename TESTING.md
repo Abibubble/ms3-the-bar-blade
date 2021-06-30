@@ -70,65 +70,66 @@
 
 A large amount of testing was done to ensure that all pages were displayed, and all functionality worked as it should. Friends, family members, and other developers were asked to review the site and documentation to point out any bugs and/or user experience issues that they came across.
 
-On every device and browser listed above, I tested the following:
-
 &#128100; <-- Logged In Only
-&#9940;
+
 &#128272; <-- Admin only access
+
 &#128683; <-- Logged out only
+
+On every device and browser listed above, I tested the following:
 
 ## Navigation Bar
 * Click the Logo to take the user to the Home page from the Home page.
-* Click the Logo to take the user to the Home page from the Profile page.
-* Click the Logo to take the user to the Home page from the Add Cocktail page.
-* Click the Logo to take the user to the Home page from the Manage Categories page (admin only).
-* Click the Logo to take the user to the Home page from the Log In page (logged out only).
-* Click the Logo to take the user to the Home page from the Register page (logged out only).
+* Click the Logo to take the user to the Home page from the Profile page. &#128100;
+* Click the Logo to take the user to the Home page from the Add Cocktail page. &#128100;
+* Click the Logo to take the user to the Home page from the Manage Categories page. &#128272;
+* Click the Logo to take the user to the Home page from the Log In page. &#128683;
+* Click the Logo to take the user to the Home page from the Register page. &#128683;
 
 * Click the Home button to take the user to the Home page from the Home page.
-* Click the Home button to take the user to the Home page from the Profile page.
-* Click the Home button to take the user to the Home page from the Add Cocktail page.
-* Click the Home button to take the user to the Home page from the Manage Categories page (admin only).
-* Click the Home button to take the user to the Home page from the Log In page (logged out only).
-* Click the Home button to take the user to the Home page from the Register page (logged out only).
+* Click the Home button to take the user to the Home page from the Profile page. &#128100;
+* Click the Home button to take the user to the Home page from the Add Cocktail page. &#128100;
+* Click the Home button to take the user to the Home page from the Manage Categories page. &#128272;
+* Click the Home button to take the user to the Home page from the Log In page. &#128683;
+* Click the Home button to take the user to the Home page from the Register page. &#128683;
 
-* Click the Profile button to take the user to the Profile page from the Home page (logged in only).
-* Click the Profile button to take the user to the Profile page from the Profile page (logged in only).
-* Click the Profile button to take the user to the Profile page from the Add Cocktail page (logged in only).
-* Click the Profile button to take the user to the Profile page from the Manage Categories page (admin only) (logged in only).
+* Click the Profile button to take the user to the Profile page from the Home page. &#128100;
+* Click the Profile button to take the user to the Profile page from the Profile page. &#128100;
+* Click the Profile button to take the user to the Profile page from the Add Cocktail page. &#128100;
+* Click the Profile button to take the user to the Profile page from the Manage Categories page. &#128272;
 
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Home page (logged in only).
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page (logged in only).
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Add Cocktail page (logged in only).
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Manage Categories page (admin only) (logged in only).
+* Click the Add Cocktail button to take the user to the Add Cocktail page from the Home page. &#128100;
+* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page. &#128100;
+* Click the Add Cocktail button to take the user to the Add Cocktail page from the Add Cocktail page. &#128100;
+* Click the Add Cocktail button to take the user to the Add Cocktail page from the Manage Categories page. &#128272;
 
-* Click the Manage Categories button to take the user to the Manage Categories page from the Home page (admin only).
-* Click the Manage Categories button to take the user to the Manage Categories page from the Profile page (admin only).
-* Click the Manage Categories button to take the user to the Manage Categories page from the Add Cocktail page (admin only).
-* Click the Manage Categories button to take the user to the Manage Categories page from the Manage Categories page (admin only).
+* Click the Manage Categories button to take the user to the Manage Categories page from the Home page. &#128272;
+* Click the Manage Categories button to take the user to the Manage Categories page from the Profile page. &#128272;
+* Click the Manage Categories button to take the user to the Manage Categories page from the Add Cocktail page. &#128272;
+* Click the Manage Categories button to take the user to the Manage Categories page from the Manage Categories page. &#128272;
 
 * Click the Log Out button to log the user out and take them to the Log In page from the Home page.
-* Click the Log Out button to log the user out and take them to the Log In page from the Profile page.
-* Click the Log Out button to log the user out and take them to the Log In page from the Add Cocktail page.
-* Click the Log Out button to log the user out and take them to the Log In page from the Manage Categories page (admin only).
+* Click the Log Out button to log the user out and take them to the Log In page from the Profile page. &#128100;
+* Click the Log Out button to log the user out and take them to the Log In page from the Add Cocktail page. &#128100;
+* Click the Log Out button to log the user out and take them to the Log In page from the Manage Categories page. &#128272;
 * Click the Log Out button to log the user out and take them to the Log In page from the Log In page.
 * Click the Log Out button to log the user out and take them to the Log In page from the Register page.
 
-* Click the Log In button to take the user to the Log In page from the Home page (logged out only).
-* Click the Log In button to take the user to the Log In page from the Log In page (logged out only).
-* Click the Log In button to take the user to the Log In page from the Register page (logged out only).
+* Click the Log In button to take the user to the Log In page from the Home page. &#128683;
+* Click the Log In button to take the user to the Log In page from the Log In page. &#128683;
+* Click the Log In button to take the user to the Log In page from the Register page. &#128683;
 
-* Click the Register button to take the user to the Register page from the Home page (logged out only).
-* Click the Register button to take the user to the Register page from the Log In page (logged out only).
-* Click the Register button to take the user to the Register page from the Register page (logged out only).
+* Click the Register button to take the user to the Register page from the Home page. &#128683;
+* Click the Register button to take the user to the Register page from the Log In page. &#128683;
+* Click the Register button to take the user to the Register page from the Register page. &#128683;
 
 ---
 
 ## Internal Navigation
-* Click the Edit Cocktail button to take the user to the Edit Cocktail page from the Profile page (logged in only).
-* Click the Add Category button to take the user to the Add Category page from the Manage Categories page (admin only).
-* Click the Edit Category button to take the user to the Edit Category page from the Manage Categories page (admin only).
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page (logged in only).
+* Click the Edit Cocktail button to take the user to the Edit Cocktail page from the Profile page. &#128100;
+* Click the Add Category button to take the user to the Add Category page from the Manage Categories page. &#128272;
+* Click the Edit Category button to take the user to the Edit Category page from the Manage Categories page. &#128272;
+* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page. &#128100;
 
 ---
 
