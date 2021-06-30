@@ -113,12 +113,13 @@ def logout():
 
 @app.route("/add_cocktail", methods=["GET", "POST"])
 def add_cocktail():
+    user = mongo.db.users.find_one({"username": session["user"]})
+
     if request.method == "POST":
         category_name = request.form.get("category_name")
         category = mongo.db.categories.find_one(
             {"category_name": category_name})
-        user = mongo.db.users.find_one({"username": session["user"]})
-        print(user)
+
         cocktail = {
             "category_id": category["_id"],
             "recipe_name": request.form.get("recipe_name"),
@@ -133,7 +134,8 @@ def add_cocktail():
         return redirect(url_for("homepage"))
 
     categories = mongo.db.categories.find().sort("category_id", 1)
-    return render_template("add_cocktail.html", categories=categories)
+    return render_template(
+        "add_cocktail.html", categories=categories, user=user)
 
 
 @app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
@@ -151,10 +153,11 @@ def edit_cocktail(recipe_id):
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, cocktail)
         flash("Cocktail successfully edited!")
 
+    user = mongo.db.users.find_one({"username": session["user"]})
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_cocktail.html", categories=categories, recipe=recipe)
+        "edit_cocktail.html", categories=categories, recipe=recipe, user=user)
 
 
 @app.route("/delete_cocktail/<recipe_id>")
@@ -166,8 +169,9 @@ def delete_cocktail(recipe_id):
 
 @app.route("/get_categories")
 def get_categories():
+    user = mongo.db.users.find_one({"username": session["user"]})
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    return render_template("categories.html", categories=categories, user=user)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -179,6 +183,7 @@ def search():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    user = mongo.db.users.find_one({"username": session["user"]})
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -186,11 +191,12 @@ def add_category():
         mongo.db.categories.insert_one(category)
         flash("New category added")
         return redirect(url_for("get_categories"))
-    return render_template("add_category.html")
+    return render_template("add_category.html", user=user)
 
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    user = mongo.db.users.find_one({"username": session["user"]})
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -200,7 +206,7 @@ def edit_category(category_id):
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template("edit_category.html", category=category, user=user)
 
 
 @app.route("/delete_category/<category_id>")
