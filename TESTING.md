@@ -17,10 +17,6 @@
     * [Mobile](#mobile)
     * [Responsinator](#responsinator)
 
-&#128100; <-- Logged In Only
-
-&#9940; <-- Admin only access
-
 #### Desktop / Laptop
 1. Google Chrome
     * All tested and working correctly.
@@ -80,48 +76,48 @@ On every device and browser listed above, I tested the following:
 
 ## Navigation Bar
 * Click the Logo to take the user to the Home page from the Home page.
-* Click the Logo to take the user to the Home page from the Profile page. &#128100;
-* Click the Logo to take the user to the Home page from the Add Cocktail page. &#128100;
-* Click the Logo to take the user to the Home page from the Manage Categories page. &#128272;
-* Click the Logo to take the user to the Home page from the Log In page. &#128683;
-* Click the Logo to take the user to the Home page from the Register page. &#128683;
+* &#128100; Click the Logo to take the user to the Home page from the Profile page.
+* &#128100; Click the Logo to take the user to the Home page from the Add Cocktail page.
+* &#128272; Click the Logo to take the user to the Home page from the Manage Categories page.
+* &#128683; Click the Logo to take the user to the Home page from the Log In page.
+* &#128683; Click the Logo to take the user to the Home page from the Register page.
 
 * Click the Home button to take the user to the Home page from the Home page.
-* Click the Home button to take the user to the Home page from the Profile page. &#128100;
-* Click the Home button to take the user to the Home page from the Add Cocktail page. &#128100;
-* Click the Home button to take the user to the Home page from the Manage Categories page. &#128272;
-* Click the Home button to take the user to the Home page from the Log In page. &#128683;
-* Click the Home button to take the user to the Home page from the Register page. &#128683;
+* &#128100; Click the Home button to take the user to the Home page from the Profile page.
+* &#128100; Click the Home button to take the user to the Home page from the Add Cocktail page.
+* &#128272; Click the Home button to take the user to the Home page from the Manage Categories page.
+* &#128683; Click the Home button to take the user to the Home page from the Log In page.
+* &#128683; Click the Home button to take the user to the Home page from the Register page.
 
-* Click the Profile button to take the user to the Profile page from the Home page. &#128100;
-* Click the Profile button to take the user to the Profile page from the Profile page. &#128100;
-* Click the Profile button to take the user to the Profile page from the Add Cocktail page. &#128100;
-* Click the Profile button to take the user to the Profile page from the Manage Categories page. &#128272;
+* &#128100; Click the Profile button to take the user to the Profile page from the Home page.
+* &#128100; Click the Profile button to take the user to the Profile page from the Profile page.
+* &#128100; Click the Profile button to take the user to the Profile page from the Add Cocktail page.
+* C&#128272; lick the Profile button to take the user to the Profile page from the Manage Categories page.
 
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Home page. &#128100;
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page. &#128100;
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Add Cocktail page. &#128100;
-* Click the Add Cocktail button to take the user to the Add Cocktail page from the Manage Categories page. &#128272;
+* &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Home page.
+* &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Profile page.
+* &#128100; Click the Add Cocktail button to take the user to the Add Cocktail page from the Add Cocktail page.
+* &#128272; Click the Add Cocktail button to take the user to the Add Cocktail page from the Manage Categories page.
 
-* Click the Manage Categories button to take the user to the Manage Categories page from the Home page. &#128272;
-* Click the Manage Categories button to take the user to the Manage Categories page from the Profile page. &#128272;
-* Click the Manage Categories button to take the user to the Manage Categories page from the Add Cocktail page. &#128272;
-* Click the Manage Categories button to take the user to the Manage Categories page from the Manage Categories page. &#128272;
+* &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Home page.
+* &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Profile page.
+* &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Add Cocktail page.
+* &#128272; Click the Manage Categories button to take the user to the Manage Categories page from the Manage Categories page.
 
-* Click the Log Out button to log the user out and take them to the Log In page from the Home page.
-* Click the Log Out button to log the user out and take them to the Log In page from the Profile page. &#128100;
-* Click the Log Out button to log the user out and take them to the Log In page from the Add Cocktail page. &#128100;
-* Click the Log Out button to log the user out and take them to the Log In page from the Manage Categories page. &#128272;
-* Click the Log Out button to log the user out and take them to the Log In page from the Log In page.
-* Click the Log Out button to log the user out and take them to the Log In page from the Register page.
+* &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Home page.
+* &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Profile page.
+* &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Add Cocktail page.
+* &#128272; Click the Log Out button to log the user out and take them to the Log In page from the Manage Categories page.
+* &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Log In page.
+* &#128100; Click the Log Out button to log the user out and take them to the Log In page from the Register page.
 
-* Click the Log In button to take the user to the Log In page from the Home page. &#128683;
-* Click the Log In button to take the user to the Log In page from the Log In page. &#128683;
-* Click the Log In button to take the user to the Log In page from the Register page. &#128683;
+* &#128683; Click the Log In button to take the user to the Log In page from the Home page.
+* &#128683; Click the Log In button to take the user to the Log In page from the Log In page.
+* &#128683; Click the Log In button to take the user to the Log In page from the Register page.
 
-* Click the Register button to take the user to the Register page from the Home page. &#128683;
-* Click the Register button to take the user to the Register page from the Log In page. &#128683;
-* Click the Register button to take the user to the Register page from the Register page. &#128683;
+* &#128683; Click the Register button to take the user to the Register page from the Home page.
+* &#128683; Click the Register button to take the user to the Register page from the Log In page.
+* &#128683; Click the Register button to take the user to the Register page from the Register page.
 
 ---
 
