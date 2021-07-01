@@ -2,11 +2,27 @@
 
 ## Contents
 
-* [Navigation Bar](#navigation-bar)
+* [Devices and Browsers](#devices-and-browsers)
+* [Icon Key]((#icon-key))
+* [Links and Navigation](#links-and-navigation)
+    * [Navigation Bar](#navigation-bar)
+    * [Internal Navigation](#internal-navigation)
+    * [Footer](#footer)
+    * [Modals](#modals)
 * [Styling and Layout](#styling-and-layout)
-* [Pages](#pages)
+* [User Access](#user-access)
 * [Functions](#functions)
-    * [](#)
+    * [Register](#register)
+    * [Log In](#log-in)
+    * [Log Out](#log-out)
+    * [Add Cocktail](#add-cocktail)
+    * [Edit Cocktail](#edit-cocktail)
+    * [Delete Cocktail](#delete-cocktail)
+    * [Add Category](#add-category)
+    * [Edit Category](#edit-category)
+    * [Delete Category](#delete-category)
+    * [Search Recipes](#search-recipes)
+* [Database](#database)
 * [Responsive Design](#responsive-design)
     * [Mobile](#mobile)
     * [Tablet](#tablet)
@@ -17,7 +33,8 @@
     * [Mobile](#mobile)
     * [Responsinator](#responsinator)
 
-#### Desktop / Laptop
+## Devices and Browsers
+### Desktop / Laptop
 1. Google Chrome
     * All tested and working correctly.
 
@@ -30,11 +47,11 @@
 4. Safari
     * All tested and working correctly.
 
-#### Tablet
+### Tablet
 1. Safari
     * All tested and working correctly.
 
-#### Mobile
+### Mobile
 1. Google Chrome
     * All tested and working correctly.
 
@@ -44,7 +61,7 @@
 3. Samsung Internet
     * All tested and working correctly.
 
-### Further Testing
+### Full devices and browsers
 * The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge, Safari and Samsung Internet browsers.
 * Testing was not done on Internet Explorer due to it being depreciated in favour of Microsoft Edge.
 * The website was viewed on a variety of devices, including:
@@ -66,6 +83,8 @@
 
 A large amount of testing was done to ensure that all pages were displayed, and all functionality worked as it should. Friends, family members, and other developers were asked to review the site and documentation to point out any bugs and/or user experience issues that they came across.
 
+## Icon key
+
 &#128100; <-- Logged In Only
 
 &#128272; <-- Admin only access
@@ -74,7 +93,8 @@ A large amount of testing was done to ensure that all pages were displayed, and 
 
 On every device and browser listed above, I tested the following:
 
-## Navigation Bar
+## Links and Navigation
+### Navigation Bar
 * Click the Logo to take the user to the Home page from the Home page.
 * &#128100; Click the Logo to take the user to the Home page from the Profile page.
 * &#128100; Click the Logo to take the user to the Home page from the Add Cocktail page.
@@ -128,7 +148,7 @@ On every device and browser listed above, I tested the following:
 
 ---
 
-## Internal Navigation
+### Internal Navigation
 * &#128100; Click the Edit Cocktail button to take the user to the Edit Cocktail page from the Profile page.
 * &#128272; Click the Add Category button to take the user to the Add Category page from the Manage Categories page.
 * &#128272; Click the Edit Category button to take the user to the Edit Category page from the Manage Categories page.
@@ -136,7 +156,7 @@ On every device and browser listed above, I tested the following:
 
 ---
 
-## Footer
+### Footer
 * Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Home page.
 * &#128100; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Profile page.
 * &#128100; Click the Drink Aware link to take the user to the Drink Aware site in a new tab from the Add Cocktail page.
@@ -149,7 +169,7 @@ On every device and browser listed above, I tested the following:
 
 ---
 
-## Modals
+### Modals
 * &#128100; The Delete Cocktail modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
 * &#128272; The Delete Category modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
 * &#128100; The Delete Profile modal is visible in front of all other items on the screen, and clearly displays the Cancel and Delete buttons.
@@ -242,7 +262,7 @@ On every device and browser listed above, I tested the following:
 * Once submitted, it deletes the category from the database, so the category can no longer be used to create new cocktails.
 * The category will be permanently deleted from the database.
 
-### Search recipes
+### Search Recipes
 * Accessible by all users
 * Searches through database for what the user has entered into the search box.
 * It using the cocktail recipe name, ingredients list, and category to search within.
@@ -250,6 +270,14 @@ On every device and browser listed above, I tested the following:
 * The reset button then clears the search bar, and returns the homepage to it's standard state.
 
 ---
+
+## Database
+* When the `category_id` is referred to, the category name should display.
+* When the `user_id` is referred to, the username should display.
+* When the user adds a cocktail, the category name should be stored by category_id.
+* If the category or user is deleted, the phrase 'User/Category has been deleted' should display.
+
+--
 
 ## Responsive Design
 ### Mobile
@@ -317,6 +345,8 @@ On every device and browser listed above, I tested the following:
 
 ---
 
+## Images
+### Desktop and Laptop
 #### Chrome
 ![Home page](static/docs/testing/home-d-chrome.jpg)
 ![Log In page](static/docs/testing/log-in-d-chrome.jpg)
