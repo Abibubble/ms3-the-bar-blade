@@ -2,8 +2,8 @@
 
 ## Contents
 
+* [Icon Key](#icon-key)
 * [Devices and Browsers](#devices-and-browsers)
-* [Icon Key]((#icon-key))
 * [Links and Navigation](#links-and-navigation)
     * [Navigation Bar](#navigation-bar)
     * [Internal Navigation](#internal-navigation)
@@ -32,6 +32,14 @@
     * [Tablet](#tablet)
     * [Mobile](#mobile)
     * [Responsinator](#responsinator)
+
+## Icon key
+
+&#128100; <-- Logged In Only
+
+&#128272; <-- Admin only access
+
+&#128683; <-- Logged out only
 
 ## Devices and Browsers
 ### Desktop / Laptop
@@ -82,14 +90,6 @@
     * xBox One
 
 A large amount of testing was done to ensure that all pages were displayed, and all functionality worked as it should. Friends, family members, and other developers were asked to review the site and documentation to point out any bugs and/or user experience issues that they came across.
-
-## Icon key
-
-&#128100; <-- Logged In Only
-
-&#128272; <-- Admin only access
-
-&#128683; <-- Logged out only
 
 On every device and browser listed above, I tested the following:
 
