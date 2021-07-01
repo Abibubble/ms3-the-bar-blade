@@ -69,11 +69,13 @@ function addIngredient(add) {
 
 function removeIngredient(el) {
     let elRemove = el.getAttribute("data-ingredient"); // find the data attribute, which is the same as the id
-    console.log(elRemove);
-    console.log(`remove-button-${counter - 1}`);
-    let siteRemoveButton = document.getElementById(`remove-button-${counter - 1}`); // find the relevant remove button
-    console.log("siteRemoveButton = " + siteRemoveButton);
-    if (elRemove = "add-ingredient-1") { // if it's the original ingredient box
+    console.log("elRemove = " + elRemove);
+    currentElCounter = elRemove.substr(15, 1);
+    console.log(currentElCounter);
+    let siteRemoveButton = document.getElementById(`remove-button-${counter - 1}`);
+    console.log("siteRemoveButton = ");
+    console.log(siteRemoveButton);
+    if (elRemove == "add-ingredient-2") { // if it's the original ingredient box
         siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the add button back
     }
     siteRemoveButton.remove();
