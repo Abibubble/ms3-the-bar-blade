@@ -48,7 +48,7 @@ let newIngredient = `<div class="row" id="add-ingredient-*">
 </div>
 </div>`;
 
-let removeButton = `<a class="waves-effect waves-light btn red darken-4" onClick="removeIngredient(this)" data-ingredient="add-ingredient-*" id="remove-button"><i class="fas fa-times"></i> Remove</a>`;
+let removeButton = `<a class="waves-effect waves-light btn red darken-4" onClick="removeIngredient(this)" data-ingredient="add-ingredient-*" id="remove-button-*"><i class="fas fa-times"></i> Remove</a>`;
 let addButton = `<a class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-1');" id="add-button">Add Another
 Ingredient</a>`;
 
@@ -68,14 +68,17 @@ function addIngredient(add) {
 };
 
 function removeIngredient(el) {
-    let elRemove = el.getAttribute("data-ingredient");
-    let siteRemoveButton = document.getElementById("remove-button");
-    if (elRemove = "add-ingredient-1") {
-        siteRemoveButton.insertAdjacentHTML('afterend', addButton);
+    let elRemove = el.getAttribute("data-ingredient"); // find the data attribute, which is the same as the id
+    console.log(elRemove);
+    console.log(`remove-button-${counter - 1}`);
+    let siteRemoveButton = document.getElementById(`remove-button-${counter - 1}`); // find the relevant remove button
+    console.log("siteRemoveButton = " + siteRemoveButton);
+    if (elRemove = "add-ingredient-1") { // if it's the original ingredient box
+        siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the add button back
     }
-    siteRemoveButton.insertAdjacentHTML('beforebegin', addButton);
     siteRemoveButton.remove();
     document.getElementById(elRemove).remove();
+    counter--;
 }
 
 // -------------------------------------------------------------------- Copyright
