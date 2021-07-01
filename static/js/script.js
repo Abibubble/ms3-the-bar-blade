@@ -39,29 +39,44 @@ $(document).ready(function(){ // jQuery sections from Materalize
 let counter = 2;
 let max = 20;
 
-let newIngredient = `<div class="row" id="addIngredient-*">
+let newIngredient = `<div class="row" id="add-ingredient-*">
 <div class="input-field col s10 m8 offset-s1 offset-m2">
 <i class="fas fa-mortar-pestle prefix"></i>
 <input id="recipe_list-*" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
 <label for="recipe_list-*">Ingredients</label>
-<a class="waves-effect waves-light btn purple" onclick="addIngredient('addIngredient-*');" id="add-button">Add Another Ingredient</a> 
+<a class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-*');" id="add-button">Add Another Ingredient</a> 
 </div>
 </div>`;
 
-let removeButton = `<a class="waves-effect waves-light btn" onClick="deleteIngredient(this)" data-ingredient="ingredient-*"><i class="fas fa-times"></i> Remove</a>`;
+let removeButton = `<a class="waves-effect waves-light btn red darken-4" onClick="removeIngredient(this)" data-ingredient="add-ingredient-*" id="remove-button"><i class="fas fa-times"></i> Remove</a>`;
+let addButton = `<a class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-1');" id="add-button">Add Another
+Ingredient</a>`;
 
 function addIngredient(add) {
+    let oldAddButton = document.getElementById("add-button"); // Find original add button
     if (counter === max) {
         alert("You have reached the maximum amount of ingredients");
     } else {
         console.log("Adding Ingredient");
-        let oldAddButton = document.getElementById("add-button");
-        oldAddButton.remove();
-        newIngredient = newIngredient.replaceAll("*", counter);
-        document.getElementById(add).insertAdjacentHTML('beforebegin', newIngredient);
+        removeButton = removeButton.replaceAll("*", counter); // relace * in remove button
+        oldAddButton.insertAdjacentHTML('beforebegin', removeButton); // put the remove button in front of the add button
+        oldAddButton.remove(); // remove old add button
+        newIngredient = newIngredient.replaceAll("*", counter); // Replace * in new ingredient
+        document.getElementById(add).insertAdjacentHTML('beforebegin', newIngredient); // Put the new ingredient in front of the clicked button
         counter++;
     }
 };
+
+function removeIngredient(el) {
+    let elRemove = el.getAttribute("data-ingredient");
+    let siteRemoveButton = document.getElementById("remove-button");
+    if (elRemove = "add-ingredient-1") {
+        siteRemoveButton.insertAdjacentHTML('afterend', addButton);
+    }
+    siteRemoveButton.insertAdjacentHTML('beforebegin', addButton);
+    siteRemoveButton.remove();
+    document.getElementById(elRemove).remove();
+}
 
 // -------------------------------------------------------------------- Copyright
 

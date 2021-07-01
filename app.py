@@ -257,7 +257,11 @@ def delete_account(username):
 
 @app.errorhandler(404)
 def not_found(error):
-    return render_template('404.html', error=error), 404
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        user = mongo.db.users.find()
+    return render_template('404.html', error=error, user=user), 404
 
 
 if __name__ == "__main__":
