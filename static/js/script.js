@@ -39,18 +39,24 @@ $(document).ready(function(){ // jQuery sections from Materalize
 let counter = 2;
 let max = 20;
 
-let newIngredient = `<div class="row" id="addIngredient-*"><div class="input-field col s10 m8 offset-s1 offset-m2">
+let newIngredient = `<div class="row" id="addIngredient-*">
+<div class="input-field col s10 m8 offset-s1 offset-m2">
 <i class="fas fa-mortar-pestle prefix"></i>
-<input id="recipe_list" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
-<label for="recipe_list"></label>
-<a class="waves-effect waves-light btn" onClick="deleteIngredient(this)" data-ingredient="ingredient-*"><i class="fas fa-times"></i> Remove</a>
-</div></div>`;
+<input id="recipe_list-*" name="recipe_list" type="text" minlength="5" maxlength="100" class="validate white-text" required>
+<label for="recipe_list-*">Ingredients</label>
+<a class="waves-effect waves-light btn purple" onclick="addIngredient('addIngredient-*');" id="add-button">Add Another Ingredient</a> 
+</div>
+</div>`;
+
+let removeButton = `<a class="waves-effect waves-light btn" onClick="deleteIngredient(this)" data-ingredient="ingredient-*"><i class="fas fa-times"></i> Remove</a>`;
 
 function addIngredient(add) {
     if (counter === max) {
         alert("You have reached the maximum amount of ingredients");
     } else {
         console.log("Adding Ingredient");
+        let oldAddButton = document.getElementById("add-button");
+        oldAddButton.remove();
         newIngredient = newIngredient.replaceAll("*", counter);
         document.getElementById(add).insertAdjacentHTML('beforebegin', newIngredient);
         counter++;
