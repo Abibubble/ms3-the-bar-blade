@@ -3,7 +3,7 @@
 $(document).ready(function(){ // jQuery sections from Materalize
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
-    $('select').formSelect();
+    $('select').formSelect(); 
 
     validateMaterializeSelect(); // jQuery Select validation from the Code Institute task manager mini-project
     function validateMaterializeSelect() {
@@ -58,13 +58,13 @@ function addIngredient(add) {
         alert("You have reached the maximum amount of ingredients");
     } else {
         console.log("Adding Ingredient");
-        removeButton = removeButton.replaceAll("*", counter); // relace * in remove button
-        oldAddButton.insertAdjacentHTML('beforebegin', removeButton); // put the remove button in front of the add button
+        let thisRemoveButton = removeButton.replaceAll("*", counter); // relace * in remove button
+        oldAddButton.insertAdjacentHTML('beforebegin', thisRemoveButton); // put the remove button in front of the add button
         oldAddButton.remove(); // remove old add button
-        newIngredient = newIngredient.replaceAll("*", counter); // Replace * in new ingredient
-        document.getElementById(add).insertAdjacentHTML('beforebegin', newIngredient); // Put the new ingredient in front of the clicked button
-        counter++;
+        let thisNewIngredient = newIngredient.replaceAll("*", counter); // Replace * in new ingredient
+        document.getElementById(add).insertAdjacentHTML('beforebegin', thisNewIngredient); // Put the new ingredient in front of the clicked button
     }
+    counter++;
 };
 
 function removeIngredient(el) {
@@ -72,15 +72,16 @@ function removeIngredient(el) {
     console.log("elRemove = " + elRemove);
     currentElCounter = elRemove.substr(15, 1);
     console.log(currentElCounter);
-    let siteRemoveButton = document.getElementById(`remove-button-${counter - 1}`);
+    let siteRemoveButton = document.getElementById(`remove-button-${currentElCounter}`);
     console.log("siteRemoveButton = ");
     console.log(siteRemoveButton);
-    if (elRemove == "add-ingredient-2") { // if it's the original ingredient box
+    if (currentElCounter == "2") { // if it's going back to just the original ingredient box
         siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the add button back
     }
     siteRemoveButton.remove();
     document.getElementById(elRemove).remove();
     counter--;
+    console.log(counter);
 }
 
 // -------------------------------------------------------------------- Copyright
