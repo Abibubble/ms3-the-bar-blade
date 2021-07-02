@@ -433,6 +433,11 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * In my base.html, I changed the `{% if user["is_admin"] %}` to `{% if user %}{% if user["is_admin"] %}` to check if the user was logged in first.
     * I then added a try/except block in my app.py file to try to find the logged in user, but if that wasn't found, to select all users instead.
     * This fixed this bug.
+5. When adding a cocktail, the ingredients add as expected, but if there's more than one additional ingredient, the ingredients won't remove properly.
+    * I used `console.log()` to ensure I was referencing the correct elements.
+    * I discovered that the counter variable wasn't being referenced correctly from the `elRemove` variable.
+    * I created a new variable to find the counter for the clicked remove button.
+    * 
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
