@@ -37,7 +37,7 @@ $(document).ready(function(){ // jQuery sections from Materalize
 // -------------------------------------------------------------------- Add Ingredients
 
 let counter = 2;
-let max = 20;
+let max = 30;
 
 let newIngredient = `<div class="row" id="add-ingredient-*">
 <div class="input-field col s10 m8 offset-s1 offset-m2">
@@ -53,11 +53,11 @@ let addButton = `<a class="waves-effect waves-light btn purple" onclick="addIngr
 Ingredient</a>`;
 
 function addIngredient(add) {
-    let oldAddButton = document.getElementById("add-button"); // Find original add button
     if (counter === max) {
         alert("You have reached the maximum amount of ingredients");
     } else {
         console.log("Adding Ingredient");
+        let oldAddButton = document.getElementById("add-button"); // Find current add button
         let thisRemoveButton = removeButton.replaceAll("*", counter); // relace * in remove button
         oldAddButton.insertAdjacentHTML('beforebegin', thisRemoveButton); // put the remove button in front of the add button
         oldAddButton.remove(); // remove old add button
@@ -69,16 +69,13 @@ function addIngredient(add) {
 
 function removeIngredient(el) {
     let elRemove = el.getAttribute("data-ingredient"); // find the data attribute, which is the same as the id
-    console.log("elRemove = " + elRemove);
-    currentElCounter = elRemove.substr(15, 1);
+    let currentElCounter = elRemove.substr(15, 1);
     console.log(currentElCounter);
     let siteRemoveButton = document.getElementById(`remove-button-${currentElCounter}`);
-    console.log("siteRemoveButton = ");
-    console.log(siteRemoveButton);
-    if (currentElCounter == "2") { // if it's going back to just the original ingredient box
-        siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the add button back
+    if (currentElCounter == "1") { // if it's going back to just the original ingredient box
+        siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the first add button back
     }
-    siteRemoveButton.remove();
+    // siteRemoveButton.remove();
     document.getElementById(elRemove).remove();
     counter--;
     console.log(counter);
