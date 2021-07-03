@@ -84,6 +84,17 @@ function removeIngredient(el) {
     console.log(counter);
 }
 
+// -------------------------------------------------------------------- Show Password
+
+function showPassword() {
+    var input = document.getElementById("password");
+    if (input.type === "password") {
+      input.type = "text";
+    } else {
+      input.type = "password";
+    }
+  }
+
 // -------------------------------------------------------------------- Copyright
 
 function copyrightYear() {
