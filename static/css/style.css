@@ -166,6 +166,7 @@ label {
     text-align: center;
     box-shadow: none;
     -webkit-box-shadow: none;
+    z-index: 1;
 }
 
 .modal-content {
