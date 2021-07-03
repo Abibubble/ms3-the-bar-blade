@@ -33,12 +33,15 @@ def homepage():
         try:
             username = mongo.db.users.find_one(
                 {"_id": ObjectId(recipe["user_id"])})["username"]
+            recipe["user_id"] = username
+        except BaseException:
+            recipe["user_id"] = "undefined"
+        try:
             category_name = mongo.db.categories.find_one(
                 {"_id": ObjectId(recipe["category_id"])})["category_name"]
-            recipe["user_id"] = username
             recipe["category_id"] = category_name
         except BaseException:
-            pass
+            recipe["category_id"] = "undefined"
 
     return render_template(
         "homepage.html", recipes=recipes, categories=categories, user=user)
@@ -119,14 +122,17 @@ def profile(username):
 
     for recipe in recipes:
         try:
-            user_name = mongo.db.users.find_one(
+            username = mongo.db.users.find_one(
                 {"_id": ObjectId(recipe["user_id"])})["username"]
+            recipe["user_id"] = username
+        except BaseException:
+            recipe["user_id"] = "undefined"
+        try:
             category_name = mongo.db.categories.find_one(
                 {"_id": ObjectId(recipe["category_id"])})["category_name"]
-            recipe["user_id"] = user_name
             recipe["category_id"] = category_name
         except BaseException:
-            pass
+            recipe["category_id"] = "undefined"
 
     if session["user"]:
         return render_template(
@@ -248,6 +254,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    mongo.db.recipes.find()
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category deleted")
     return redirect(url_for("get_categories"))
