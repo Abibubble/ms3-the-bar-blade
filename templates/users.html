@@ -25,15 +25,15 @@
                         <div class="row">
                             {% if user.is_admin == false %}
                                 <div class="col s6">
-                                    <a href="{{ url_for('admin_user', user_id=user._id) }}" class="btn-small blue darken-2">Admin On</a>
+                                    <a href="{{ url_for('admin_user', user_id=user._id, user_admin=user.is_admin) }}" class="btn-small blue darken-2">Admin On</a>
                                 </div>
                             {% else %}
                                 <div class="col s6">
-                                    <a href="{{ url_for('admin_user', user_id=user._id) }}" class="btn-small blue darken-2">Admin Off</a>
+                                    <a href="{{ url_for('admin_user', user_id=user._id, user_admin=user.is_admin) }}" class="btn-small blue darken-2">Admin Off</a>
                                 </div>
                             {% endif %}
                             <div class="col s6">
-                                <button onclick="document.getElementById('modal-{{ user._id }}').style.display='block'" class="btn-small red darken-4">Delete</button>
+                                <button onclick="document.getElementById('modal-{{ user._id }}').style.display='block'" class="btn-small red darken-4">Delete User</button>
                                 <div id="modal-{{ user._id }}" class="modal">
                                     <span onclick="document.getElementById('modal-{{ user._id }}').style.display='none'" class="close-icon white" title="Close Modal"><i class="far fa-times-circle"></i></span>
                                     <div class="modal-content" class="purple darken-4">

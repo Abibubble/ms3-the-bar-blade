@@ -284,11 +284,14 @@ def get_users():
 
 @app.route("/admin_user/<user_id>")
 def admin_user(user_id):
-    user = mongo.db.users.find_one({"_id": user_id})
-    if user.is_admin is False:
-        mongo.db.users.update({"_id": user_id}, {"is_admin": True})
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+
+    if user["is_admin"] is False:
+        mongo.db.users.update(
+            {"_id": ObjectId(user_id)}, {"$set": {"is_admin": True}})
     else:
-        mongo.db.users.update({"_id": user_id}, {"is_admin": False})
+        mongo.db.users.update(
+            {"_id": ObjectId(user_id)}, {"$set": {"is_admin": False}})
     flash("User Admin Rights Updated")
     return redirect(url_for("get_users"))
 
