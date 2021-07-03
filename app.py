@@ -19,6 +19,7 @@ mongo = PyMongo(app)
 
 
 def get_recipes(offset=0, per_page=10):
+    # Give pagination information about recipes
     recipes = list(mongo.db.recipes.find())
     return recipes[offset: offset + per_page]
 
@@ -163,7 +164,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # Remove user from session cookies
+    # Remove user from session cookies and log out
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -171,6 +172,7 @@ def logout():
 
 @app.route("/add_cocktail", methods=["GET", "POST"])
 def add_cocktail():
+    # Allow user to add a cocktail recipe
     user = mongo.db.users.find_one({"username": session["user"]})
 
     if request.method == "POST":
@@ -198,6 +200,7 @@ def add_cocktail():
 
 @app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
 def edit_cocktail(recipe_id):
+    # Allow user or admin to edit a cocktail recipe
     user = mongo.db.users.find_one({"username": session["user"]})
     category_name = request.form.get("category_name")
     category = mongo.db.categories.find_one({"category_name": category_name})
@@ -223,6 +226,7 @@ def edit_cocktail(recipe_id):
 
 @app.route("/delete_cocktail/<recipe_id>")
 def delete_cocktail(recipe_id):
+    # Allow user or admin to delete a cocktail recipe
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Cocktail Deleted")
     return redirect(url_for("homepage"))
@@ -230,6 +234,7 @@ def delete_cocktail(recipe_id):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # Search function
     query = request.form.get("query")
     user = mongo.db.users.find_one({"username": session["user"]})
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
@@ -253,6 +258,7 @@ def search():
 
 @app.route("/get_categories")
 def get_categories():
+    # Show categories to admin user
     user = mongo.db.users.find_one({"username": session["user"]})
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories, user=user)
@@ -260,6 +266,7 @@ def get_categories():
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # Allow admin user to add categories
     user = mongo.db.users.find_one({"username": session["user"]})
 
     if request.method == "POST":
@@ -274,6 +281,7 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # Allow admin user to edit categories
     user = mongo.db.users.find_one({"username": session["user"]})
 
     if request.method == "POST":
@@ -290,6 +298,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    # Allow admin user to delete categories
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category deleted")
     return redirect(url_for("get_categories"))
@@ -297,6 +306,7 @@ def delete_category(category_id):
 
 @app.route("/get_users")
 def get_users():
+    # Allow admin user to view all users
     user = mongo.db.users.find_one({"username": session["user"]})
     users = list(mongo.db.users.find().sort("category_name", 1))
     return render_template("users.html", users=users, user=user)
@@ -304,6 +314,7 @@ def get_users():
 
 @app.route("/admin_user/<user_id>")
 def admin_user(user_id):
+    # Allow admin to give or remove admin rights on other users
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
 
     if user["is_admin"] is False:
@@ -320,6 +331,7 @@ def admin_user(user_id):
 
 @app.route("/delete_user/<user_id>")
 def delete_user(user_id):
+    # Allow admin user to delete other users
     mongo.db.users.remove({"_id": ObjectId(user_id)})
     flash("User deleted")
     return redirect(url_for("get_users"))
@@ -327,6 +339,7 @@ def delete_user(user_id):
 
 @app.route("/delete_account/<username>")
 def delete_account(username):
+    # Allow user to delete their own account
     mongo.db.users.remove({"username": username})
     flash("User deleted")
     session.pop("user")
@@ -335,6 +348,7 @@ def delete_account(username):
 
 @app.errorhandler(404)
 def not_found(error):
+    # 404 page for if errors do occur
     try:
         user = mongo.db.users.find_one({"username": session["user"]})
     except BaseException:
