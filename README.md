@@ -465,7 +465,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * I changed it to `let thisRemoveButton = removeButton.replaceAll("*", counter-1);` which fixed this bug.
 
 ### Known Bugs
-* ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
+* None found, if any errors are found, please contact me via my GitHub ([Abibubble](https://github.com/Abibubble/)) to get them fixed.
 
 ### Lighthouse
 I tested my website using DevTools Lighthouse feature, and got these results:
@@ -477,21 +477,23 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 ![Lighthouse mobile first try](static/docs/img/lighthousemobile.png)
 
 #### Performance:
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* The main issue was the fact that images do not have explicit width and height. This was necessary, as there is no way of knowing what size images users will be submitting with their cocktails, and it would cause more issues with images being stretched or squashed.
 
 #### Accessibility:
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
 * All images have alt text, including a request for users to add alt text for their own images so the site stays fully accessible.
 * All icons have titles where text isn't otherwise present to explain their use.
+* All tap targets are correctly sized, and aren't overlapping other content.
 * All colors are WCAG AA compliant. The majority are AAA compliant, except for the Delete and Edit buttons.
 
 ![WCAG AAA non-compliant color example](static/docs/img/aa-colors.png)
 
 #### Best Practices:
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* This was knocked down due to an issue in the console.
+* The console error is due to the new SameSite cookie issue Google has introduced, which I wasn't able to find a fix for.
 
 #### SEO:
-* EXPLAIN SCORE AND HOW I IMPROVED IT IF NECESSARY
+* The only thing causing issues with SEO was that not all links are crawlable.
+* The links it's referring to are the pagination links, which I don't have control over due to my use of Flask-paginate to create the pagination for this site.
 
 ---
 ## Credits
