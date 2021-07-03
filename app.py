@@ -23,10 +23,12 @@ mongo = PyMongo(app)
 def homepage():
     recipes = list(mongo.db.recipes.find())
     categories = mongo.db.categories.find()
+
     try:
         user = mongo.db.users.find_one({"username": session["user"]})
     except BaseException:
         user = mongo.db.users.find()
+
     for recipe in recipes:
         try:
             username = mongo.db.users.find_one(
@@ -37,6 +39,7 @@ def homepage():
             recipe["category_id"] = category_name
         except BaseException:
             pass
+
     return render_template(
         "homepage.html", recipes=recipes, categories=categories, user=user)
 
@@ -113,6 +116,7 @@ def profile(username):
         recipes = list(mongo.db.recipes.find())
     else:
         recipes = list(mongo.db.recipes.find({"user_id": ObjectId(user_id)}))
+
     for recipe in recipes:
         try:
             user_name = mongo.db.users.find_one(
@@ -151,7 +155,7 @@ def add_cocktail():
         cocktail = {
             "category_id": ObjectId(category["_id"]),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_list": request.form.get("recipe_list"),
+            "recipe_list": request.form.getlist("recipe_list"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
@@ -215,6 +219,7 @@ def search():
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     user = mongo.db.users.find_one({"username": session["user"]})
+
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -228,6 +233,7 @@ def add_category():
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     user = mongo.db.users.find_one({"username": session["user"]})
+
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
