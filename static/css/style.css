@@ -190,6 +190,10 @@ label {
 /* ----------------------------------------------------------------------------------- Pagination */
 /* Thanks to mozillazg from GitHub for the base of this code */
 
+.pagination li {
+    margin: 5px;
+}
+
 .pagination li a {
     color: white;
 }
@@ -198,7 +202,7 @@ label {
     padding: 10px;
     width: 100%;
     margin: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .pagination-page-info b {
