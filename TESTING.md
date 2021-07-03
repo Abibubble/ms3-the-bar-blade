@@ -307,10 +307,12 @@ On every device and browser listed above, I tested the following:
 * The Categories page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Add Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Edit Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Users page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The Delete Cocktail modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Category modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Profile modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Delete User modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The buttons have well sized text, not so big it takes up too much screen space, and not so small that they're difficult to read.
 * All the font sizes aren't too big or too small for the screen size.
@@ -328,10 +330,12 @@ On every device and browser listed above, I tested the following:
 * The Categories page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Add Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Edit Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Users page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The Delete Cocktail modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Category modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Profile modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Delete User modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The buttons have well sized text, not so big it takes up too much screen space, and not so small that they're difficult to read.
 * All the font sizes aren't too big or too small for the screen size.
@@ -349,10 +353,12 @@ On every device and browser listed above, I tested the following:
 * The Categories page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Add Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Edit Category page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Users page looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The Delete Cocktail modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Category modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 * The Delete Profile modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
+* The Delete User modal looks good and nothing wraps where it shouldn't or disappears off the edge of the viewport.
 
 * The buttons have well sized text, not so big it takes up too much screen space, and not so small that they're difficult to read.
 * All the font sizes aren't too big or too small for the screen size.
