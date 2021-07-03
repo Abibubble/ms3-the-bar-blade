@@ -162,7 +162,6 @@ I wanted to create a website linked to a database, which allows users to login, 
 * Email verification before a user can add a cocktail.
 * Enter user's password to delete user account.
 * Create an 'Add to Favourites' so users can store their favourite cocktail recipes.
-* When registering a new account, add ability to view the password that was typed in before submitting.
 
 ### Audio
 * No audio is used in this project.
