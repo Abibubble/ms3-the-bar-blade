@@ -190,7 +190,7 @@ label {
 /* ----------------------------------------------------------------------------------- Pagination */
 /* Thanks to mozillazg from GitHub for the base of this code */
 
-.pagination li {
+.pagination li a {
     color: white;
 }
 
