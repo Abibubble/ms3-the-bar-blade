@@ -138,6 +138,10 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ![Create, Edit and Delete a category](static/docs/img/categories.png)
 
+* Edit admin rights and Delete a user for admin users only.
+
+![Edit and Delete a user](static/docs/img/users.png)
+
 * Search for a specific cocktail.
 
 ![Search bar](static/docs/img/search.png)
@@ -173,6 +177,7 @@ The navigation bar changes depending on user status and screen size:
 | Profile | &#10060; | &#9989; | &#9989; |
 | Add Cocktail | &#10060; | &#9989; | &#9989; |
 | Manage Categories | &#10060; | &#10060; | &#9989; |
+| Manage Users | &#10060; | &#10060; | &#9989; |
 | Log Out | &#10060; | &#9989; | &#9989; |
 | Log In | &#9989; | &#10060; | &#10060; |
 | Register | &#9989; | &#10060; | &#10060; |
