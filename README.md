@@ -223,7 +223,7 @@ MongoDB was used to store data for this site in a database. The data has been se
 | user_id | ObjectId | users._id |
 
 | Categories |    |
-|---|---|---|
+|---|---|
 | _id | ObjectId |
 | category_name | string |
 
@@ -349,12 +349,32 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 ## Testing
 ### W3C Validator
 The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the project to ensure there were no syntax errors within the site.
-
-1. W3C Markup Validator
-    * [HTML Results](LINK)
+ENSURE EVERY PAGE IS TESTED
+1. W3C HTML Markup Validator
+    * [Homepage](LINK)
+    * [Register](LINK)
+    * [Log In](LINK)
+    * [Log Out](LINK)
+    * [Profile](LINK)
+    * [Add Cocktail](LINK)
+    * [Edit Cocktail](LINK)
+    * [Manage Categories](LINK)
+    * [Add Category](LINK)
+    * [Edit Category](LINK)
+    * [Manage Users](LINK)
 
 2. W3C CSS Validator
-    * [CSS Results](LINK)
+    * [Homepage](LINK)
+    * [Register](LINK)
+    * [Log In](LINK)
+    * [Log Out](LINK)
+    * [Profile](LINK)
+    * [Add Cocktail](LINK)
+    * [Edit Cocktail](LINK)
+    * [Manage Categories](LINK)
+    * [Add Category](LINK)
+    * [Edit Category](LINK)
+    * [Manage Users](LINK)
     * There is only one error appearing, which is from the Materialize CSS file.
     * There are several warnings, mostly from the Materialize CSS file, but also three related to my purple variables. As these variables are acceptable CSS syntax, I've considered them to be not an error.
 
