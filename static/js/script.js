@@ -1,11 +1,13 @@
 // -------------------------------------------------------------------- Materialize
 
-$(document).ready(function(){ // jQuery sections from Materalize
+// jQuery sections from Materalize
+$(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('select').formSelect(); 
 
-    validateMaterializeSelect(); // jQuery Select validation from the Code Institute task manager mini-project
+    // jQuery Select validation from the Code Institute task manager mini-project
+    validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
         let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
@@ -56,32 +58,25 @@ function addIngredient(add) {
     if (counter === max) {
         alert("You have reached the maximum amount of ingredients");
     } else {
-        console.log("Adding Ingredient");
         let oldAddButton = document.getElementById("add-button"); // Find current add button
-        let thisRemoveButton = removeButton.replaceAll("*", counter-1); // replace * in remove button
-        console.log("thisRemoveButton = " + thisRemoveButton);
-        oldAddButton.insertAdjacentHTML('beforebegin', thisRemoveButton); // put the remove button in front of the add button
-        oldAddButton.remove(); // remove old add button
-        let thisNewIngredient = newIngredient.replaceAll("*", counter); // Replace * in new ingredient
-        console.log("thisNewIngredient = " + thisNewIngredient);
-        document.getElementById(add).insertAdjacentHTML('beforebegin', thisNewIngredient); // Put the new ingredient in front of the clicked button
+        let thisRemoveButton = removeButton.replaceAll("*", counter-1);
+        oldAddButton.insertAdjacentHTML('beforebegin', thisRemoveButton);
+        oldAddButton.remove(); // Remove old add button
+        let thisNewIngredient = newIngredient.replaceAll("*", counter);
+        document.getElementById(add).insertAdjacentHTML('beforebegin', thisNewIngredient);
         counter++;
     }
 };
 
 function removeIngredient(el) {
-    let elRemove = el.getAttribute("data-ingredient"); // find the data attribute, which is the same as the id
-    console.log(elRemove);
+    let elRemove = el.getAttribute("data-ingredient"); // Find the data attribute, which is the same as the id
     let currentElCounter = elRemove.substr(15, 1);
-    console.log(currentElCounter);
     let siteRemoveButton = document.getElementById(`remove-button-${currentElCounter}`);
-    if (currentElCounter == "1") { // if it's going back to just the original ingredient box
-        siteRemoveButton.insertAdjacentHTML('afterend', addButton); // add the first add button back
+    if (currentElCounter == "1") { // If it's going back to just one ingredient input...
+        siteRemoveButton.insertAdjacentHTML('afterend', addButton); // Add the first add button back
     }
-    // siteRemoveButton.remove();
     document.getElementById(elRemove).remove();
     counter--;
-    console.log(counter);
 }
 
 // -------------------------------------------------------------------- Show Password

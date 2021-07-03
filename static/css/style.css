@@ -188,6 +188,7 @@ label {
 }
 
 /* ----------------------------------------------------------------------------------- Pagination */
+/* Thanks to mozillazg from GitHub for the base of this code */
 
 .pagination li {
     color: white;
