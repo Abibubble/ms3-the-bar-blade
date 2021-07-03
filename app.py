@@ -289,10 +289,12 @@ def admin_user(user_id):
     if user["is_admin"] is False:
         mongo.db.users.update(
             {"_id": ObjectId(user_id)}, {"$set": {"is_admin": True}})
+            flash("User Admin Rights Added")
     else:
         mongo.db.users.update(
             {"_id": ObjectId(user_id)}, {"$set": {"is_admin": False}})
-    flash("User Admin Rights Updated")
+            flash("User Admin Rights Removed")
+
     return redirect(url_for("get_users"))
 
 
