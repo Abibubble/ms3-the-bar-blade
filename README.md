@@ -349,32 +349,18 @@ For a more detailed version of these steps, go to the [Github Docs](https://docs
 ## Testing
 ### W3C Validator
 The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the project to ensure there were no syntax errors within the site.
-ENSURE EVERY PAGE IS TESTED
+
 1. W3C HTML Markup Validator
-    * [Homepage](LINK)
-    * [Register](LINK)
-    * [Log In](LINK)
-    * [Log Out](LINK)
-    * [Profile](LINK)
-    * [Add Cocktail](LINK)
-    * [Edit Cocktail](LINK)
-    * [Manage Categories](LINK)
-    * [Add Category](LINK)
-    * [Edit Category](LINK)
-    * [Manage Users](LINK)
+    * [Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Fhomepage)
+    * [Register](https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Fregister)
+    * [Log In](https://validator.w3.org/nu/?doc=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Flogin)
+    * Unfortunately, as it's not possible to log in using the Validator, it was only possible to test the 3 pages available to a user who isn't logged in.
 
 2. W3C CSS Validator
-    * [Homepage](LINK)
-    * [Register](LINK)
-    * [Log In](LINK)
-    * [Log Out](LINK)
-    * [Profile](LINK)
-    * [Add Cocktail](LINK)
-    * [Edit Cocktail](LINK)
-    * [Manage Categories](LINK)
-    * [Add Category](LINK)
-    * [Edit Category](LINK)
-    * [Manage Users](LINK)
+    * [Homepage](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Fhomepage&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    * [Register](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Fregister&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    * [Log In](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fms3-the-bar-blade.herokuapp.com%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    * Unfortunately, as it's not possible to log in using the Validator, it was only possible to test the 3 pages available to a user who isn't logged in.
     * There is only one error appearing, which is from the Materialize CSS file.
     * There are several warnings, mostly from the Materialize CSS file, but also three related to my purple variables. As these variables are acceptable CSS syntax, I've considered them to be not an error.
 
@@ -386,6 +372,11 @@ ENSURE EVERY PAGE IS TESTED
 ![Image of JSHint results](static/docs/img/jshint1.png)
 ![Image of JSHint results](static/docs/img/jshint2.png)
 ![Image of JSHint results](static/docs/img/jshint3.png)
+
+4. PEP8 Online
+    * [PEP8 Online](http://pep8online.com/)
+
+![Image of PEP8 Online results](static/docs/img/pep8.png)
 
 ### Testing User Stories
 #### First Time Visitor Goals
