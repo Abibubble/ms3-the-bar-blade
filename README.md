@@ -217,10 +217,12 @@ MongoDB was used to store data for this site in a database. The data has been se
 | recipe_alt | string |    |
 | user_id | ObjectId | users._id |
 
-| Categories |    |    |
+| Categories |    |
 |---|---|---|
-| _id | ObjectId |    |
-| category_name | string |    |
+| _id | ObjectId |
+| category_name | string |
+
+The Recipes collection references both the Categories collection and the Users collection, using the ObjectId from the relevant fields to ensure that they automatically update if changes are made.
 
 ---
 
@@ -272,12 +274,14 @@ MongoDB was used to store data for this site in a database. The data has been se
 [favicon.io](https://favicon.io/) used to create a site favicon.
 #### Imgur:
 [Imgur](https://imgur.com/) was used to host images to add to each cocktail recipe.
-
-???????? CHECK IF THESE SHOULD BE REFERENCED
-Flask-PyMongo
-Pip3
-dnspython
-Flask Paginate
+#### Flask-paginate:
+[Flask-paginate](https://pythonhosted.org/Flask-paginate/) was used to add pagination to the homepage.
+#### Flask-PyMongo:
+[Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect my Python / Flask app to MongoDB.
+#### pip:
+[pip](https://pip.pypa.io/en/stable/) was used to install the required dependancies for this site.
+#### dnspython:
+[dnspython](https://pypi.org/project/dnspython/) was used to provide access to DNS.
 
 ## Deployment
 ### Initial Deployment
@@ -415,8 +419,8 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 1. When I added the confirm deletion modal into categories.html, it wasn't taking the category I'd clicked on to delete, it was just deleting the first category in the list.
     * I looked through my code on Google DevTools and saw that, as my delete button was part of a for loop that was populating categories, it was also duplicating the ID of the modal.
     * This meant that when it came to deleting, it didn't know which one of those IDs I actually wanted to delete.
-    * I then added in the `category._id`, so I could have an individual ID for each category.
-    * This solved the bug, and also fixed the issue that W3C HTML validator brought up about repeated IDs.
+    * I then added in the `category._id` to each modal ID, so I could have an individual ID for each category.
+    * This solved the bug, and also fixed an issue that W3C HTML validator brought up about repeated IDs.
 2. When the user clicked the 'delete' or 'edit' buttons on their profile cocktails, the collapsible would expand as well as the button's action.
     * I discovered that, as the buttons were inside the collapsible-header Materialize class, they were being treated as clickable too.
     * I attempted to move them to the right of the headers, but this resulted in the buttons not connecting to their cocktail recipes.
@@ -424,7 +428,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * This makes more sense than where I had them before, as the user won't know if they want to edit or delete a recipe until they've looked at it.
 3. The favicon files were throwing up errors in the console, as shown below.
     * I checked that the files I was including were correct, accoring to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
-    * I then did a google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
+    * I then did a Google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
     * I added `crossorigin="use-credentials"` to my link for the webmanifest file, which fixed the console errors.
     * ![Favicon error](static/docs/img/favicon.png)
 4. The user couldn't view the Homepage without being logged in - which also meant that they couldn't log in.
@@ -436,8 +440,9 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 5. When adding a cocktail, the ingredients add as expected, but if there's more than one additional ingredient, the ingredients won't remove properly.
     * I used `console.log()` to ensure I was referencing the correct elements.
     * I discovered that the counter variable wasn't being referenced correctly from the `elRemove` variable.
-    * I created a new variable to find the counter for the clicked remove button.
-    * 
+    * I created a new variable to find the counter for the clicked remove button, and used that to reference.
+    * I then used Google DevTools to inspect my code and discovered that the remove button was being given a number from the counter that was one too high for the element it was meant to be referencing.
+    * I changed it to `let thisRemoveButton = removeButton.replaceAll("*", counter-1);` which fixed this bug.
 
 ### Known Bugs
 * ANY BUGS LEFT IN THE CODE AFTER FINAL DEPLOYMENT, FOR FIXING IN FUTURE RELEASES
