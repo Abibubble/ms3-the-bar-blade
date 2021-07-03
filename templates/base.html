@@ -57,6 +57,7 @@
                         {% if user %}
                             {% if user["is_admin"] %}
                                 <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                                <li><a href="{{ url_for('get_users') }}">Manage Users</a></li>
                             {% endif %}
                         {% endif %}
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -77,6 +78,7 @@
             <li><a href="{{ url_for('add_cocktail') }}">Add Cocktail</a></li>
             {% if user["is_admin"] %}
                 <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                <li><a href="{{ url_for('get_users') }}">Manage Users</a></li>
             {% endif %}
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}

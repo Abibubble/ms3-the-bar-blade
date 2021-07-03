@@ -208,13 +208,6 @@ def delete_cocktail(recipe_id):
     return redirect(url_for("homepage"))
 
 
-@app.route("/get_categories")
-def get_categories():
-    user = mongo.db.users.find_one({"username": session["user"]})
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories, user=user)
-
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -236,6 +229,13 @@ def search():
             recipe["category_id"] = "undefined"
 
     return render_template("homepage.html", recipes=recipes, user=user)
+
+
+@app.route("/get_categories")
+def get_categories():
+    user = mongo.db.users.find_one({"username": session["user"]})
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories, user=user)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
@@ -273,6 +273,30 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category deleted")
     return redirect(url_for("get_categories"))
+
+
+@app.route("/get_users")
+def get_users():
+    user = mongo.db.users.find_one({"username": session["user"]})
+    users = list(mongo.db.users.find().sort("category_name", 1))
+    return render_template("users.html", users=users, user=user)
+
+
+@app.route("/admin_user/<user_id>")
+def admin_user(user_id):
+    user = mongo.db.users.find_one({"username": session["user"]})
+    if user.is_admin is False:
+        mongo.db.categories.update({"_id": user._id}, {"is_admin": True})
+    else:
+        mongo.db.categories.update({"_id": user._id}, {"is_admin": False})
+    return redirect(url_for("get_users"))
+
+
+@app.route("/delete_user/<user_id>")
+def delete_user(user_id):
+    mongo.db.users.remove({"_id": ObjectId(user_id)})
+    flash("User deleted")
+    return redirect(url_for("get_users"))
 
 
 @app.route("/delete_account/<username>")
