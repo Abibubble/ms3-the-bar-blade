@@ -3,11 +3,11 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-
 
 app = Flask(__name__)
 
@@ -18,24 +18,40 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def get_recipes(offset=0, per_page=10):
+    recipes = list(mongo.db.recipes.find())
+    return recipes[offset: offset + per_page]
+
+
 @app.route("/")
 @app.route("/homepage")
 def homepage():
     recipes = list(mongo.db.recipes.find())
     categories = mongo.db.categories.find()
 
+    # Pagination
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    total = len(recipes)
+    pagination_recipes = get_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total)
+
+    # Find if a user is logged in
     try:
         user = mongo.db.users.find_one({"username": session["user"]})
     except BaseException:
         user = mongo.db.users.find()
 
-    for recipe in recipes:
+    for recipe in pagination_recipes:
+        # Fill in username from user _id
         try:
             username = mongo.db.users.find_one(
                 {"_id": ObjectId(recipe["user_id"])})["username"]
             recipe["user_id"] = username
         except BaseException:
             recipe["user_id"] = "undefined"
+
+        # Fill in category_name from category _id
         try:
             category_name = mongo.db.categories.find_one(
                 {"_id": ObjectId(recipe["category_id"])})["category_name"]
@@ -44,7 +60,9 @@ def homepage():
             recipe["category_id"] = "undefined"
 
     return render_template(
-        "homepage.html", recipes=recipes, categories=categories, user=user)
+        "homepage.html", recipes=pagination_recipes,
+        categories=categories, user=user, page=page,
+        per_page=per_page, pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])
