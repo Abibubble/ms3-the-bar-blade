@@ -21,6 +21,8 @@
     * [Add Category](#add-category)
     * [Edit Category](#edit-category)
     * [Delete Category](#delete-category)
+    * [Edit User](#edit-user)
+    * [Delete User](#delete-user)
     * [Search Recipes](#search-recipes)
 * [Database](#database)
 * [Responsive Design](#responsive-design)
@@ -253,7 +255,7 @@ On every device and browser listed above, I tested the following:
 * Only accessible for admin users.
 * Provides a form for admins to fill in, with placeholder text.
 * The form is pre-filled in with the current category details, for easy editing.
-* Once submitted, it editss the category in the database, which then can be used when creating cocktails for all users.
+* Once submitted, it edits the category in the database, which then can be used when creating cocktails for all users.
 
 ### Delete Category
 * &#128272;
@@ -261,6 +263,20 @@ On every device and browser listed above, I tested the following:
 * Create a modal to confirm if the admin wishes to delete this category.
 * Once submitted, it deletes the category from the database, so the category can no longer be used to create new cocktails.
 * The category will be permanently deleted from the database.
+* Any recipes with this category will change to 'undefined' category.
+
+### Edit User
+* &#128272;
+* Only accessible for admin users.
+* Provides admin users with a toggle button to give or remove admin rights for a user.
+
+### Delete User
+* &#128272;
+* Only accessible for admin users.
+* Create a modal to confirm if the admin wishes to delete this user account.
+* Once submitted, it deletes the user from the database, so the user can no longer log in.
+* The user will be permanently deleted from the database.
+* Any recipes the user has created will change to 'undefined' user.
 
 ### Search Recipes
 * Accessible by all users
