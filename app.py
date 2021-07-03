@@ -22,6 +22,7 @@ mongo = PyMongo(app)
 @app.route("/homepage")
 def homepage():
     recipes = list(mongo.db.recipes.find())
+    categories = mongo.db.categories.find()
     try:
         user = mongo.db.users.find_one({"username": session["user"]})
     except BaseException:
@@ -36,7 +37,6 @@ def homepage():
             recipe["category_id"] = category_name
         except BaseException:
             pass
-    categories = mongo.db.categories.find()
     return render_template(
         "homepage.html", recipes=recipes, categories=categories, user=user)
 
