@@ -218,8 +218,24 @@ def get_categories():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    user = mongo.db.users.find_one({"username": session["user"]})
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("homepage.html", recipes=recipes)
+
+    for recipe in recipes:
+        try:
+            username = mongo.db.users.find_one(
+                {"_id": ObjectId(recipe["user_id"])})["username"]
+            recipe["user_id"] = username
+        except BaseException:
+            recipe["user_id"] = "undefined"
+        try:
+            category_name = mongo.db.categories.find_one(
+                {"_id": ObjectId(recipe["category_id"])})["category_name"]
+            recipe["category_id"] = category_name
+        except BaseException:
+            recipe["category_id"] = "undefined"
+
+    return render_template("homepage.html", recipes=recipes, user=user)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
