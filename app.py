@@ -30,8 +30,10 @@ def homepage():
     categories = mongo.db.categories.find()
 
     # Pagination
+    # pylint: disable=unbalanced-tuple-unpacking
     page, per_page, offset = get_page_args(page_parameter='page',
                                            per_page_parameter='per_page')
+    # pylint: enable=unbalanced-tuple-unpacking
     total = len(recipes)
     pagination_recipes = get_recipes(offset=offset, per_page=per_page)
     pagination = Pagination(page=page, per_page=per_page, total=total)
