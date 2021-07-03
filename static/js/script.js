@@ -66,7 +66,7 @@ function addIngredient(add) {
         document.getElementById(add).insertAdjacentHTML('beforebegin', thisNewIngredient);
         counter++;
     }
-};
+}
 
 function removeIngredient(el) {
     let elRemove = el.getAttribute("data-ingredient"); // Find the data attribute, which is the same as the id

@@ -380,8 +380,12 @@ ENSURE EVERY PAGE IS TESTED
 
 3. JSHint
     * [JSHint](https://jshint.com/)
+    * There is one undefined variable, which is due to the jQuery `$`.
+    * There are three unused variables, which are used in onclick functions in my HTML.
 
-![Image of JSHint results](static/docs/img/jshint.png)
+![Image of JSHint results](static/docs/img/jshint1.png)
+![Image of JSHint results](static/docs/img/jshint2.png)
+![Image of JSHint results](static/docs/img/jshint3.png)
 
 ### Testing User Stories
 #### First Time Visitor Goals
