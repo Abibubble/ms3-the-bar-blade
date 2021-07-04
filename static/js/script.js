@@ -41,7 +41,7 @@ $(document).ready(function(){
 let counter = 2;
 let max = 30;
 
-let newIngredient = `<div class="row" id="add-ingredient-*">
+let newIngredient = `<div class="row" id="add-ingredient-*" class="add-ingredients">
 <div class="input-field col s10 m8 offset-s1 offset-m2">
 <i class="fas fa-mortar-pestle prefix"></i>
 <input id="recipe_list-*" name="recipe_list" type="text" minlength="3" maxlength="100" class="validate white-text" required>
@@ -72,7 +72,7 @@ function removeIngredient(el) {
     let elRemove = el.getAttribute("data-ingredient"); // Find the data attribute, which is the same as the id
     let currentElCounter = elRemove.substr(15, 1);
     let siteRemoveButton = document.getElementById(`remove-button-${currentElCounter}`);
-    if (currentElCounter == "1") { // If it's going back to just one ingredient input...
+    if (document.getElementsByClassName("add-ingredients").length == 1) { // If it's going back to just one ingredient input...
         siteRemoveButton.insertAdjacentHTML('afterend', addButton); // Add the first add button back
     }
     document.getElementById(elRemove).remove();
