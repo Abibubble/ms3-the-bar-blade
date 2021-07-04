@@ -452,19 +452,19 @@ On every device and browser listed above, I tested the following:
 ---
 
 #### Edge
-![Home page](static/docs/testing/desktop/edge/home.png)
-![Log In page](static/docs/testing/desktop/edge/log-in.png)
-![Register page](static/docs/testing/desktop/edge/register.png)
-![User profile page with cocktails](static/docs/testing/desktop/edge/profile-cocktails.png)
-![User profile page without cocktails](static/docs/testing/desktop/edge/profile-no.png)
-![Admin profile page](static/docs/testing/desktop/edge/profile-admin.png)
-![Admin profile page with delete cocktail modal](static/docs/testing/desktop/edge/profile-delete.png)
-![Add Cocktail page](static/docs/testing/desktop/edge/add-cocktail.png)
-![Edit Cocktail page](static/docs/testing/desktop/edge/edit-cocktail.png)
-![Categories page](static/docs/testing/desktop/edge/categories.png)
-![Add Category page](static/docs/testing/desktop/edge/add-category.png)
-![Edit Category page](static/docs/testing/desktop/edge/edit-category.png)
-![Users page](static/docs/testing/desktop/edge/users.png)
+![Home page](static/docs/testing/desktop/edge/home.jpeg)
+![Log In page](static/docs/testing/desktop/edge/log-in.jpeg)
+![Register page](static/docs/testing/desktop/edge/register.jpeg)
+![User profile page with cocktails](static/docs/testing/desktop/edge/profile-cocktails.jpeg)
+![User profile page without cocktails](static/docs/testing/desktop/edge/profile-no.jpeg)
+![Admin profile page](static/docs/testing/desktop/edge/profile-admin.jpeg)
+![Admin profile page with delete cocktail modal](static/docs/testing/desktop/edge/profile-delete.jpeg)
+![Add Cocktail page](static/docs/testing/desktop/edge/add-cocktail.jpeg)
+![Edit Cocktail page](static/docs/testing/desktop/edge/edit-cocktail.jpeg)
+![Categories page](static/docs/testing/desktop/edge/categories.jpeg)
+![Add Category page](static/docs/testing/desktop/edge/add-category.jpeg)
+![Edit Category page](static/docs/testing/desktop/edge/edit-category.jpeg)
+![Users page](static/docs/testing/desktop/edge/users.jpeg)
 
 ---
 
