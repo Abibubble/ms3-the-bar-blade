@@ -66,26 +66,30 @@ I wanted to create a website linked to a database, which allows users to login, 
 
 ### User Stories
 #### First Time Visitor Goals
-* To be able to easily navigate the site.
-* It should be easy to understand what to do.
-* It should be easy to register for an account.
-* It should be easy to search for a specific cocktail.
+As a first time visitor to this site, a user should be able to :
+* Be able to easily navigate the site.
+* Intuitively and easily understand what to do.
+* Be able to register for an account.
+* Search for a specific cocktail.
+* Browse through all cocktails.
+* Get visual feedback when an action on the site is completed.
 
 #### Returning Visitor Goals
-* It should be easy to add, edit and delete the user's cocktails.
-* It should be easy to see the cocktails the user has added.
+In addition to the First Time Visitor Goals, a Returning Visitor should be able to :
+* Log in.
+* Add new cocktails.
+* Edit and delete the user's cocktails.
+* See the cocktails the user has added.
 * The user's password should be stored securely.
-* It should be easy to search for a specific cocktail.
-
-#### Frequent Visitor Goals
-* It should be easy to search for a specific cocktail.
 * Navigation should be intuitive, with no need to use the browser's back button.
 
 #### Admin Goals
-* Other users shouldn't be able to edit or delete the user's cocktails.
+In addition to the First Time Visitor Goals and Returning Visitor Goals, as an administrator of this site, an admin user should be able to:
 * A user shouldn't be able to brute force their way into the restricted pages.
-* Be able to edit or delete any recipe as an admin.
-* Be able to give or remove admin rights as an admin.
+* Edit or delete any cocktail recipe.
+* Add a new category.
+* Edit or delete any category.
+* Give or remove admin rights.
 
 ### Project Goals
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
@@ -380,59 +384,81 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 
 ### Testing User Stories
 #### First Time Visitor Goals
-##### To be able to easily navigate the site.
+##### Be able to easily navigate the site.
 * The navigation bar is clearly visible on all pages.
 * The navigation bar is fixed to the top of the screen, so even when the user scrolls, they can still see the navigation bar.
 
-##### It should be easy to understand what to do.
+##### Intuitively and easily understand what to do.
 * Everything is clearly laid out.
 * All buttons decribe what they're for in simple terms.
 * Icons are used to help convey meaning.
 
-##### It should be easy to register for an account.
-* The register button is clear to see on the navigation bar, and it only requires a username, a password, and a confirmation of that password to register an account.
+##### Be able to register for an account.
+* The register button is clear to see on the navigation bar.
+* It only requires a username, a password, and a confirmation of that password to register an account.
 
-##### It should be easy to search for a specific cocktail.
+##### Search for a specific cocktail.
 * The search bar is displayed prominently on the homepage for all users, whether logged in or not.
 
+##### Browse through all cocktails.
+* All cocktails are displayed on the homepage for all users to view.
+
+##### Get visual feedback when an action on the site is completed.
+* A flash message appears at the top of the screen when :
+    * Any item is added.
+    * Any item is edited.
+    * Any item is deleted.
+    * A user registers.
+    * A user logs in.
+    * A user logs out.
+
 #### Returning Visitor Goals
-##### It should be easy to add, edit and delete the user's cocktails.
+##### Log in.
+* The log in button is visible in the navigation bar.
+* The log in process is intuitive and simple to use.
+
+##### Add new cocktails.
+* The 'Add Cocktail' button is available on the navigation bar once you log in.
+* Every input field on the Add Cocktail form is clearly defined.
+* There is a helpful reminder about accessibility when adding an image to the site.
+* If the user hasn't added any cocktails, their profile prompts them to add one, with a helpful button to direct them to the 'Add Cocktail' page.
+
+##### Edit and delete the user's cocktails.
 * Every cocktail that a user has added is displayed on their profile.
 * Each cocktail listing has it's own edit and delete buttons.
 * There is a link to add a cocktail on the navigation bar, which is available on every page.
-* If the user hasn't added any cocktails, their profile instead prompts them to add one, with a helpful button to aid them.
+* If the user hasn't added any cocktails, their profile instead prompts them to add one, with a helpful button to direct them to the 'Add Cocktail' page.
 
-##### It should be easy to see the cocktails the user has added.
+##### See the cocktails the user has added.
 * Every cocktail that a user has added is displayed on their profile.
 
 ##### The user's password should be stored securely.
 * Werkzeug's password hashing methods have been used to store all user's passwords in a secure and safe way.
 
-##### It should be easy to search for a specific cocktail.
-* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
-
-#### Frequent Visitor Goals
-##### It should be easy to search for a specific cocktail.
-* The search bar is displayed prominently on the homepage for all users, whether logged in or not.
-
 ##### Navigation should be intuitive, with no need to use the browser's back button.
-* The navigation bar is constantly visible across the top of the site, whether that be the full navigation bar or the condensed burger icon menu bar on smaller screen sizes.
+* The navigation bar is constantly visible across the top of the site.
+* This is either the full navigation bar, or the condensed burger icon menu bar on smaller screen sizes.
 
 #### Admin Goals
-##### Other users shouldn't be able to edit or delete the user's cocktails.
-* Edit and delete buttons are only shown for cocktails on the user's profile.
-* The only cocktails shown on the user's profile are the ones created by them.
-
 ##### A user shouldn't be able to brute force their way into the restricted pages.
 * Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
+* If a user without access rights tries to access a restricted page, it presents them with the 404 page, with a navigation bar at the top to take them back to the pages they're allowed to access.
 
-##### Be able to edit or delete any recipe as an admin.
+##### Edit or delete any cocktail recipe.
 * Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
 * If the user has the is_admin toggle set to true, then all recipes are displayed on their profile.
 * This includes all recipes created by other users, with edit and delete buttons.
 * This enabled the admin to edit or delete any recipe.
 
-##### Be able to give or remove admin rights as an admin.
+##### Add a new category.
+* Admin accounts have access to the 'Manage Categories' page.
+* This allows them to add a new category.
+
+##### Edit or delete any category.
+* Admin accounts have access to the 'Manage Categories' page.
+* This allows them to edit or delete any categories.
+
+##### Give or remove admin rights.
 * Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
 * If the user has the is_admin toggle set to true, then they have access to the Manage Users page.
 * From there, any user can be deleted, or have their admin rights switched on or off.
