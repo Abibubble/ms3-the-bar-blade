@@ -46,7 +46,7 @@ let newIngredient = `<div class="row" id="add-ingredient-*" class="add-ingredien
 <i class="fas fa-mortar-pestle prefix"></i>
 <input id="recipe_list-*" name="recipe_list" type="text" minlength="3" maxlength="100" class="validate white-text" required>
 <label for="recipe_list-*">Ingredients</label>
-<button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-*');" id="add-button">Add Another Ingredient</button> 
+<button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-*');" id="add-button">Add Additional Ingredient</button> 
 </div>
 </div>`;
 
