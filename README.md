@@ -176,6 +176,7 @@ In addition to the First Time Visitor Goals and Returning Visitor Goals, as an a
 * Email verification before a user can add a cocktail.
 * Enter user's password to delete user account.
 * Create an 'Add to Favourites' so users can store their favourite cocktail recipes.
+* Admin to approve cocktail recipe before it goes live on the site.
 
 ### Audio
 * No audio is used in this project.
