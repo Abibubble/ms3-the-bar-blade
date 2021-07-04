@@ -627,4 +627,5 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * My mentor, Antonio Rodriguez, at [Code Institute](https://codeinstitute.net/), for continuous helpful feedback and support.
 * [Eve Crabb](https://github.com/evecrabb), for her support through my learning, for being a sounding board for bug fixes, and for being the best boss ever.
 * The team at [Code Institute](https://codeinstitute.net/), for teaching me the necessary skills to create this site.
+* [Manni Silva](https://github.com/manni8436) for taking screenshots for me on iOS, and for being my coding buddy.
 * Conor Nye for his continuous support throughout my coding journey.
