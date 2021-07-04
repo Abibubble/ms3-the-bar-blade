@@ -244,7 +244,12 @@ def search():
     # Search function
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    user = mongo.db.users.find_one({"username": session["user"]})
+
+    # Find if a user is logged in
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        user = mongo.db.users.find()
 
     # Pagination
     # pylint: disable=unbalanced-tuple-unpacking
