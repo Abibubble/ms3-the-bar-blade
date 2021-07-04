@@ -33,7 +33,6 @@
     * [Desktop and Laptop](#desktop-and-laptop)
     * [Tablet](#tablet)
     * [Mobile](#mobile)
-    * [Responsinator](#responsinator)
 
 ## Icon key
 
@@ -166,6 +165,7 @@ On every device and browser listed above, I tested the following:
 * &#128272; Click the Admin On button in the Manage Users page to turn admin rights on for another user.
 * &#128272; Click the Admin Off button in the Manage Users page to turn admin rights off for another user.
 * &#128272; Click the Delete button in the Manage Users page to delete another user's user account.
+* &#128272; Ensure the main admin account cannot be edited or deleted.
 
 ---
 
@@ -209,7 +209,7 @@ On every device and browser listed above, I tested the following:
 
 ### Admin Users
 * &#128272;
-* Navigation bar will show Logo, Home, Profile, Add Cocktail, Manage Categories, Log Out
+* Navigation bar will show Logo, Home, Profile, Add Cocktail, Manage Categories, Manage Users, Log Out
 
 ---
 
@@ -263,6 +263,8 @@ On every device and browser listed above, I tested the following:
 * &#128100;
 * Only accessible for logged in users.
 * Provides a form for users to fill in, with placeholder text, and a helpful message about accessibility.
+* All input elements have the correct validation on.
+* The ingredients input won't let you add an additional ingredient until you've entered data into the first one.
 * Once submitted, it adds a cocktail to the database, which then populates it onto the homepage, and onto the user's profile.
 * All cocktails added by the user will appear on their profile.
 * &#128272; Admin users can edit or delete any cocktail without needing to go into the MongoDB database.
@@ -271,7 +273,9 @@ On every device and browser listed above, I tested the following:
 * &#128100;
 * Only accessible for logged in users.
 * Provides a form for users to fill in, with placeholder text, and a helpful message about accessibility.
+* All input elements have the correct validation on.
 * The form is pre-filled in with the current cocktail recipe details, for easy editing.
+* The ingredients input won't let you add an additional ingredient until you've entered data into the first one.
 * Once submitted, it edits the cocktail in the database, which then populates those edits onto the homepage, and onto the user's profile.
 * &#128272; If the user is an admin, they can edit any cocktail without needing to go into the MongoDB database.
 
@@ -323,6 +327,7 @@ On every device and browser listed above, I tested the following:
 * Accessible by all users
 * Searches through database for what the user has entered into the search box.
 * It using the cocktail recipe name, ingredients list, and category to search within.
+* It only returns results when you search by full word, not part-word.
 * It returns all results, or a message if there are no results.
 * The reset button then clears the search bar, and returns the homepage to it's standard state.
 
@@ -335,7 +340,7 @@ On every device and browser listed above, I tested the following:
 
 ### 404
 * Accessible by all users
-* This page will display if a user has tried to access a page that doesn't exist.
+* This page will display if a user has tried to access a page that doesn't exist, or if a user doesn't have access to the page they're trying to reach.
 * It accesses whether the user is logged in or not, and if logged in, what admin rights they have, and displays the corresponding navigation bar.
 * It states clearly that it's a 404 error, and that the page hasn't been found.
 * It directs the user to the navigation bar to continue back to the safety of the site.
@@ -430,135 +435,137 @@ On every device and browser listed above, I tested the following:
 ## Images
 ### Desktop and Laptop
 #### Chrome
-![Home page](static/docs/testing/home-d-chrome.jpg)
-![Log In page](static/docs/testing/log-in-d-chrome.jpg)
-![Log Out page](static/docs/testing/log-out-d-chrome.jpg)
-![Register page](static/docs/testing/register-d-chrome.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-d-chrome.jpg)
-![Profile page without cocktails](static/docs/testing/profile-d-chrome.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-d-chrome.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-d-chrome.jpg)
-![Categories page](static/docs/testing/categories-d-chrome.jpg)
-![Add Category page](static/docs/testing/add-category-d-chrome.jpg)
-![Edit Category page](static/docs/testing/edit-category-d-chrome.jpg)
+![Home page](static/docs/testing/desktop/chrome/home.png)
+![Log In page](static/docs/testing/desktop/chrome/log-in.png)
+![Register page](static/docs/testing/desktop/chrome/register.png)
+![User profile page with cocktails](static/docs/testing/desktop/chrome/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/desktop/chrome/profile-no.png)
+![Admin profile page](static/docs/testing/desktop/chrome/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/desktop/chrome/profile-delete.png)
+![Add Cocktail page](static/docs/testing/desktop/chrome/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/desktop/chrome/edit-cocktail.png)
+![Categories page](static/docs/testing/desktop/chrome/categories.png)
+![Add Category page](static/docs/testing/desktop/chrome/add-category.png)
+![Edit Category page](static/docs/testing/desktop/chrome/edit-category.png)
+![Users page](static/docs/testing/desktop/chrome/users.png)
 
 ---
 
 #### Edge
-![Home page](static/docs/testing/home-d-edge.jpg)
-![Log In page](static/docs/testing/log-in-d-edge.jpg)
-![Log Out page](static/docs/testing/log-out-d-edge.jpg)
-![Register page](static/docs/testing/register-d-edge.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-d-edge.jpg)
-![Profile page without cocktails](static/docs/testing/profile-d-edge.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-d-edge.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-d-edge.jpg)
-![Categories page](static/docs/testing/categories-d-edge.jpg)
-![Add Category page](static/docs/testing/add-category-d-edge.jpg)
-![Edit Category page](static/docs/testing/edit-category-d-edge.jpg)
+![Home page](static/docs/testing/desktop/edge/home.png)
+![Log In page](static/docs/testing/desktop/edge/log-in.png)
+![Register page](static/docs/testing/desktop/edge/register.png)
+![User profile page with cocktails](static/docs/testing/desktop/edge/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/desktop/edge/profile-no.png)
+![Admin profile page](static/docs/testing/desktop/edge/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/desktop/edge/profile-delete.png)
+![Add Cocktail page](static/docs/testing/desktop/edge/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/desktop/edge/edit-cocktail.png)
+![Categories page](static/docs/testing/desktop/edge/categories.png)
+![Add Category page](static/docs/testing/desktop/edge/add-category.png)
+![Edit Category page](static/docs/testing/desktop/edge/edit-category.png)
+![Users page](static/docs/testing/desktop/edge/users.png)
 
 ---
 
 #### Mozilla Firefox
-![Home page](static/docs/testing/home-d-moz.jpg)
-![Log In page](static/docs/testing/log-in-d-moz.jpg)
-![Log Out page](static/docs/testing/log-out-d-moz.jpg)
-![Register page](static/docs/testing/register-d-moz.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-d-moz.jpg)
-![Profile page without cocktails](static/docs/testing/profile-d-moz.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-d-moz.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-d-moz.jpg)
-![Categories page](static/docs/testing/categories-d-moz.jpg)
-![Add Category page](static/docs/testing/add-category-d-moz.jpg)
-![Edit Category page](static/docs/testing/edit-category-d-moz.jpg)
+![Home page](static/docs/testing/desktop/moz/home.png)
+![Log In page](static/docs/testing/desktop/moz/log-in.png)
+![Register page](static/docs/testing/desktop/moz/register.png)
+![User profile page with cocktails](static/docs/testing/desktop/moz/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/desktop/moz/profile-no.png)
+![Admin profile page](static/docs/testing/desktop/moz/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/desktop/moz/profile-delete.png)
+![Add Cocktail page](static/docs/testing/desktop/moz/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/desktop/moz/edit-cocktail.png)
+![Categories page](static/docs/testing/desktop/moz/categories.png)
+![Add Category page](static/docs/testing/desktop/moz/add-category.png)
+![Edit Category page](static/docs/testing/desktop/moz/edit-category.png)
+![Users page](static/docs/testing/desktop/moz/users.png)
 
 ---
 
 #### Safari
-![Home page](static/docs/testing/home-d-safari.jpg)
-![Log In page](static/docs/testing/log-in-d-safari.jpg)
-![Log Out page](static/docs/testing/log-out-d-safari.jpg)
-![Register page](static/docs/testing/register-d-safari.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-d-safari.jpg)
-![Profile page without cocktails](static/docs/testing/profile-d-safari.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-d-safari.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-d-safari.jpg)
-![Categories page](static/docs/testing/categories-d-safari.jpg)
-![Add Category page](static/docs/testing/add-category-d-safari.jpg)
-![Edit Category page](static/docs/testing/edit-category-d-safari.jpg)
+![Home page](static/docs/testing/desktop/safari/home.png)
+![Log In page](static/docs/testing/desktop/safari/log-in.png)
+![Register page](static/docs/testing/desktop/safari/register.png)
+![User profile page with cocktails](static/docs/testing/desktop/safari/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/desktop/safari/profile-no.png)
+![Admin profile page](static/docs/testing/desktop/safari/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/desktop/safari/profile-delete.png)
+![Add Cocktail page](static/docs/testing/desktop/safari/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/desktop/safari/edit-cocktail.png)
+![Categories page](static/docs/testing/desktop/safari/categories.png)
+![Add Category page](static/docs/testing/desktop/safari/add-category.png)
+![Edit Category page](static/docs/testing/desktop/safari/edit-category.png)
+![Users page](static/docs/testing/desktop/safari/users.png)
 
 ---
 
 ### Tablet
 #### Safari
-![Home page](static/docs/testing/home-t-safari.jpg)
-![Log In page](static/docs/testing/log-in-t-safari.jpg)
-![Log Out page](static/docs/testing/log-out-t-safari.jpg)
-![Register page](static/docs/testing/register-t-safari.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-t-safari.jpg)
-![Profile page without cocktails](static/docs/testing/profile-t-safari.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-t-safari.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-t-safari.jpg)
-![Categories page](static/docs/testing/categories-t-safari.jpg)
-![Add Category page](static/docs/testing/add-category-t-safari.jpg)
-![Edit Category page](static/docs/testing/edit-category-t-safari.jpg)
+![Home page](static/docs/testing/tablet/safari/home.png)
+![Log In page](static/docs/testing/tablet/safari/log-in.png)
+![Register page](static/docs/testing/tablet/safari/register.png)
+![User profile page with cocktails](static/docs/testing/tablet/safari/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/tablet/safari/profile-no.png)
+![Admin profile page](static/docs/testing/tablet/safari/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/tablet/safari/profile-delete.png)
+![Add Cocktail page](static/docs/testing/tablet/safari/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/tablet/safari/edit-cocktail.png)
+![Categories page](static/docs/testing/tablet/safari/categories.png)
+![Add Category page](static/docs/testing/tablet/safari/add-category.png)
+![Edit Category page](static/docs/testing/tablet/safari/edit-category.png)
+![Users page](static/docs/testing/tablet/safari/users.png)
 
 ---
 
 ### Mobile
 #### Chrome
-![Home page](static/docs/testing/home-m-chrome.jpg)
-![Log In page](static/docs/testing/log-in-m-chrome.jpg)
-![Log Out page](static/docs/testing/log-out-m-chrome.jpg)
-![Register page](static/docs/testing/register-m-chrome.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-m-chrome.jpg)
-![Profile page without cocktails](static/docs/testing/profile-m-chrome.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-m-chrome.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-m-chrome.jpg)
-![Categories page](static/docs/testing/categories-m-chrome.jpg)
-![Add Category page](static/docs/testing/add-category-m-chrome.jpg)
-![Edit Category page](static/docs/testing/edit-category-m-chrome.jpg)
+![Home page](static/docs/testing/mobile/chrome/home.png)
+![Log In page](static/docs/testing/mobile/chrome/log-in.png)
+![Register page](static/docs/testing/mobile/chrome/register.png)
+![User profile page with cocktails](static/docs/testing/mobile/chrome/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/mobile/chrome/profile-no.png)
+![Admin profile page](static/docs/testing/mobile/chrome/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/mobile/chrome/profile-delete.png)
+![Add Cocktail page](static/docs/testing/mobile/chrome/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/mobile/chrome/edit-cocktail.png)
+![Categories page](static/docs/testing/mobile/chrome/categories.png)
+![Add Category page](static/docs/testing/mobile/chrome/add-category.png)
+![Edit Category page](static/docs/testing/mobile/chrome/edit-category.png)
+![Users page](static/docs/testing/mobile/chrome/users.png)
 
 ---
 
 #### Safari
-![Home page](static/docs/testing/home-m-safari.jpg)
-![Log In page](static/docs/testing/log-in-m-safari.jpg)
-![Log Out page](static/docs/testing/log-out-m-safari.jpg)
-![Register page](static/docs/testing/register-m-safari.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-m-safari.jpg)
-![Profile page without cocktails](static/docs/testing/profile-m-safari.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-m-safari.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-m-safari.jpg)
-![Categories page](static/docs/testing/categories-m-safari.jpg)
-![Add Category page](static/docs/testing/add-category-m-safari.jpg)
-![Edit Category page](static/docs/testing/edit-category-m-safari.jpg)
+![Home page](static/docs/testing/mobile/safari/home.png)
+![Log In page](static/docs/testing/mobile/safari/log-in.png)
+![Register page](static/docs/testing/mobile/safari/register.png)
+![User profile page with cocktails](static/docs/testing/mobile/safari/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/mobile/safari/profile-no.png)
+![Admin profile page](static/docs/testing/mobile/safari/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/mobile/safari/profile-delete.png)
+![Add Cocktail page](static/docs/testing/mobile/safari/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/mobile/safari/edit-cocktail.png)
+![Categories page](static/docs/testing/mobile/safari/categories.png)
+![Add Category page](static/docs/testing/mobile/safari/add-category.png)
+![Edit Category page](static/docs/testing/mobile/safari/edit-category.png)
+![Users page](static/docs/testing/mobile/safari/users.png)
 
 ---
 
 #### Samsung Internet
-![Home page](static/docs/testing/home-m-samsung.jpg)
-![Log In page](static/docs/testing/log-in-m-samsung.jpg)
-![Log Out page](static/docs/testing/log-out-m-samsung.jpg)
-![Register page](static/docs/testing/register-m-samsung.jpg)
-![Profile page with cocktails](static/docs/testing/profile-cocktails-m-samsung.jpg)
-![Profile page without cocktails](static/docs/testing/profile-m-samsung.jpg)
-![Add Cocktail page](static/docs/testing/add-cocktail-m-samsung.jpg)
-![Edit Cocktail page](static/docs/testing/edit-cocktail-m-samsung.jpg)
-![Categories page](static/docs/testing/categories-m-samsung.jpg)
-![Add Category page](static/docs/testing/add-category-m-samsung.jpg)
-![Edit Category page](static/docs/testing/edit-category-m-samsung.jpg)
-
----
-
-### Responsinator
-![Responsinator test](static/docs/testing/responsinator1.jpg)
-![Responsinator test](static/docs/testing/responsinator2.jpg)
-![Responsinator test](static/docs/testing/responsinator3.jpg)
-![Responsinator test](static/docs/testing/responsinator4.jpg)
-![Responsinator test](static/docs/testing/responsinator5.jpg)
-![Responsinator test](static/docs/testing/responsinator6.jpg)
-![Responsinator test](static/docs/testing/responsinator7.jpg)
-![Responsinator test](static/docs/testing/responsinator8.jpg)
-![Responsinator test](static/docs/testing/responsinator9.jpg)
-![Responsinator test](static/docs/testing/responsinator10.jpg)
+![Home page](static/docs/testing/mobile/samsung/home.png)
+![Log In page](static/docs/testing/mobile/samsung/log-in.png)
+![Register page](static/docs/testing/mobile/samsung/register.png)
+![User profile page with cocktails](static/docs/testing/mobile/samsung/profile-cocktails.png)
+![User profile page without cocktails](static/docs/testing/mobile/samsung/profile-no.png)
+![Admin profile page](static/docs/testing/mobile/samsung/profile-admin.png)
+![Admin profile page with delete cocktail modal](static/docs/testing/mobile/samsung/profile-delete.png)
+![Add Cocktail page](static/docs/testing/mobile/samsung/add-cocktail.png)
+![Edit Cocktail page](static/docs/testing/mobile/samsung/edit-cocktail.png)
+![Categories page](static/docs/testing/mobile/samsung/categories.png)
+![Add Category page](static/docs/testing/mobile/samsung/add-category.png)
+![Edit Category page](static/docs/testing/mobile/samsung/edit-category.png)
+![Users page](static/docs/testing/mobile/samsung/users.png)
