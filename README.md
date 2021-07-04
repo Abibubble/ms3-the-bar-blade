@@ -620,6 +620,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * London Lemonade - Photo by [Geraud pfeiffer](https://www.pexels.com/@geraud-pfeiffer?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from Pexels.
 * Blue Lagoon - Photo by [Nerfee Mirandilla](https://www.pexels.com/@nerfee-mirandilla-1656989?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) from Pexels.
 * Favicon - Image by [Clker-Free-Vector-Images](https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=35622) from Pixabay.
+* Any images added by users can't be credited here, unfortunately, although I send my warmest thanks to the sites the users have found the images on.
 
 ### Acknowledgements
 * My mentor, Antonio Rodriguez, at [Code Institute](https://codeinstitute.net/), for continuous helpful feedback and support.
