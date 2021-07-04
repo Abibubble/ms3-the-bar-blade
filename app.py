@@ -190,7 +190,7 @@ def add_cocktail():
             "user_id": ObjectId(user["_id"])
         }
         mongo.db.recipes.insert_one(cocktail)
-        flash("Cocktail successfully added!")
+        flash("Cocktail Successfully Added")
         return redirect(url_for("homepage"))
 
     categories = mongo.db.categories.find().sort("category_id", 1)
@@ -216,7 +216,7 @@ def edit_cocktail(recipe_id):
             "user_id": ObjectId(user["_id"])
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, cocktail)
-        flash("Cocktail successfully edited!")
+        flash("Cocktail Successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -228,7 +228,7 @@ def edit_cocktail(recipe_id):
 def delete_cocktail(recipe_id):
     # Allow user or admin to delete a cocktail recipe
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Cocktail Deleted")
+    flash("Cocktail Successfully Deleted")
     return redirect(url_for("homepage"))
 
 
@@ -295,7 +295,7 @@ def add_category():
             "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
-        flash("New category added")
+        flash("Category Successfully Added")
         return redirect(url_for("get_categories"))
     return render_template("add_category.html", user=user)
 
@@ -354,7 +354,7 @@ def admin_user(user_id):
 def delete_user(user_id):
     # Allow admin user to delete other users
     mongo.db.users.remove({"_id": ObjectId(user_id)})
-    flash("User deleted")
+    flash("User Successfully Deleted")
     return redirect(url_for("get_users"))
 
 
@@ -362,7 +362,7 @@ def delete_user(user_id):
 def delete_account(username):
     # Allow user to delete their own account
     mongo.db.users.remove({"username": username})
-    flash("User deleted")
+    flash("User Successfully Deleted")
     session.pop("user")
     return redirect(url_for("homepage"))
 
