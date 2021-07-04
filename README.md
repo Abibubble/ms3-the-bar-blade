@@ -33,8 +33,15 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
 * [Database Design](#database-design)
 
 * [Technologies Used](#technologies-used)
-    * [Languages Used](#languages-used)
-    * [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
+    * [Languages](#languages)
+    * [Workspace](#workspace)
+    * [Version Control](#version-control)
+    * [Wireframing](#wireframing)
+    * [Responsive Design](#responsive-design)
+    * [Documentation](#documentation)
+    * [Site Design](#site-design)
+    * [Database Design](#database-design)
+    * [Frameworks, Libraries and Others](#frameworks-libraries-and-others)
 
 * [Deployment](#deployment)
     * [Initial Deployment](#initial-deployment)
@@ -242,69 +249,68 @@ The Recipes collection references both the Categories collection and the Users c
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Python](https://www.python.org/)
 
-### Frameworks Libraries and Programs Used
-#### Workspace
-##### GitPod:
+### Workspace
+#### GitPod:
 [GitPod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
 
-#### Version Control
-##### Git:
+### Version Control
+#### Git:
 [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
-##### GitHub:
+#### GitHub:
 [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
 
-#### Wireframing
-##### Balsamiq:
+### Wireframing
+#### Balsamiq:
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
 
-#### Responsive Design
-##### Am I Responsive Design:
+### Responsive Design
+#### Am I Responsive Design:
 [Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the responsive design of the site, and to create the final site image.
-##### Responsinator:
+#### Responsinator:
 [Responsinator](http://www.responsinator.com/) was used to help improve the responsive design on a variety of devices.
 
-#### Documentation
-##### Shields.io:
+### Documentation
+#### Shields.io:
 [Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
 
-#### Design
-##### Font Awesome:
+### Site Design
+#### Font Awesome:
 [Font Awesome](https://fontawesome.com/) was used on all pages to add the icons.
-##### Google Fonts:
+#### Google Fonts:
 [Google Fonts](https://fonts.google.com/) was used to select all the fonts on the site.
-##### Favicon.io:
+#### Favicon.io:
 [favicon.io](https://favicon.io/) used to create a site favicon.
-##### Imgur:
+#### Imgur:
 [Imgur](https://imgur.com/) was used to host images to add to each cocktail recipe.
 
-#### Database
-##### MongoDB:
+### Database Design
+#### MongoDB:
 [MongoDB](https://www.mongodb.com/) was used to store the contents of the database, and allow full CRUD functionality.
-##### Flask-PyMongo:
+#### Flask-PyMongo:
 [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect my Python / Flask app to MongoDB.
 
-#### Frameworks, Libraries and Others
-##### Heroku:
+### Frameworks, Libraries and Others
+#### Heroku:
 [Heroku](https://www.heroku.com) was used to deploy the live site.
-##### Google DevTools:
+#### Google DevTools:
 [Google DevTools](https://developer.chrome.com/docs/devtools/) was used to help find what code correlated to which feature.
-##### Lighthouse:
+#### Lighthouse:
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the code was as performant as possible, confirming to best practices, and SEO and Accessibility guidelines.
-##### Flask:
+#### Flask:
 [Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to help create the templating for this site.
-##### Materialize:
+#### Materialize:
 [Materialize](https://materializecss.com/) was used to create a beautiful, responsive website.
-##### jQuery:
+#### jQuery:
 [jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
-##### Jinja:
+#### Jinja:
 [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
-##### RandomKeygen:
+#### RandomKeygen:
 [RandomKeygen](https://randomkeygen.com/) was used to generate a strong `SECRET_KEY`.
-##### Flask-paginate:
+#### Flask-paginate:
 [Flask-paginate](https://pythonhosted.org/Flask-paginate/) was used to add pagination to the homepage.
-##### pip:
+#### pip:
 [pip](https://pip.pypa.io/en/stable/) was used to install the required dependancies for this site.
-##### dnspython:
+#### dnspython:
 [dnspython](https://pypi.org/project/dnspython/) was used to provide access to DNS.
 
 ## Deployment
