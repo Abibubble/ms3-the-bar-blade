@@ -55,8 +55,12 @@ let addButton = `<button class="waves-effect waves-light btn purple" onclick="ad
 Ingredient</button>`;
 
 function addIngredient(add) {
+    let number = add.substr(15);
+    let thisInput = document.getElementById("recipe_list-" + number);
     if (counter === max) {
         alert("You have reached the maximum amount of ingredients");
+    } else if (thisInput.value.length < 3) {
+        alert("Please ensure your ingredient is at least 3 characters long");
     } else {
         let oldAddButton = document.getElementById("add-button"); // Find current add button
         let thisRemoveButton = removeButton.replaceAll("*", counter-1);
