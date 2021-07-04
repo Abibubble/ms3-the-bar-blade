@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="row purple darken-4 white-text">
+        <div class="col s12 center-align">
+            <h2 class="welcome">Welcome to The Bar Blade!</h2>
+            <p class="welcome-p">Feel free to browse the cocktails below, search for your favourites, or add a new cocktail to the site!</p>
+            <p class="welcome-p">You can find all the cocktails you've added in your Profile</p>
+        </div>
+    </div>
+
     <div class="row card-panel purple darken-4">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
             <div class="center-align">

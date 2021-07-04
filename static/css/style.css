@@ -47,6 +47,14 @@ main {
     font-family: 'Dancing Script', cursive;
 }
 
+.welcome {
+    font-size: 2rem;
+}
+
+.welcome-p {
+    font-size: 1.1rem;
+}
+
 .card {
     color: white;
     background-color: black;
