@@ -75,9 +75,9 @@ I wanted to create a website linked to a database, which allows users to login, 
 ### User Stories
 #### First Time Visitor Goals
 As a first time visitor to this site, a user should be able to :
-* Be able to easily navigate the site.
+* Easily navigate the site.
 * Intuitively and easily understand what to do.
-* Be able to register for an account.
+* Register for an account.
 * Search for a specific cocktail.
 * Browse through all cocktails.
 * Get visual feedback when an action on the site is completed.
@@ -88,12 +88,12 @@ In addition to the First Time Visitor Goals, a Returning Visitor should be able 
 * Add new cocktails.
 * Edit and delete the user's cocktails.
 * See the cocktails the user has added.
-* The user's password should be stored securely.
-* Navigation should be intuitive, with no need to use the browser's back button.
+* Be confident that the user's password is be stored securely.
+* Navigate intuitively, with no need to use the browser's back button.
 
 #### Admin Goals
-In addition to the First Time Visitor Goals and Returning Visitor Goals, as an administrator of this site, an admin user should be able to:
-* A user shouldn't be able to brute force their way into the restricted pages.
+In addition to the First Time and Returning Visitor Goals, as an administrator of this site, an admin user should be able to:
+* Be confident that a user can't to brute force their way into the restricted pages.
 * Edit or delete any cocktail recipe.
 * Add a new category.
 * Edit or delete any category.
@@ -107,7 +107,8 @@ In addition to the First Time Visitor Goals and Returning Visitor Goals, as an a
 ## Design
 ### Color Scheme
 * I decided on a very simple theme of purple and black for my color scheme.
-* I didn't want to distract from the content of the site, hence choosing two main colours.
+* I didn't want to distract from the content of the site, hence choosing two main colors.
+* These colors are very contrasting, which provides a striking visual style on the site.
 * I have used 3 different shades of purple to provide some contrast on the site.
 * All text is white, which allows the text to be easily visible on all backgrounds.
 * I have used other colors on buttons only:
