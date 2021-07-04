@@ -232,20 +232,39 @@ def delete_cocktail(recipe_id):
     return redirect(url_for("homepage"))
 
 
+def get_search_recipes(offset=0, per_page=10):
+    # Give pagination information about recipes when searched
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return recipes[offset: offset + per_page]
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     # Search function
     query = request.form.get("query")
-    user = mongo.db.users.find_one({"username": session["user"]})
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    user = mongo.db.users.find_one({"username": session["user"]})
 
-    for recipe in recipes:
+    # Pagination
+    # pylint: disable=unbalanced-tuple-unpacking
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    # pylint: enable=unbalanced-tuple-unpacking
+    total = len(recipes)
+    pagination_recipes = get_search_recipes(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total)
+
+    for recipe in pagination_recipes:
+        # Fill in username from user _id
         try:
             username = mongo.db.users.find_one(
                 {"_id": ObjectId(recipe["user_id"])})["username"]
             recipe["user_id"] = username
         except BaseException:
             recipe["user_id"] = "undefined"
+
+        # Fill in category_name from category _id
         try:
             category_name = mongo.db.categories.find_one(
                 {"_id": ObjectId(recipe["category_id"])})["category_name"]
@@ -253,7 +272,9 @@ def search():
         except BaseException:
             recipe["category_id"] = "undefined"
 
-    return render_template("homepage.html", recipes=recipes, user=user)
+    return render_template(
+        "homepage.html", recipes=pagination_recipes,
+        user=user, page=page, per_page=per_page, pagination=pagination)
 
 
 @app.route("/get_categories")
