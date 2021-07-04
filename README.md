@@ -67,6 +67,7 @@ This is a cocktail recipe site, built for bartenders, by bartenders. It's a site
     * [Acknowledgements](#acknowledgements)
 
 ---
+
 ## User Experience (UX)
 ### Initial Discussion
 I wanted to create a website linked to a database, which allows users to login, add their own cocktails, or just search and find previously added cocktails. As an ex-bartender myself, this was something I always wanted but couldn't find online.
@@ -102,6 +103,7 @@ In addition to the First Time Visitor Goals and Returning Visitor Goals, as an a
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
 
 ---
+
 ## Design
 ### Color Scheme
 * I decided on a very simple theme of purple and black for my color scheme.
@@ -321,6 +323,8 @@ The Recipes collection references both the Categories collection and the Users c
 #### dnspython:
 [dnspython](https://pypi.org/project/dnspython/) was used to provide access to DNS.
 
+---
+
 ## Deployment
 ### Requirements for Deployment
 * Python
@@ -401,6 +405,7 @@ SECRET_KEY - This is a custom string set up to keep sessions secure. I recommend
 For a more detailed version of these steps, go to the [Github Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) page on this topic.
 
 ---
+
 ## Testing
 ### W3C Validator
 The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the project to ensure there were no syntax errors within the site.
@@ -579,6 +584,7 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * The links it's referring to are the pagination links, which I don't have control over due to my use of Flask-paginate to create the pagination for this site.
 
 ---
+
 ## Credits
 ### Code
 * [Font Awesome](https://fontawesome.com/): Library of icons used for social media and download links.
