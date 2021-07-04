@@ -237,7 +237,7 @@ On every device and browser listed above, I tested the following:
 ### Homepage
 * &#128683;
 * All cocktails are displayed on this page.
-* There is a search function, as explained below in [Search](#search).
+* There is a search function, as explained below in [Search Recipes](#search-recipes).
 * Category and User names are displayed capitalized.
 * If the recipe is too long for the box, there is a helpful scrollbar to ensure the page stays stylistically smooth.
 
