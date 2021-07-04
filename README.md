@@ -85,6 +85,7 @@ I wanted to create a website linked to a database, which allows users to login, 
 * Other users shouldn't be able to edit or delete the user's cocktails.
 * A user shouldn't be able to brute force their way into the restricted pages.
 * Be able to edit or delete any recipe as an admin.
+* Be able to give or remove admin rights as an admin.
 
 ### Project Goals
 * This project has the goal of demonstrating my understanding of maintaining a database attached to a website, with full CRUD (Create, Read, Update and Delete) functionality.
@@ -430,6 +431,12 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 * If the user has the is_admin toggle set to true, then all recipes are displayed on their profile.
 * This includes all recipes created by other users, with edit and delete buttons.
 * This enabled the admin to edit or delete any recipe.
+
+##### Be able to give or remove admin rights as an admin.
+* Admin users are set with an is_admin toggle in the database, so that it doesn't rely on usernames.
+* If the user has the is_admin toggle set to true, then they have access to the Manage Users page.
+* From there, any user can be deleted, or have their admin rights switched on or off.
+* The only user that cannot be edited is the main admin account, to ensure the site isn't left without an admin user by mistake.
 
 ### Full Testing
 [Click here to view the full testing steps](static/docs/TESTING.md) that were completed on every device and browser, and screenshots of testing.
