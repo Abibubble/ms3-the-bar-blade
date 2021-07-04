@@ -25,6 +25,10 @@ main {
     border: 1px solid black;
 }
 
+.bar-blade-shadow {
+    text-shadow: 1px 1px white;
+}
+
 /* ----------------------------------------------------------------------------------- Navbar */
 
 .brand-logo {

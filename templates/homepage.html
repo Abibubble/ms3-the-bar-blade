@@ -26,7 +26,7 @@
     <div class="row card">
         {% for recipe in recipes %}
             <div class="col s12 m6 card-outer">
-                <h2 class="header card-header bar-blade">{{ recipe.recipe_name }}</h2>
+                <h2 class="header card-header bar-blade bar-blade-shadow">{{ recipe.recipe_name }}</h2>
                 <p class="added-by"><em>Added by {{ recipe.user_id.capitalize() }}</em></p>
                 <div class="card homepage-card horizontal">
                     <div class="card-image">
