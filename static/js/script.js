@@ -76,7 +76,6 @@ function removeIngredient(el) {
         siteRemoveButton.insertAdjacentHTML('afterend', addButton); // Add the first add button back
     }
     document.getElementById(elRemove).remove();
-    counter--;
 }
 
 // -------------------------------------------------------------------- Show Password
