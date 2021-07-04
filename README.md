@@ -555,6 +555,10 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * I created a new variable to find the counter for the clicked remove button, and used that to reference.
     * I then used Google DevTools to inspect my code and discovered that the remove button was being given a number from the counter that was one too high for the element it was meant to be referencing.
     * I changed it to `let thisRemoveButton = removeButton.replaceAll("*", counter-1);` which fixed this bug.
+6. When a user who isn't logged in tries to search, it gives a `key error: user`.
+    * I checked my app.py file and found that the search function was still using `user = mongo.db.users.find_one({"username": session["user"]})`.
+    * I changed this to the same try/except block that the homepage uses.
+    * This fixed the bug.
 
 ### Known Bugs
 * None found, if any errors are found, please contact me via my GitHub ([Abibubble](https://github.com/Abibubble/)) to get them fixed.
