@@ -522,19 +522,21 @@ On every device and browser listed above, I tested the following:
 
 ### Mobile
 #### Chrome
-![Home page](static/docs/testing/mobile/chrome/home.png)
-![Log In page](static/docs/testing/mobile/chrome/log-in.png)
-![Register page](static/docs/testing/mobile/chrome/register.png)
-![User profile page with cocktails](static/docs/testing/mobile/chrome/profile-cocktails.png)
-![User profile page without cocktails](static/docs/testing/mobile/chrome/profile-no.png)
-![Admin profile page](static/docs/testing/mobile/chrome/profile-admin.png)
-![Admin profile page with delete cocktail modal](static/docs/testing/mobile/chrome/profile-delete.png)
-![Add Cocktail page](static/docs/testing/mobile/chrome/add-cocktail.png)
-![Edit Cocktail page](static/docs/testing/mobile/chrome/edit-cocktail.png)
-![Categories page](static/docs/testing/mobile/chrome/categories.png)
-![Add Category page](static/docs/testing/mobile/chrome/add-category.png)
-![Edit Category page](static/docs/testing/mobile/chrome/edit-category.png)
-![Users page](static/docs/testing/mobile/chrome/users.png)
+![Home page](static/docs/testing/mobile/chrome/home.jpg)
+![Log In page](static/docs/testing/mobile/chrome/log-in.jpg)
+![Register page](static/docs/testing/mobile/chrome/register.jpg)
+![User profile page with cocktails](static/docs/testing/mobile/chrome/profile-cocktails.jpg)
+![User profile page without cocktails](static/docs/testing/mobile/chrome/profile-no.jpg)
+![User profile page without cocktails bottom](static/docs/testing/mobile/chrome/profile-no2.jpg)
+![Admin profile page](static/docs/testing/mobile/chrome/profile-admin.jpg)
+![Admin profile page bottom](static/docs/testing/mobile/chrome/profile-admin2.jpg)
+![Admin profile page with delete cocktail modal](static/docs/testing/mobile/chrome/profile-delete.jpg)
+![Add Cocktail page](static/docs/testing/mobile/chrome/add-cocktail.jpg)
+![Edit Cocktail page](static/docs/testing/mobile/chrome/edit-cocktail.jpg)
+![Categories page](static/docs/testing/mobile/chrome/categories.jpg)
+![Add Category page](static/docs/testing/mobile/chrome/add-category.jpg)
+![Edit Category page](static/docs/testing/mobile/chrome/edit-category.jpg)
+![Users page](static/docs/testing/mobile/chrome/users.jpg)
 
 ---
 
