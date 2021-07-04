@@ -70,7 +70,7 @@ function addIngredient(add) {
 
 function removeIngredient(el) {
     let elRemove = el.getAttribute("data-ingredient"); // Find the data attribute, which is the same as the id
-    let currentElCounter = elRemove.substr(15, 1);
+    let currentElCounter = elRemove.substr(15);
     let siteRemoveButton = document.getElementById(`remove-button-${currentElCounter}`);
     if (document.getElementsByClassName("add-ingredients").length == 1) { // If it's going back to just one ingredient input...
         siteRemoveButton.insertAdjacentHTML('afterend', addButton); // Add the first add button back
