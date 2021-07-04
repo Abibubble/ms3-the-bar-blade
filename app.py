@@ -330,7 +330,7 @@ def add_category():
         flash("You need to be logged in to access this page")
         return redirect(url_for("login"))
 
-    if user.is_admin is False:
+    if user["is_admin"] is False:
         flash("You need to be an admin to access this page")
         return redirect(url_for("homepage"))
 
@@ -353,7 +353,7 @@ def edit_category(category_id):
         flash("You need to be logged in to access this page")
         return redirect(url_for("login"))
 
-    if user.is_admin is False:
+    if user["is_admin"] is False:
         flash("You need to be an admin to access this page")
         return redirect(url_for("homepage"))
 
