@@ -599,8 +599,9 @@ I tested my website using DevTools Lighthouse feature, and got these results:
 * [Font Awesome](https://fontawesome.com/): Library of icons used for social media and download links.
 * [Materialize](https://materializecss.com/): Throughout the site, to create a beautiful responsive site, without taking too much time.
 * [Code Institute](https://codeinstitute.net/): For the select form element validation.
-* [This article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) for helping me fix bug #3.
-* [This GitHub repo from mozillazg](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) for help with the pagination.
+* [This article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3): For helping me fix bug #3.
+* [Flask-paginate](https://pythonhosted.org/Flask-paginate/): For the pagination.
+* [This GitHub repo from mozillazg](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9): For help with making the pagination work on this site.
 
 ### Content
 * All content was created by [Abi Harrison](https://github.com/Abibubble).
