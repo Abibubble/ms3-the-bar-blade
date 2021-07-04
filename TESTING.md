@@ -563,6 +563,7 @@ On every device and browser listed above, I tested the following:
 ![Register page](static/docs/testing/mobile/samsung/register.jpg)
 ![User profile page with cocktails](static/docs/testing/mobile/samsung/profile-cocktails.jpg)
 ![User profile page without cocktails](static/docs/testing/mobile/samsung/profile-no.jpg)
+![User profile page without cocktails bottom](static/docs/testing/mobile/samsung/profile-no2.jpg)
 ![Admin profile page](static/docs/testing/mobile/samsung/profile-admin.jpg)
 ![Admin profile page with delete cocktail modal](static/docs/testing/mobile/samsung/profile-delete.jpg)
 ![Add Cocktail page](static/docs/testing/mobile/samsung/add-cocktail.jpg)
