@@ -51,8 +51,7 @@ let newIngredient = `<div class="row" id="add-ingredient-*" class="add-ingredien
 </div>`;
 
 let removeButton = `<button class="waves-effect waves-light btn red darken-4" onClick="removeIngredient(this)" data-ingredient="add-ingredient-*" id="remove-button-*"><i class="fas fa-times"></i> Remove</button>`;
-let addButton = `<button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-1');" id="add-button">Add Another
-Ingredient</button>`;
+let addButton = `<button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-1');" id="add-button">Add Additional Ingredient</button>`;
 
 function addIngredient(add) {
     let number = add.substr(15);

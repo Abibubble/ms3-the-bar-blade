@@ -40,7 +40,7 @@
                         <input id="recipe_list-{{ ingredient }}" value="{{ ingredient }}" name="recipe_list" type="text" minlength="3" maxlength="100" class="validate white-text" required>
                         <label for="recipe_list-{{ ingredient }}">Ingredients</label>
                         {% if loop.index == 1 %}
-                            <button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-{{ ingredient }}');" id="add-button">Add Another Ingredient</button>
+                            <button class="waves-effect waves-light btn purple" onclick="addIngredient('add-ingredient-{{ ingredient }}');" id="add-button">Add Additional Ingredient</button>
                         {% else %}
                             <button class="waves-effect waves-light btn red darken-4" onClick="removeIngredient(this)" data-ingredient="add-ingredient-{{ ingredient }}" id="remove-button-{{ ingredient }}"><i class="fas fa-times"></i> Remove</button>
                         {% endif %}
