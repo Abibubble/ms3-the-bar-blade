@@ -243,51 +243,68 @@ The Recipes collection references both the Categories collection and the Users c
 * [Python](https://www.python.org/)
 
 ### Frameworks Libraries and Programs Used
-#### Git:
+#### Workspace
+##### GitPod:
+[GitPod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
+
+#### Version Control
+##### Git:
 [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
-#### GitHub:
+##### GitHub:
 [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
-#### Heroku:
-[Heroku](https://www.heroku.com) was used to deploy the live site.
-#### Balsamiq:
+
+#### Wireframing
+##### Balsamiq:
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
-#### Responsinator:
-[Responsinator](http://www.responsinator.com/) was used to help improve the responsive design on a variety of devices.
-#### Google DevTools:
-[Google DevTools](https://developer.chrome.com/docs/devtools/) was used to help find what code correlated to which feature.
-#### Am I Responsive Design:
+
+#### Responsive Design
+##### Am I Responsive Design:
 [Am I Responsive Design](http://ami.responsivedesign.is/#) was used to check the responsive design of the site, and to create the final site image.
-#### Shields.io:
+##### Responsinator:
+[Responsinator](http://www.responsinator.com/) was used to help improve the responsive design on a variety of devices.
+
+#### Documentation
+##### Shields.io:
 [Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
-#### Lighthouse:
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the code was as performant as possible, confirming to best practices, and SEO and Accessibility guidelines.
-#### Font Awesome:
+
+#### Design
+##### Font Awesome:
 [Font Awesome](https://fontawesome.com/) was used on all pages to add the icons.
-#### MongoDB:
-[MongoDB](https://www.mongodb.com/) was used to store the contents of the database, and allow full CRUD functionality.
-#### Flask:
-[Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to help create the templating for this site.
-#### Materialize:
-[Materialize](https://materializecss.com/) was used to create a beautiful, responsive website.
-#### jQuery:
-[jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
-#### Google Fonts:
+##### Google Fonts:
 [Google Fonts](https://fonts.google.com/) was used to select all the fonts on the site.
-#### Jinja:
-[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
-#### RandomKeygen:
-[RandomKeygen](https://randomkeygen.com/) was used to generate a strong `SECRET_KEY`.
-#### Favicon.io:
+##### Favicon.io:
 [favicon.io](https://favicon.io/) used to create a site favicon.
-#### Imgur:
+##### Imgur:
 [Imgur](https://imgur.com/) was used to host images to add to each cocktail recipe.
-#### Flask-paginate:
-[Flask-paginate](https://pythonhosted.org/Flask-paginate/) was used to add pagination to the homepage.
-#### Flask-PyMongo:
+
+#### Database
+##### MongoDB:
+[MongoDB](https://www.mongodb.com/) was used to store the contents of the database, and allow full CRUD functionality.
+##### Flask-PyMongo:
 [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect my Python / Flask app to MongoDB.
-#### pip:
+
+#### Frameworks, Libraries and Others
+##### Heroku:
+[Heroku](https://www.heroku.com) was used to deploy the live site.
+##### Google DevTools:
+[Google DevTools](https://developer.chrome.com/docs/devtools/) was used to help find what code correlated to which feature.
+##### Lighthouse:
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to ensure that the code was as performant as possible, confirming to best practices, and SEO and Accessibility guidelines.
+##### Flask:
+[Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to help create the templating for this site.
+##### Materialize:
+[Materialize](https://materializecss.com/) was used to create a beautiful, responsive website.
+##### jQuery:
+[jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
+##### Jinja:
+[Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
+##### RandomKeygen:
+[RandomKeygen](https://randomkeygen.com/) was used to generate a strong `SECRET_KEY`.
+##### Flask-paginate:
+[Flask-paginate](https://pythonhosted.org/Flask-paginate/) was used to add pagination to the homepage.
+##### pip:
 [pip](https://pip.pypa.io/en/stable/) was used to install the required dependancies for this site.
-#### dnspython:
+##### dnspython:
 [dnspython](https://pypi.org/project/dnspython/) was used to provide access to DNS.
 
 ## Deployment
