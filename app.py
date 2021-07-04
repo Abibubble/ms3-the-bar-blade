@@ -105,6 +105,12 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    # Find if a user is logged in
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        user = mongo.db.users.find()
+
     if request.method == "POST":
         # Check if username already exists
         existing_user = mongo.db.users.find_one(
@@ -126,15 +132,19 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html", user=user)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # Get the user's username from the database
-    user = mongo.db.users.find_one({"username": session["user"]})
-    username = user["username"]
-    user_id = user["_id"]
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+        username = user["username"]
+        user_id = user["_id"]
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
 
     if user["is_admin"]:
         recipes = list(mongo.db.recipes.find())
@@ -173,7 +183,11 @@ def logout():
 @app.route("/add_cocktail", methods=["GET", "POST"])
 def add_cocktail():
     # Allow user to add a cocktail recipe
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
 
     if request.method == "POST":
         category_name = request.form.get("category_name")
@@ -201,7 +215,12 @@ def add_cocktail():
 @app.route("/edit_cocktail/<recipe_id>", methods=["GET", "POST"])
 def edit_cocktail(recipe_id):
     # Allow user or admin to edit a cocktail recipe
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
+
     category_name = request.form.get("category_name")
     category = mongo.db.categories.find_one({"category_name": category_name})
 
@@ -285,7 +304,16 @@ def search():
 @app.route("/get_categories")
 def get_categories():
     # Show categories to admin user
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
+
+    if user.is_admin is False:
+        flash("You need to be an admin to access this page")
+        return redirect(url_for("homepage"))
+
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories, user=user)
 
@@ -293,7 +321,15 @@ def get_categories():
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     # Allow admin user to add categories
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
+
+    if user.is_admin is False:
+        flash("You need to be an admin to access this page")
+        return redirect(url_for("homepage"))
 
     if request.method == "POST":
         category = {
@@ -308,7 +344,15 @@ def add_category():
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     # Allow admin user to edit categories
-    user = mongo.db.users.find_one({"username": session["user"]})
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+    except BaseException:
+        flash("You need to be logged in to access this page")
+        return redirect(url_for("login"))
+
+    if user.is_admin is False:
+        flash("You need to be an admin to access this page")
+        return redirect(url_for("homepage"))
 
     if request.method == "POST":
         submit = {
