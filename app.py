@@ -62,6 +62,8 @@ def homepage():
         except BaseException:
             recipe["category_id"] = "undefined"
 
+        recipe["recipe_list"].reverse()
+
     return render_template(
         "homepage.html", recipes=pagination_recipes,
         categories=categories, user=user, page=page,
@@ -164,6 +166,7 @@ def profile(username):
             recipe["category_id"] = category_name
         except BaseException:
             recipe["category_id"] = "undefined"
+        recipe["recipe_list"].reverse()
 
     if session["user"]:
         return render_template(
@@ -197,7 +200,7 @@ def add_cocktail():
         cocktail = {
             "category_id": ObjectId(category["_id"]),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_list": request.form.getlist("recipe_list").reverse(),
+            "recipe_list": request.form.getlist("recipe_list"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
@@ -228,7 +231,7 @@ def edit_cocktail(recipe_id):
         cocktail = {
             "category_id": ObjectId(category["_id"]),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_list": request.form.getlist("recipe_list").reverse(),
+            "recipe_list": request.form.getlist("recipe_list"),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
