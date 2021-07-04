@@ -249,9 +249,11 @@ The Recipes collection references both the Categories collection and the Users c
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Python](https://www.python.org/)
 
+
 ### Workspace
 #### GitPod:
 [GitPod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
+
 
 ### Version Control
 #### Git:
@@ -259,9 +261,11 @@ The Recipes collection references both the Categories collection and the Users c
 #### GitHub:
 [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
 
+
 ### Wireframing
 #### Balsamiq:
 [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
+
 
 ### Responsive Design
 #### Am I Responsive Design:
@@ -269,9 +273,11 @@ The Recipes collection references both the Categories collection and the Users c
 #### Responsinator:
 [Responsinator](http://www.responsinator.com/) was used to help improve the responsive design on a variety of devices.
 
+
 ### Documentation
 #### Shields.io:
 [Shields.io](https://shields.io/) was used to create the GitHub badges for the top of this README.md file.
+
 
 ### Site Design
 #### Font Awesome:
@@ -283,11 +289,13 @@ The Recipes collection references both the Categories collection and the Users c
 #### Imgur:
 [Imgur](https://imgur.com/) was used to host images to add to each cocktail recipe.
 
+
 ### Database Design
 #### MongoDB:
 [MongoDB](https://www.mongodb.com/) was used to store the contents of the database, and allow full CRUD functionality.
 #### Flask-PyMongo:
 [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/) was used to connect my Python / Flask app to MongoDB.
+
 
 ### Frameworks, Libraries and Others
 #### Heroku:
