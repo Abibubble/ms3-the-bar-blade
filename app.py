@@ -197,7 +197,7 @@ def add_cocktail():
         cocktail = {
             "category_id": ObjectId(category["_id"]),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_list": request.form.getlist("recipe_list"),
+            "recipe_list": request.form.getlist("recipe_list").reverse(),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
@@ -228,7 +228,7 @@ def edit_cocktail(recipe_id):
         cocktail = {
             "category_id": ObjectId(category["_id"]),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_list": request.form.getlist("recipe_list"),
+            "recipe_list": request.form.getlist("recipe_list").reverse(),
             "recipe_description": request.form.get("recipe_description"),
             "recipe_img": request.form.get("recipe_img"),
             "recipe_alt": request.form.get("recipe_alt"),
