@@ -537,23 +537,25 @@ On every device and browser listed above, I tested the following:
 ![Add Category page](static/docs/testing/mobile/chrome/add-category.jpg)
 ![Edit Category page](static/docs/testing/mobile/chrome/edit-category.jpg)
 ![Users page](static/docs/testing/mobile/chrome/users.jpg)
+![Navigation menu](static/docs/testing/mobile/chrome/menu.jpg)
 
 ---
 
 #### Safari
-![Home page](static/docs/testing/mobile/safari/home.png)
-![Log In page](static/docs/testing/mobile/safari/log-in.png)
-![Register page](static/docs/testing/mobile/safari/register.png)
-![User profile page with cocktails](static/docs/testing/mobile/safari/profile-cocktails.png)
-![User profile page without cocktails](static/docs/testing/mobile/safari/profile-no.png)
-![Admin profile page](static/docs/testing/mobile/safari/profile-admin.png)
-![Admin profile page with delete cocktail modal](static/docs/testing/mobile/safari/profile-delete.png)
-![Add Cocktail page](static/docs/testing/mobile/safari/add-cocktail.png)
-![Edit Cocktail page](static/docs/testing/mobile/safari/edit-cocktail.png)
-![Categories page](static/docs/testing/mobile/safari/categories.png)
-![Add Category page](static/docs/testing/mobile/safari/add-category.png)
-![Edit Category page](static/docs/testing/mobile/safari/edit-category.png)
-![Users page](static/docs/testing/mobile/safari/users.png)
+![Home page](static/docs/testing/mobile/safari/home.jpg)
+![Log In page](static/docs/testing/mobile/safari/log-in.jpg)
+![Register page](static/docs/testing/mobile/safari/register.jpg)
+![User profile page with cocktails](static/docs/testing/mobile/safari/profile-cocktails.jpg)
+![User profile page without cocktails](static/docs/testing/mobile/safari/profile-no.jpg)
+![Admin profile page](static/docs/testing/mobile/safari/profile-admin.jpg)
+![Admin profile page with delete cocktail modal](static/docs/testing/mobile/safari/profile-delete.jpg)
+![Add Cocktail page](static/docs/testing/mobile/safari/add-cocktail.jpg)
+![Edit Cocktail page](static/docs/testing/mobile/safari/edit-cocktail.jpg)
+![Categories page](static/docs/testing/mobile/safari/categories.jpg)
+![Add Category page](static/docs/testing/mobile/safari/add-category.jpg)
+![Edit Category page](static/docs/testing/mobile/safari/edit-category.jpg)
+![Users page](static/docs/testing/mobile/safari/users.jpg)
+![Navigation menu](static/docs/testing/mobile/safari/menu.jpg)
 
 ---
 
