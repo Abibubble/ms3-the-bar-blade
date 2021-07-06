@@ -517,6 +517,7 @@ On every device and browser listed above, I tested the following:
 ![Add Category page](static/docs/testing/tablet/safari/add-category.jpg)
 ![Edit Category page](static/docs/testing/tablet/safari/edit-category.jpg)
 ![Users page](static/docs/testing/tablet/safari/users.jpg)
+![Menu](static/docs/testing/tablet/safari/menu.jpg)
 
 ---
 
