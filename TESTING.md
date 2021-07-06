@@ -504,19 +504,19 @@ On every device and browser listed above, I tested the following:
 
 ### Tablet
 #### Safari
-![Home page](static/docs/testing/tablet/safari/home.png)
-![Log In page](static/docs/testing/tablet/safari/log-in.png)
-![Register page](static/docs/testing/tablet/safari/register.png)
-![User profile page with cocktails](static/docs/testing/tablet/safari/profile-cocktails.png)
-![User profile page without cocktails](static/docs/testing/tablet/safari/profile-no.png)
-![Admin profile page](static/docs/testing/tablet/safari/profile-admin.png)
-![Admin profile page with delete cocktail modal](static/docs/testing/tablet/safari/profile-delete.png)
-![Add Cocktail page](static/docs/testing/tablet/safari/add-cocktail.png)
-![Edit Cocktail page](static/docs/testing/tablet/safari/edit-cocktail.png)
-![Categories page](static/docs/testing/tablet/safari/categories.png)
-![Add Category page](static/docs/testing/tablet/safari/add-category.png)
-![Edit Category page](static/docs/testing/tablet/safari/edit-category.png)
-![Users page](static/docs/testing/tablet/safari/users.png)
+![Home page](static/docs/testing/tablet/safari/home.jpg)
+![Log In page](static/docs/testing/tablet/safari/log-in.jpg)
+![Register page](static/docs/testing/tablet/safari/register.jpg)
+![User profile page with cocktails](static/docs/testing/tablet/safari/profile-cocktails.jpg)
+![User profile page without cocktails](static/docs/testing/tablet/safari/profile-no.jpg)
+![Admin profile page](static/docs/testing/tablet/safari/profile-admin.jpg)
+![Admin profile page with delete cocktail modal](static/docs/testing/tablet/safari/profile-delete.jpg)
+![Add Cocktail page](static/docs/testing/tablet/safari/add-cocktail.jpg)
+![Edit Cocktail page](static/docs/testing/tablet/safari/edit-cocktail.jpg)
+![Categories page](static/docs/testing/tablet/safari/categories.jpg)
+![Add Category page](static/docs/testing/tablet/safari/add-category.jpg)
+![Edit Category page](static/docs/testing/tablet/safari/edit-category.jpg)
+![Users page](static/docs/testing/tablet/safari/users.jpg)
 
 ---
 
