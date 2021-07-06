@@ -451,7 +451,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 
 ##### Intuitively and easily understand what to do.
 * Everything is clearly laid out.
-* All buttons decribe what they're for in simple terms.
+* All buttons describe what they're for in simple terms.
 * Icons are used to help convey meaning.
 
 ##### Be able to register for an account.
@@ -486,7 +486,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
 
 ##### Edit and delete the user's cocktails.
 * Every cocktail that a user has added is displayed on their profile.
-* Each cocktail listing has it's own edit and delete buttons.
+* Each cocktail listing has its own edit and delete buttons.
 * There is a link to add a cocktail on the navigation bar, which is available on every page.
 * If the user hasn't added any cocktails, their profile instead prompts them to add one, with a helpful button to direct them to the 'Add Cocktail' page.
 
@@ -540,7 +540,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint were used to validate the pr
     * Instead, I moved them into the expanded section, so now the user can click on the header to expand, and depending on the contents of the recipe, can then decide to delete or edit.
     * This makes more sense than where I had them before, as the user won't know if they want to edit or delete a recipe until they've looked at it.
 3. The favicon files were throwing up errors in the console, as shown below.
-    * I checked that the files I was including were correct, accoring to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
+    * I checked that the files I was including were correct, according to [Favicon.io](https://favicon.io/), which was where I got my favicon from.
     * I then did a Google search and found [this article on Medium](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3) which suggested a possible fix.
     * I added `crossorigin="use-credentials"` to my link for the webmanifest file, which fixed the console errors.
     * ![Favicon error](static/docs/img/favicon.png)
