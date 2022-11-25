@@ -7,7 +7,7 @@
 ![Font Awesome version](https://img.shields.io/badge/Font%20Awesome-v5.15.1-blue)
 ![GitHub forks](https://img.shields.io/github/forks/abibubble/ms3-the-bar-blade?style=social)
 
-[Here is a link to the final project](https://ms3-the-bar-blade.herokuapp.com/homepage)
+[Here is a link to the final project](https://ms3-the-bar-blade.onrender.com)
 
 This is a cocktail recipe site, built for bartenders, by bartenders. It's a site where users can sign in, find cocktails, add their own cocktails, and edit or delete old cocktail recipes. It is designed to be responsive on a wide range of devices, whilst also being easy to navigate through. 
 
